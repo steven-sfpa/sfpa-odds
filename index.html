@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SFPA City Championship — Live Odds</title>
+<style>
+  :root{
+    --ink:#0B1F3A; --gold:#C8A24B; --green:#1B7A43; --grey:#F3F4F6;
+    --line:#e3e6ea; --muted:#667;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:#fafbfc; line-height:1.5;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:28px 20px 60px}
+  header{border-bottom:3px solid var(--gold); padding-bottom:16px; margin-bottom:8px}
+  h1{font-size:26px; margin:0 0 4px}
+  .sub{color:var(--muted); font-size:14px}
+  .updated{font-size:13px; color:var(--muted); margin-top:10px}
+  .updated b{color:var(--ink)}
+  h2{font-size:18px; margin:34px 0 12px; color:var(--ink)}
+  /* odds table */
+  table{width:100%; border-collapse:collapse; font-size:15px; background:#fff;
+        box-shadow:0 1px 3px rgba(0,0,0,.06); border-radius:8px; overflow:hidden}
+  th{background:var(--ink); color:#fff; text-align:left; padding:10px 12px; font-size:13px; letter-spacing:.02em}
+  th.num,td.num{text-align:right}
+  td{padding:9px 12px; border-top:1px solid var(--line)}
+  tr.fav td{background:#FBF1D6}
+  tr.fav td:first-child{font-weight:700}
+  .bar{display:inline-block; height:9px; border-radius:5px; background:var(--green); vertical-align:middle; margin-left:8px}
+  .bar.gold{background:var(--gold)}
+  .seed{display:inline-block; min-width:22px; height:22px; line-height:22px; text-align:center;
+        background:var(--grey); border-radius:50%; font-size:12px; color:var(--muted); margin-right:8px}
+  .pct{font-variant-numeric:tabular-nums; font-weight:600}
+  .ml{font-variant-numeric:tabular-nums; color:var(--muted)}
+  /* bracket callout */
+  .bracket{background:#fff; border:1px solid var(--line); border-left:4px solid var(--gold);
+           border-radius:8px; padding:16px 18px; font-size:15px; box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .bracket .champ{font-size:17px; font-weight:700}
+  .bracket .champ .trophy{color:var(--gold)}
+  .bracket .detail{color:var(--muted); font-size:14px; margin-top:6px}
+  /* snapshots */
+  .snaps{list-style:none; padding:0; margin:0}
+  .snaps li{background:#fff; border:1px solid var(--line); border-radius:8px; margin-bottom:8px;
+            display:flex; align-items:center; justify-content:space-between; padding:11px 15px}
+  .snaps a{color:var(--ink); text-decoration:none; font-weight:600}
+  .snaps a:hover{color:var(--green)}
+  .snaps .latest{background:var(--green); color:#fff; font-size:11px; padding:2px 8px; border-radius:10px; margin-left:8px}
+  .snaps .dl{color:var(--green); font-size:13px}
+  .note{font-size:12.5px; color:var(--muted); margin-top:18px; line-height:1.6}
+  footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--line); font-size:12px; color:var(--muted)}
+  .err{background:#fdecea; border:1px solid #f5c2c0; color:#9b2c2c; padding:14px; border-radius:8px}
+  @media (max-width:520px){ h1{font-size:22px} td,th{padding:8px} .hide-sm{display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SFPA City Championship — Live Odds</h1>
+    <div class="sub" id="season">Spring 2026</div>
+    <div class="updated" id="updated"></div>
+  </header>
+
+  <div id="content">Loading…</div>
+
+  <footer>
+    Model: Elo power ratings (seeded on top-4 Fargo, updated game-by-game) · race-to-9 matches with an
+    8-8 top-Fargo tiebreaker · 60,000-run double-elimination Monte Carlo. Pool is high-variance — these are
+    probabilities, not predictions. Odds update automatically as playoff results post.
+  </footer>
+</div>
+
+<script>
+function fmtPct(p){ return (p==null?'—':p.toFixed(1)+'%'); }
+function render(d){
+  document.getElementById('season').textContent = d.season || 'Spring 2026';
+  document.getElementById('updated').innerHTML = 'Last updated: <b>'+ (d.updated||'—') +'</b>';
+
+  var teams = d.teams||[];
+  var maxPct = Math.max.apply(null, teams.map(function(t){return t.title||0})) || 1;
+  var rows = teams.filter(function(t){return (t.title||0) >= 0.05;}).map(function(t,i){
+    var fav = i===0;
+    var barW = Math.max(2, Math.round((t.title/maxPct)*120));
+    return '<tr class="'+(fav?'fav':'')+'">'
+      + '<td><span class="seed">'+t.seed+'</span>'+t.team+'</td>'
+      + '<td class="num"><span class="pct">'+fmtPct(t.title)+'</span>'
+        + '<span class="bar '+(fav?'gold':'')+'" style="width:'+barW+'px"></span></td>'
+      + '<td class="num ml hide-sm">'+(t.american||'')+'</td>'
+      + '<td class="num hide-sm">'+(t.reach_final!=null? t.reach_final+'%':'—')+'</td>'
+      + '</tr>';
+  }).join('');
+
+  var b = d.bracket||{};
+  var bracketHtml = b.champion ?
+    '<div class="bracket">'
+    + '<div class="champ"><span class="trophy">🏆</span> Projected champion: '+b.champion+'</div>'
+    + '<div class="detail">Most-likely single bracket: '+b.champion+' def. '+(b.runner_up||'')+' '
+      + (b.score||'') +' in the grand final. This is one illustrative path; the odds above come from 60,000 simulated tournaments.</div>'
+    + '</div>' : '';
+
+  var snaps = d.snapshots||[];
+  var snapHtml = snaps.length ?
+    '<ul class="snaps">' + snaps.map(function(s,i){
+      return '<li><span><a href="'+encodeURI(s.file)+'">📄 '+s.date+' snapshot</a>'
+        + (i===0?'<span class="latest">LATEST</span>':'') + '</span>'
+        + '<a class="dl" href="'+encodeURI(s.file)+'">Open PDF →</a></li>';
+    }).join('') + '</ul>'
+    : '<p class="note">No dated snapshots yet — the first will appear once playoff results post.</p>';
+
+  document.getElementById('content').innerHTML =
+      '<h2>Title odds</h2>'
+    + '<table><thead><tr><th>Team</th><th class="num">Title %</th>'
+    + '<th class="num hide-sm">Fair line</th><th class="num hide-sm">Reach final</th></tr></thead>'
+    + '<tbody>'+rows+'</tbody></table>'
+    + '<h2>Projected bracket</h2>' + bracketHtml
+    + '<h2>Report snapshots</h2>' + snapHtml
+    + '<p class="note">Each snapshot is a permanent point-in-time PDF. The newest reflects all results posted so far.</p>';
+}
+
+fetch('odds.json?'+Date.now())
+  .then(function(r){ if(!r.ok) throw new Error('odds.json not found'); return r.json(); })
+  .then(render)
+  .catch(function(e){
+    document.getElementById('content').innerHTML =
+      '<div class="err">Could not load the latest odds (<code>'+e.message+'</code>). '
+      + 'If this page was just published, give it a minute and refresh.</div>';
+  });
+</script>
+</body>
+</html>

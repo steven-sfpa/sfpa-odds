@@ -1,0 +1,149 @@
+{
+ "updated": "June 23, 2026 at 11:43 PM",
+ "updated_iso": "2026-06-23T23:43:30.882244",
+ "season": "SFPA Spring 2026 City Championship",
+ "teams": [
+  {
+   "team": "Happy Lounge Rawhides",
+   "seed": 1,
+   "title": 39.1,
+   "american": "+156",
+   "reach_final": 63.8,
+   "reach_sf": 77.9
+  },
+  {
+   "team": "El Farolito Shooters",
+   "seed": 2,
+   "title": 28.7,
+   "american": "+248",
+   "reach_final": 54.2,
+   "reach_sf": 89.7
+  },
+  {
+   "team": "Pilsner InnDecisives",
+   "seed": 6,
+   "title": 22.0,
+   "american": "+355",
+   "reach_final": 43.8,
+   "reach_sf": 68.1
+  },
+  {
+   "team": "Bus Stop Flyers",
+   "seed": 5,
+   "title": 3.4,
+   "american": "+2841",
+   "reach_final": 12.2,
+   "reach_sf": 51.5
+  },
+  {
+   "team": "Hall Monitors",
+   "seed": 3,
+   "title": 2.8,
+   "american": "+3471",
+   "reach_final": 9.6,
+   "reach_sf": 29.3
+  },
+  {
+   "team": "Marcelo's Hall Stars",
+   "seed": 8,
+   "title": 2.2,
+   "american": "+4445",
+   "reach_final": 8.1,
+   "reach_sf": 18.1
+  },
+  {
+   "team": "Happy HALLers",
+   "seed": 4,
+   "title": 1.6,
+   "american": "+6150",
+   "reach_final": 7.1,
+   "reach_sf": 43.0
+  },
+  {
+   "team": "Gino & Carlo",
+   "seed": 9,
+   "title": 0.1,
+   "american": "+99900",
+   "reach_final": 0.6,
+   "reach_sf": 4.0
+  },
+  {
+   "team": "Pocket Full of Fizz",
+   "seed": 7,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.2,
+   "reach_sf": 5.1
+  },
+  {
+   "team": "Lucky Horseshoe Glue Factory",
+   "seed": 10,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.2,
+   "reach_sf": 4.6
+  },
+  {
+   "team": "Route 101 Dalmatians",
+   "seed": 11,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.1,
+   "reach_sf": 1.4
+  },
+  {
+   "team": "Friends Crooked Cues",
+   "seed": 12,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.1,
+   "reach_sf": 4.0
+  },
+  {
+   "team": "Karl's Freakin' Beacon",
+   "seed": 13,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.0,
+   "reach_sf": 1.5
+  },
+  {
+   "team": "Temple Holy Smokes",
+   "seed": 14,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.0,
+   "reach_sf": 1.3
+  },
+  {
+   "team": "Lower Haight Misfits",
+   "seed": 15,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.0,
+   "reach_sf": 0.6
+  },
+  {
+   "team": "Cinch You're Down There",
+   "seed": 16,
+   "title": 0.0,
+   "american": "+999800",
+   "reach_final": 0.0,
+   "reach_sf": 0.1
+  }
+ ],
+ "bracket": {
+  "champion": "Happy Lounge Rawhides",
+  "runner_up": "El Farolito Shooters",
+  "score": "9-8",
+  "a_side": "Happy Lounge Rawhides",
+  "b_side": "El Farolito Shooters"
+ },
+ "snapshots": [
+  {
+   "file": "SFPA_CityChampionship_BettingLine_2026-06-23.pdf",
+   "date": "2026-06-23"
+  }
+ ],
+ "latest_pdf": "SFPA_CityChampionship_BettingLine_2026-06-23.pdf"
+}
