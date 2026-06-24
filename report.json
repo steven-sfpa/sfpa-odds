@@ -1,6 +1,6 @@
 {
  "updated": "June 24, 2026",
- "updated_full": "Jun 24, 2026, 9:29 PM",
+ "updated_full": "Jun 24, 2026, 9:39 PM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "Pilsner InnDecisives",
@@ -612,6 +612,46 @@
   "bump_fargo": 30,
   "basis": "4-season playoff record 17-7 (71%), 15-0 vs all non-Rawhides opponents; significant vs 50% null (p=0.032)",
   "data": "data/raw/pilsner_playoff_history.json"
+ },
+ "storylines": {
+  "pilsner": {
+   "playoff_record": "17-7",
+   "losses_only_to": [
+    "Happy Lounge Rawhides"
+   ],
+   "vs_nonrawhides": "15-0",
+   "seed": 6,
+   "title": 15.76,
+   "reach_final": 33.8,
+   "team_elo": 1632
+  },
+  "rawhides": {
+   "team_elo": 1702,
+   "fargo": 609.5,
+   "form": -10.4,
+   "title": 40.91,
+   "reach_final": 55.7
+  },
+  "elfarolito": {
+   "form": 28.0,
+   "title": 15.61,
+   "reach_final": 34.5
+  },
+  "bracket_halves": {
+   "top_contenders": [
+    "Happy Lounge Rawhides",
+    "Hall Monitors",
+    "Marcelo's Hall Stars"
+   ],
+   "bottom_contenders": [
+    "El Farolito Shooters",
+    "Pilsner InnDecisives",
+    "Bus Stop Flyers"
+   ],
+   "rawhides_reach_final": 55.7,
+   "elfarolito_reach_final": 34.5,
+   "pilsner_reach_final": 33.8
+  }
  },
  "snapshots": [
   {
