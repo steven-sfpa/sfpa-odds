@@ -86,7 +86,7 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Odds</a><a href="#method">How it's built</a><a href="#board">The board</a>
+  <a href="#changed">What changed</a><a href="#odds">Odds</a><a href="#method">How it's built</a><a href="#board">The board</a>
   <a href="#race">Three-horse race</a><a href="#equity">Equity</a><a href="#ratings">Power ratings</a>
   <a href="#bracket">Bracket</a><a href="#talent">Talent vs results</a><a href="#drift">Season drift</a>
   <a href="#dynasty">Dynasty</a><a href="#verdict">Verdict</a><a href="#calib">Calibration</a><a href="#pdf">PDFs</a>
@@ -118,6 +118,8 @@ function render(d){
   document.getElementById('footer').innerHTML='Model: Elo power ratings seeded on Fargo and updated over 13 weeks of game-level results; log5/Elo matchup probabilities with a variance cap; a data-derived pedigree bump for Pilsner only (the one team that measurably overperforms in the playoffs); 60,000-run double-elimination Monte Carlo. Backtested at '+bt.accuracy+'% match accuracy (Brier '+bt.brier+'). Pool is high-variance — these are probabilities, not predictions. For entertainment and analysis. Updates automatically as playoff results post.';
   var ped=(d.ratings.find(function(r){return r.ped>0;})||{ped:45});
   var h="";
+
+  h+=changelogHtml(d.changelog);
 
   h+='<section id="odds"><h2>Title odds</h2>'
    +'<p class="lead"><b>'+esc(t3[0].team)+' are the '+(t3[0].title-t3[1].title>=12?'clear':'narrow')+' favorite</b> — champions in <b>'+p0(t3[0].title)+'</b> of 60,000 simulated brackets (fair odds ~'+t3[0].american+'). <b>'+esc(t3[1].team)+'</b> ('+t3[1].american+', '+p0(t3[1].title)+') is the principal threat, with <b>'+esc(t3[2].team)+'</b> ('+t3[2].american+', '+p0(t3[2].title)+') a live third. Together the top three hold ~'+Math.round(t3[0].title+t3[1].title+t3[2].title)+'% of all title equity; everyone else is a longshot.</p>'
@@ -221,6 +223,31 @@ function render(d){
   drawOdds(t); drawTiers(t); drawScatter(d.scatter); drawDrift(d.drift); drawCalib(d.calibration);
 }
 
+function changelogHtml(c){
+  if(!c) return '';
+  var head='';
+  if(c.fav_flip){
+    head='<p class="lead"><b>New favorite: '+esc(short(c.fav_now.team))+' overtook '+esc(short(c.fav_prev.team))+' for the top of the board.</b> Last update '+esc(short(c.fav_prev.team))+' led at '+p0(c.fav_prev.pct)+'; now '+esc(short(c.fav_now.team))+' are clear at '+p0(c.fav_now.pct)+'.</p>';
+  }else if(c.fav_now){
+    head='<p class="lead"><b>'+esc(short(c.fav_now.team))+'</b> remain the favorite, now at '+p0(c.fav_now.pct)+' (was '+p0(c.fav_prev.pct)+').</p>';
+  }
+  var field='';
+  if((c.field_in&&c.field_in.length)||(c.field_out&&c.field_out.length)){
+    field='<p><b>Field change at the cutline:</b> '
+      +(c.field_in.length?'in — '+c.field_in.map(short).map(esc).join(', '):'')
+      +(c.field_in.length&&c.field_out.length?'; ':'')
+      +(c.field_out.length?'out — '+c.field_out.map(short).map(esc).join(', '):'')+'.</p>';
+  }
+  var movers=(c.movers||[]).filter(function(m){return Math.abs(m.delta)>=0.5;}).slice(0,10);
+  var rows=movers.map(function(m){
+    var up=m.delta>0,col=up?GREEN:RED,arrow=up?'▲':'▼';
+    return '<tr><td>'+esc(short(m.team))+'</td><td class="num">'+m.prev.toFixed(1)+'%</td><td class="num">'+m.now.toFixed(1)+'%</td>'
+      +'<td class="num" style="color:'+col+';font-weight:700">'+arrow+' '+(up?'+':'')+m.delta.toFixed(1)+' pts</td></tr>';
+  }).join('');
+  var table=movers.length?'<table style="margin-top:14px"><thead><tr><th>Team</th><th class="num">Last update</th><th class="num">Now</th><th class="num">Change</th></tr></thead><tbody>'+rows+'</tbody></table><p class="small">Any team not listed moved less than half a point.</p>':'<p class="small">No title-odds moves of half a point or more since the last update.</p>';
+  var when=c.now_date?('<span class="small" style="display:block;margin-bottom:6px">Since last update'+(c.prev_date?' ('+esc(c.prev_date)+' → '+esc(c.now_date)+')':'')+'</span>'):'';
+  return '<section id="changed" style="background:#FBF1D6;border:1px solid '+GOLD+';border-radius:12px;padding:20px 22px;margin:18px 0 8px"><h2 style="margin-top:0">What changed this update</h2>'+when+head+field+table+'</section>';
+}
 function heatmap(teams){
   function cell(v){var a=Math.max(0,Math.min(100,v))/100;var bg='rgba(27,122,67,'+(0.08+a*0.62).toFixed(2)+')';var col=a>0.55?'#fff':INK;return '<td style="background:'+bg+';color:'+col+'">'+Math.round(v)+'%</td>';}
   var rows=teams.filter(function(t){return t.reach_qf!=null;}).map(function(t){
