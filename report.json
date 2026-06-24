@@ -1,6 +1,6 @@
 {
  "updated": "June 24, 2026",
- "updated_full": "Jun 24, 2026, 9:39 PM",
+ "updated_full": "Jun 24, 2026, 9:47 PM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "Pilsner InnDecisives",
@@ -652,6 +652,68 @@
    "elfarolito_reach_final": 34.5,
    "pilsner_reach_final": 33.8
   }
+ },
+ "backtest": {
+  "accuracy": 76.5,
+  "n": 251,
+  "brier": 0.154,
+  "calibration": [
+   {
+    "pred": 0,
+    "actual": 0,
+    "n": 26
+   },
+   {
+    "pred": 10,
+    "actual": 12,
+    "n": 26
+   },
+   {
+    "pred": 20,
+    "actual": 24,
+    "n": 37
+   },
+   {
+    "pred": 30,
+    "actual": 23,
+    "n": 26
+   },
+   {
+    "pred": 40,
+    "actual": 67,
+    "n": 21
+   },
+   {
+    "pred": 50,
+    "actual": 66,
+    "n": 29
+   },
+   {
+    "pred": 60,
+    "actual": 46,
+    "n": 13
+   },
+   {
+    "pred": 70,
+    "actual": 88,
+    "n": 25
+   },
+   {
+    "pred": 80,
+    "actual": 75,
+    "n": 20
+   },
+   {
+    "pred": 90,
+    "actual": 100,
+    "n": 12
+   },
+   {
+    "pred": 100,
+    "actual": 100,
+    "n": 16
+   }
+  ]
  },
  "snapshots": [
   {
