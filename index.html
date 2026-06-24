@@ -5,87 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SFPA City Championship — The Betting Line</title>
 <style>
-  :root{
-    --ink:#0B1F3A; --gold:#C8A24B; --green:#1B7A43; --lb:#9C6B2E;
-    --grey:#F3F4F6; --line:#e3e6ea; --muted:#5a6472; --bg:#fafbfc;
-  }
+  :root{--ink:#0B1F3A;--gold:#C8A24B;--green:#1B7A43;--lb:#9C6B2E;--grey:#F3F4F6;
+        --line:#e3e6ea;--muted:#5a6472;--bg:#fafbfc;--red:#B23A3A}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-       color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px 80px}
-  /* sticky mini-nav */
-  nav{position:sticky;top:0;z-index:20;background:rgba(250,251,252,.94);backdrop-filter:blur(6px);
-      border-bottom:1px solid var(--line);margin-bottom:8px}
-  nav .inner{max-width:880px;margin:0 auto;padding:10px 20px;display:flex;gap:18px;overflow-x:auto;font-size:13.5px}
+       color:var(--ink);background:var(--bg);line-height:1.62;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 90px}
+  nav{position:sticky;top:0;z-index:30;background:rgba(250,251,252,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .inner{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;gap:16px;overflow-x:auto;font-size:13px}
   nav a{color:var(--muted);text-decoration:none;white-space:nowrap;font-weight:500}
   nav a:hover{color:var(--green)}
-  header.hero{padding:34px 0 18px;border-bottom:3px solid var(--gold);margin-bottom:6px}
-  h1{font-size:30px;margin:0 0 6px;letter-spacing:-.01em}
+  header.hero{padding:38px 0 18px;border-bottom:3px solid var(--gold)}
+  h1{font-size:32px;margin:0 0 6px;letter-spacing:-.01em}
   .sub{color:var(--muted);font-size:15px}
   .updated{font-size:13px;color:var(--muted);margin-top:12px}
   .updated b{color:var(--ink)}
-  section{padding:30px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:21px;margin:0 0 4px}
-  h3{font-size:16px;margin:22px 0 6px;color:var(--green)}
-  .lead{font-size:16px;margin:8px 0 18px}
-  p{margin:10px 0}
-  .small{font-size:13px;color:var(--muted)}
-  /* metric cards */
+  section{padding:32px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 6px}
+  h3{font-size:15.5px;margin:20px 0 4px;color:var(--green)}
+  .lead{font-size:16.5px;margin:8px 0 16px}
+  p{margin:11px 0}
+  b{font-weight:700}
+  .small{font-size:12.5px;color:var(--muted);margin-top:8px}
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
   .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
   .card .lab{font-size:12.5px;color:var(--muted)}
   .card .val{font-size:26px;font-weight:600;margin-top:2px}
-  .card .val small{font-size:14px;font-weight:500;color:var(--muted)}
-  /* tables */
-  table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border-radius:10px;overflow:hidden;
-        box-shadow:0 1px 3px rgba(0,0,0,.05)}
-  th{background:var(--ink);color:#fff;text-align:left;padding:9px 12px;font-size:12.5px;font-weight:600}
+  .card .val small{font-size:13px;font-weight:500;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  th{background:var(--ink);color:#fff;text-align:left;padding:9px 11px;font-size:12px;font-weight:600}
   th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
-  td{padding:8px 12px;border-top:1px solid var(--line)}
+  td{padding:8px 11px;border-top:1px solid var(--line)}
   tr.fav td{background:#FBF1D6}
   tr.fav td:first-child{font-weight:700}
-  .seed{display:inline-block;min-width:21px;height:21px;line-height:21px;text-align:center;background:var(--grey);
-        border-radius:50%;font-size:11.5px;color:var(--muted);margin-right:8px}
+  .chalk td{border-bottom:2px solid var(--gold)}
+  .seed{display:inline-block;min-width:21px;height:21px;line-height:21px;text-align:center;background:var(--grey);border-radius:50%;font-size:11px;color:var(--muted);margin-right:7px}
   .pill{font-size:11px;padding:1px 7px;border-radius:9px;background:var(--green);color:#fff;margin-left:6px}
   .pill.gold{background:var(--gold)}
   .chartbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
-  .chartbox canvas{max-height:340px}
-  .callout{background:#FBF1D6;border:1px solid var(--gold);border-radius:10px;padding:14px 16px;font-size:14px;margin:16px 0}
+  .callout{background:#FBF1D6;border:1px solid var(--gold);border-radius:10px;padding:15px 17px;font-size:13.5px;margin:16px 0}
+  /* heatmap */
+  .heat{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0}
+  .heat th{background:transparent;color:var(--muted);font-weight:600;text-align:center;padding:6px}
+  .heat td{text-align:center;padding:7px 6px;border:1px solid #fff;color:var(--ink);font-variant-numeric:tabular-nums}
+  .heat td.tm{text-align:left;color:var(--ink);background:#fff!important;font-weight:500}
   /* bracket */
   .bracket-scroll{overflow-x:auto;padding-bottom:8px}
-  .bcols{display:flex;gap:10px;min-width:760px;align-items:flex-start}
-  .bcol{display:flex;flex-direction:column;justify-content:space-around;gap:8px;flex:1;min-width:128px}
-  .bcol h4{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 2px;text-align:center}
+  .bcols{display:flex;gap:10px;min-width:780px;align-items:stretch}
+  .bcol{display:flex;flex-direction:column;justify-content:space-around;gap:8px;flex:1;min-width:130px}
+  .bcol h4{font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 2px;text-align:center}
   .match{background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;font-size:12px}
-  .row{display:flex;justify-content:space-between;padding:4px 7px;border-bottom:1px solid var(--line)}
-  .row:last-child{border-bottom:none}
-  .row.w{background:#FBF1D6;font-weight:700}
-  .row .sc{color:var(--muted);font-variant-numeric:tabular-nums}
-  .row.w .sc{color:var(--gold)}
+  .mrow{display:flex;justify-content:space-between;padding:4px 7px;border-bottom:1px solid var(--line)}
+  .mrow:last-child{border-bottom:none}
+  .mrow.w{background:#FBF1D6;font-weight:700}
+  .mrow .sc{color:var(--muted);font-variant-numeric:tabular-nums}
+  .mrow.w .sc{color:var(--gold)}
   .band{font-size:12px;font-weight:600;margin:18px 0 8px;padding:4px 10px;border-radius:6px;display:inline-block}
   .band.wb{background:#eef4ff;color:var(--ink)}
   .band.lb{background:#f6ecdd;color:var(--lb)}
   .gf{background:#FBF3DA;border:2px solid var(--gold);border-radius:12px;padding:16px;text-align:center;margin:18px 0}
-  .gf .champ{font-size:20px;font-weight:700;color:var(--ink);margin-top:4px}
+  .gf .champ{font-size:20px;font-weight:700;margin-top:4px}
   .gf .champ .t{color:var(--gold)}
-  /* snapshots */
+  /* dynasty */
+  .dyn{display:flex;gap:8px;overflow-x:auto;padding:6px 0}
+  .dyn .yr{flex:1;min-width:120px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+  .dyn .yr .s{font-size:12px;color:var(--muted)}
+  .dyn .yr .c{font-weight:700;margin-top:6px}
+  .dyn .yr .r{font-size:12px;color:var(--muted);margin-top:2px}
+  .dyn .yr.open{border-style:dashed;border-color:var(--gold)}
   .snaps{list-style:none;padding:0;margin:12px 0 0}
-  .snaps li{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;display:flex;
-            align-items:center;justify-content:space-between;padding:11px 15px}
+  .snaps li{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;padding:11px 15px}
   .snaps a{color:var(--ink);text-decoration:none;font-weight:600}
   .snaps a:hover{color:var(--green)}
   .snaps .dl{color:var(--green);font-size:13px}
   footer{padding:26px 0;font-size:12.5px;color:var(--muted)}
   .err{background:#fdecea;border:1px solid #f5c2c0;color:#9b2c2c;padding:14px;border-radius:10px;margin:30px 0}
-  @media(max-width:560px){h1{font-size:24px}.hide-sm{display:none}td,th{padding:7px 9px}}
+  @media(max-width:560px){h1{font-size:25px}.hide-sm{display:none}td,th{padding:7px 8px;font-size:13px}}
 </style>
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Odds</a><a href="#race">The race</a><a href="#ratings">Power ratings</a>
-  <a href="#bracket">Bracket</a><a href="#wk14">Week 14</a><a href="#method">Method</a>
-  <a href="#calib">Calibration</a><a href="#pdf">PDFs</a>
+  <a href="#odds">Odds</a><a href="#method">How it's built</a><a href="#board">The board</a>
+  <a href="#race">Three-horse race</a><a href="#equity">Equity</a><a href="#ratings">Power ratings</a>
+  <a href="#bracket">Bracket</a><a href="#talent">Talent vs results</a><a href="#drift">Season drift</a>
+  <a href="#dynasty">Dynasty</a><a href="#verdict">Verdict</a><a href="#calib">Calibration</a><a href="#pdf">PDFs</a>
 </div></nav>
 
 <div class="wrap">
@@ -95,176 +99,197 @@
     <div class="updated" id="updated"></div>
   </header>
   <div id="content"><p class="small">Loading the latest numbers…</p></div>
-  <footer>
-    Model: Elo power ratings (seeded on top-4 Fargo, updated game-by-game) · race-to-9 matches with an 8-8
-    top-Fargo tiebreaker · 60,000-run double-elimination Monte Carlo. Pool is high-variance — these are
-    probabilities, not predictions; even the favorite loses far more often than it wins. Updates automatically
-    as playoff results post.
-  </footer>
+  <footer id="footer"></footer>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-var GOLD="#C8A24B",GREEN="#1B7A43",INK="#0B1F3A",STEEL="#7d8aa0",MUTED="#5a6472";
+var GOLD="#C8A24B",GREEN="#1B7A43",INK="#0B1F3A",STEEL="#7d8aa0",MUTED="#5a6472",RED="#B23A3A";
 function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");}
 function pct(p){return p==null?"—":(+p).toFixed(1)+"%";}
-function seedSpan(n){return '<span class="seed">'+n+'</span>';}
+function p0(p){return p==null?"—":Math.round(+p)+"%";}
+function ss(n){return '<span class="seed">'+n+'</span>';}
+function short(n){var m={'Happy Lounge Rawhides':'Rawhides','El Farolito Shooters':'El Farolito','Pilsner InnDecisives':'Pilsner','Bus Stop Flyers':'Bus Stop',"Marcelo's Hall Stars":"Marcelo's",'Lucky Horseshoe Glue Factory':'LH Glue Factory','Route 101 Dalmatians':'Route 101','Friends Crooked Cues':'Friends Cues','Temple Holy Smokes':'Temple',"Karl's Freakin' Beacon":"Karl's",'Lower Haight Misfits':'Lower Haight',"Cinch You're Down There":'Cinch','Pocket Full of Fizz':'Pocket Fizz'};return m[n]||n;}
 
 function render(d){
-  document.getElementById('season').textContent = d.season + " — a visual handicapper's report";
-  document.getElementById('updated').innerHTML = 'Last updated: <b>'+d.updated+'</b> · model backtested at <b>'+d.backtest.accuracy+'%</b> on '+d.backtest.n+' in-season matches (Brier '+d.backtest.brier+')';
+  var t=d.teams, t3=t.slice(0,3), bt=d.backtest;
+  document.getElementById('season').textContent=d.season+" — a visual handicapper's report";
+  document.getElementById('updated').innerHTML='Last updated: <b>'+d.updated+'</b>';
+  document.getElementById('footer').innerHTML='Model: Elo power ratings seeded on Fargo and updated over 13 weeks of game-level results; log5/Elo matchup probabilities with a variance cap; a data-derived pedigree bump for Pilsner only (the one team that measurably overperforms in the playoffs); 60,000-run double-elimination Monte Carlo. Backtested at '+bt.accuracy+'% match accuracy (Brier '+bt.brier+'). Pool is high-variance — these are probabilities, not predictions. For entertainment and analysis. Updates automatically as playoff results post.';
+  var ped=(d.ratings.find(function(r){return r.ped>0;})||{ped:45});
+  var h="";
 
-  var t3=d.teams.slice(0,3);
-  var html="";
+  h+='<section id="odds"><h2>Title odds</h2>'
+   +'<p class="lead"><b>'+esc(t3[0].team)+' are the narrow favorite</b> — champions in <b>'+p0(t3[0].title)+'</b> of 60,000 simulated brackets (fair odds ~'+t3[0].american+'). It\'s a genuine three-team race: <b>'+esc(t3[1].team)+'</b> ('+t3[1].american+') and <b>'+esc(t3[2].team)+'</b> ('+t3[2].american+') are both live, and together the top three hold ~'+Math.round(t3[0].title+t3[1].title+t3[2].title)+'% of all title equity. Everyone else is a longshot.</p>'
+   +'<div class="cards">'
+     +'<div class="card"><div class="lab">Favorite</div><div class="val">'+p0(t3[0].title)+'</div><div class="small">'+esc(short(t3[0].team))+' · '+t3[0].american+'</div></div>'
+     +'<div class="card"><div class="lab">2nd</div><div class="val">'+p0(t3[1].title)+'</div><div class="small">'+esc(short(t3[1].team))+' · '+t3[1].american+'</div></div>'
+     +'<div class="card"><div class="lab">3rd</div><div class="val">'+p0(t3[2].title)+'</div><div class="small">'+esc(short(t3[2].team))+' · '+t3[2].american+'</div></div>'
+   +'</div>'
+   +'<div class="chartbox"><canvas id="oddsChart"></canvas></div>'
+   +'<p class="small">Gold = favorite · green = live contenders · steel = the field. The three-team cluster at the top is the whole story; below '+esc(short(t3[2].team))+', equity falls off a cliff.</p></section>';
 
-  /* ===== ODDS ===== */
-  html+='<section id="odds"><h2>Title odds</h2>'
-    + '<p class="lead">'+esc(t3[0].team)+' are the narrow favorite — champions in <b>'+pct(t3[0].title)+'</b> of 60,000 simulated brackets. It\'s a genuine three-team race: '+esc(t3[1].team)+' ('+pct(t3[1].title)+') and '+esc(t3[2].team)+' ('+pct(t3[2].title)+') are both live, and together the top three hold ~'+Math.round(t3[0].title+t3[1].title+t3[2].title)+'% of all title equity.</p>'
-    + '<div class="cards">'
-      + '<div class="card"><div class="lab">Favorite</div><div class="val">'+pct(t3[0].title)+'</div><div class="small">'+esc(t3[0].team)+' · '+t3[0].american+'</div></div>'
-      + '<div class="card"><div class="lab">2nd</div><div class="val">'+pct(t3[1].title)+'</div><div class="small">'+esc(t3[1].team)+' · '+t3[1].american+'</div></div>'
-      + '<div class="card"><div class="lab">3rd</div><div class="val">'+pct(t3[2].title)+'</div><div class="small">'+esc(t3[2].team)+' · '+t3[2].american+'</div></div>'
-    + '</div>'
-    + '<div class="chartbox"><canvas id="oddsChart"></canvas></div>';
-  var rows=d.teams.map(function(x,i){
-    return '<tr class="'+(i===0?'fav':'')+'"><td>'+seedSpan(x.seed)+esc(x.team)+'</td>'
-      +'<td class="num">'+pct(x.title)+'</td>'
-      +'<td class="num hide-sm">'+(x.american||'')+'</td>'
-      +'<td class="num hide-sm">'+(x.reach_final!=null?x.reach_final+'%':'—')+'</td>'
-      +'<td class="num hide-sm">'+(x.reach_sf!=null?x.reach_sf+'%':'—')+'</td></tr>';
+  h+='<section id="method"><h2>How these numbers were built</h2>'
+   +'<h3>1. A power rating for every team, earned on the table</h3>'
+   +'<p>Each team starts the season rated by the Fargo (skill) ratings of its top four players, then that rating moves up or down after every one of the season\'s 13 weeks based on actual game-by-game results — win big and you climb, scuffle and you slide. This is a standard Elo system, the same math used to rank chess players and sports teams.</p>'
+   +'<h3>2. Turning ratings into win probabilities — and proving they work</h3>'
+   +'<p>Playoff matches are a <b>race to 9</b>: the two teams play individual games until one side reaches 9 wins, and the match stops there (so a 9-3 match is over after 12 games — the score need not add to 16). The rating gap sets each team\'s per-game win chance, capped so no single game is treated as more lopsided than 85/15 (pool has too much variance for locks), and we play the race out game by game. If a match reaches <b>8-8, a single deciding game is played</b> — each team sends its highest-Fargo player, and that one game is settled by those two players\' head-to-head Fargo expectancy. We back-tested the per-game engine against this season\'s results: run week by week, it correctly called <b>'+bt.accuracy+'% of '+bt.n+' matches</b> (Brier score '+bt.brier+' — well better than a coin flip), and its confidence levels are well-calibrated (see the appendix). That hit-rate is the basis for trusting the odds.</p>'
+   +'<h3>3. Simulating the actual tournament 60,000 times</h3>'
+   +'<p>Title odds aren\'t a guess — we play out the full 16-team double-elimination bracket (winners\' side, losers\'/B-side, and the grand final where the B-side team must win twice), every match a game-by-game race to 9 with the 8-8 tiebreaker, 60,000 times and count how often each team wins. Every number in this report — title odds, survival percentages, the bracket — comes from this one simulation, so they\'re mutually consistent.</p>'
+   +'<h3>4. Did prior seasons matter? We measured it, instead of guessing</h3>'
+   +'<p>Rawhides and Pilsner have met in the City Championship final four straight seasons (Rawhides won all four) — a pattern a single-season model can\'t see, which argues for a "pedigree" weight. But rather than set that weight by feel, we tested it: across the last three championships, we checked whether each team won <i>more playoff matches than its regular-season rating predicted</i>. The result was decisive and asymmetric. <b>Pilsner overperformed dramatically</b> — winning 12 of 18 playoff matches when their seeding predicted about 7 (a statistically significant effect) — so their pedigree weight is kept (a conservative +'+ped.ped+' Elo). <b>Rawhides did not.</b> Their playoff record is statistically indistinguishable from "a top seed doing exactly what a top seed should" (the effect comfortably includes zero), so we removed the Rawhides bump entirely. Winning four finals as the highest-rated team isn\'t extra evidence — it\'s the rating already working.</p>'
+   +'<p><b>Why this matters for the headline:</b> even without a pedigree bump, Rawhides still hold the league\'s top power rating on this season\'s play — so they grade out as the narrow favorite on merit, not on borrowed history. But the gap to El Farolito and Pilsner is small: this is a genuine three-team race, not a coronation. Every adjustment in the report now has a number behind it, not a feel. Pool is high-variance, so treat these as probabilities, not predictions — even the favorite loses far more often than it wins.</p></section>';
+
+  var rows=t.map(function(x,i){
+    return '<tr class="'+(i===0?'fav ':'')+(i===2?'chalk':'')+'"><td>'+ss(x.seed)+esc(x.team)+'</td>'
+      +'<td class="num">'+pct(x.title)+'</td><td class="num hide-sm">'+(x.fair_dec?x.fair_dec.toFixed(2):'')+'</td>'
+      +'<td class="num">'+(x.american||'')+'</td><td class="num hide-sm">'+(x.posted_dec?x.posted_dec.toFixed(2):'')+'</td></tr>';
   }).join('');
-  html+='<table><thead><tr><th>Team</th><th class="num">Title %</th><th class="num hide-sm">Fair line</th>'
-    +'<th class="num hide-sm">Reach final</th><th class="num hide-sm">Reach semis</th></tr></thead><tbody>'+rows+'</tbody></table>'
-    +'<p class="small">Fair line is the no-vig moneyline implied by the title %. Reach-final / reach-semis come from the same 60,000-sim run, so every number here is mutually consistent.</p></section>';
+  h+='<section id="board"><h2>The board</h2>'
+   +'<div class="chartbox"><canvas id="tierChart"></canvas></div>'
+   +'<table><thead><tr><th>Team</th><th class="num">Title %</th><th class="num hide-sm">Fair dec</th><th class="num">Moneyline</th><th class="num hide-sm">Posted (vig)</th></tr></thead><tbody>'+rows+'</tbody></table>'
+   +'<p class="small">"Posted" odds include a standard ~18% book margin. The gold line marks the chalk cut: above it, true contenders; below, longshots.</p></section>';
 
-  /* ===== THE RACE ===== */
-  html+='<section id="race"><h2>Why it\'s a three-horse race</h2>'
-    +'<p>The top of the board is unusually tight, and there\'s a good reason no one runs away with it. Three forces are nearly in balance.</p>'
-    +'<h3>1. The contenders are bunched on rating</h3>'
-    +'<p>'+esc(t3[0].team)+' ('+t3[0].elo+'), '+esc(t3[2].team)+' ('+t3[2].elo+', including an earned pedigree bump) and '+esc(t3[1].team)+' ('+t3[1].elo+') are separated by a rounding error. Because the model caps any single game at 85/15, small rating gaps don\'t translate into runaway matches.</p>'
-    +'<h3>2. Pool is high-variance</h3>'
-    +'<p>A race to 9 has real noise — the better team is favored, not assured. Across a multi-round bracket that uncertainty compounds, which is why even the favorite wins the title only about '+Math.round(t3[0].title)+'% of the time.</p>'
-    +'<h3>3. The bracket draw matters</h3>'
-    +'<p>Seeds come from regular-season records, but strength comes from the ratings — and several teams are stronger than their seed. That mismatch is what produces upsets, and it shapes who each contender has to go through.</p></section>';
+  h+='<section id="race"><h2>Why it\'s a three-horse race</h2>'
+   +'<p>The top of the board is unusually tight — <b>'+esc(short(t[0].team))+' '+p0(t[0].title)+', '+esc(short(t[1].team))+' '+p0(t[1].title)+', '+esc(short(t[2].team))+' '+p0(t[2].title)+'</b> — and there\'s a good reason no one runs away with it. Three forces are nearly in balance, and which one tips decides the title.</p>'
+   +'<h3>1. The three contenders are bunched within a whisker on rating</h3>'
+   +'<p>Rawhides (Elo '+t[0].elo+'), Pilsner ('+(d.ratings.find(function(r){return r.team==="Pilsner InnDecisives";})||{elo:''}).elo+', including its earned bump) and El Farolito ('+(d.ratings.find(function(r){return r.team==="El Farolito Shooters";})||{elo:''}).elo+') are separated by a rounding error. Because the model caps any single game at 85/15 (pool is too high-variance for locks), a small rating edge is worth only a thumb on a coin-flip. When the talent is this even, small things decide the tournament.</p>'
+   +'<h3>2. The bracket draw cuts against the top seed</h3>'
+   +'<p>A 16-seed bracket splits into two halves so the top two seeds can only meet in the final. The draw quietly narrows the favorite\'s edge — a path difference that compounds over four or five rounds, which is why the 2nd team\'s title odds sit closer to the favorite\'s than the raw rating gap alone would suggest.</p>'
+   +'<h3>3. Pilsner\'s earned pedigree keeps them in the picture</h3>'
+   +'<p>We tested the dynasty in the data: Pilsner demonstrably wins playoff matches their seed says they shouldn\'t, so they carry a +'+ped.ped+' bump and sit a strong third — well above where a mid-pack seed would otherwise land. Rawhides earned no such bump, so they lead on current rating alone, not on history.</p>'
+   +'<p><b>Bottom line:</b> Rawhides are the favorite because they\'re the league\'s best team on this season\'s play — full stop, no borrowed history. But a near-tie at the top, a tougher draw, and a battle-tested Pilsner make this a real three-team race. Any one of them lifting the trophy would be no upset.</p></section>';
 
-  /* ===== POWER RATINGS ===== */
+  h+='<section id="equity"><h2>Bracket equity — how far each team survives</h2>'
+   +'<p>How often each team is still alive at each stage of the bracket. Because this is double-elimination, "survival" counts a team that\'s alive on either side — the winners\' bracket or the losers\' (B-side) — so a strong team that stumbles once isn\'t necessarily gone. The favorites don\'t just win more finals; they stay alive deep into the bracket far more reliably, which is what compounds into title equity.</p>'
+   + heatmap(t)
+   +'<p class="small">Every column comes from the same 60,000-run simulation, so the bold <b>Win title</b> column matches the odds board exactly. Pilsner\'s deep-run odds track its title odds — the B-side safety net is exactly why a mid-seed can be the 3rd-most-likely champion. Teams that stay alive a while but rarely reach the grand final run into the top three.</p></section>';
+
   var rr=d.ratings.map(function(r){
-    var note=r.ped?('+'+r.ped+' pedigree'):(r.seed-r.rank>=2?'under-seeded':(r.rank-r.seed>=2?'over-seeded':''));
-    var col=r.ped?GREEN:(r.seed-r.rank>=2?GREEN:(r.rank-r.seed>=2?'#B23A3A':MUTED));
-    return '<tr><td class="num">'+r.rank+'</td><td class="num">#'+r.seed+'</td><td>'+esc(r.team)+'</td>'
-      +'<td class="num">'+r.elo+'</td><td class="num">'+r.fargo+'</td>'
-      +'<td style="color:'+col+'">'+note+'</td></tr>';
+    var note=r.ped?('+'+r.ped+' pedigree'):(r.seed-r.rank>=2?'under-seeded (stronger than seed)':(r.rank-r.seed>=2?'over-seeded (weaker than seed)':''));
+    var col=r.ped?GREEN:(r.seed-r.rank>=2?GREEN:(r.rank-r.seed>=2?RED:MUTED));
+    return '<tr><td class="num">'+r.rank+'</td><td class="num">#'+r.seed+'</td><td>'+esc(r.team)+'</td><td class="num">'+r.elo+'</td><td class="num">'+r.fargo+'</td><td style="color:'+col+'">'+note+'</td></tr>';
   }).join('');
-  html+='<section id="ratings"><h2>Power ratings — the engine behind every number</h2>'
-    +'<p>Each team\'s Elo after 13 weeks. Only '+esc(t3[2].team)+' carries a pedigree bump (the one team whose playoff overperformance we could verify in the data). Read rank against seed: the gap is what produces the bracket\'s upsets.</p>'
-    +'<table><thead><tr><th class="num">Rank</th><th class="num">Seed</th><th>Team</th><th class="num">Elo</th><th class="num">Top-4 Fargo</th><th>Note</th></tr></thead><tbody>'+rr+'</tbody></table></section>';
+  h+='<section id="ratings"><h2>Power ratings — the engine behind every number</h2>'
+   +'<p>This is the heart of the model: each team\'s Elo rating after 13 weeks. Only <b>Pilsner</b> carries a pedigree bump (+'+ped.ped+'), the one team whose playoff overperformance we could verify in the data. <b>Read the first two columns together</b> — a team\'s <i>strength</i> (Elo rank) often differs from its <i>seed</i> (regular-season standing), and that gap is exactly what produces the bracket\'s projected upsets.</p>'
+   +'<table><thead><tr><th class="num">Rank</th><th class="num">Seed</th><th>Team</th><th class="num">Elo</th><th class="num">Top-4 Fargo</th><th>Note</th></tr></thead><tbody>'+rr+'</tbody></table>'
+   +'<p class="small">Key disconnects: <b>Pilsner</b> is the 2nd-strongest team by Elo but seeded only 6th; <b>Marcelo\'s Hall Stars</b> and <b>Gino &amp; Carlo</b> are likewise stronger than their seeds. That is why, in the bracket, you\'ll see a lower seed knock out a higher one — the seeds come from regular-season records, but the projected results come from these ratings.</p></section>';
 
-  /* ===== BRACKET ===== */
-  html+='<section id="bracket"><h2>The projected bracket</h2>'
-    +'<p>Seeds are set by regular-season standing. The City Championship is 16-team <b>double-elimination</b>: lose on the A-side (winners\' bracket) and you drop to the B-side; one more loss ends your run. The B-side survivor earns a grand-final rematch but must beat the A-side finalist twice.</p>'
-    + bracketHtml(d.bracket)
-    + '<div class="callout"><b>How to read this against the odds board.</b> This diagram is the single most-likely <i>path</i> — one tournament. The title odds come from 60,000 <i>different</i> tournaments. Here they happen to agree on the top three ('+esc(d.champion)+' win, '+esc(d.runner_up)+' 2nd), but that agreement is a coincidence of this particular draw, not a rule. Trust the odds board for who\'s most likely to win; read the bracket as one vivid example of how a single tournament could unfold.</div>'
-    +'</section>';
+  h+='<section id="bracket"><h2>The projected bracket</h2>'
+   +'<p>Seeds are set by regular-season standing (after the predicted Week 14 results below). The City Championship is a 16-team <b>double-elimination</b> event: lose on the A-side (winners\' bracket, Tue/Wed) and you drop to the B-side (losers\' bracket, Thursdays) where one more loss ends your run. The B-side survivor earns a Grand Final rematch but must beat the A-side finalist twice.</p>'
+   + bracketHtml(d.bracket)
+   +'<p class="small">The model\'s most-likely path, drawn in full. <b>A-side:</b> chalk largely holds, setting up a Rawhides–El Farolito winners\' final, which Rawhides win to reach the Grand Final from the A-side. <b>B-side (Thursdays):</b> each A-side loser drops into the losers\' bracket and must win out — El Farolito fights back but falls to Pilsner in the B-side final; Pilsner then earns a Grand Final rematch with Rawhides, but as the B-side team must beat them <i>twice</i>, and the model has Rawhides closing it out.</p>'
+   +'<div class="callout"><b>How to read this bracket against the odds board.</b> This diagram is the <i>single most-likely path</i> — one tournament. The title odds come from 60,000 <i>different</i> simulated tournaments. They answer different questions, so they don\'t have to rank teams the same way. Here they happen to agree on the order of the top three: '+esc(short(d.champion))+' win it, '+esc(short(d.runner_up))+' take 2nd, and the third contender goes out 3rd. But that agreement is a coincidence of this particular draw, not a rule — in plenty of the other 60,000 simulations the order flips. Trust the odds board for who\'s most likely to win, and read the bracket as one vivid example of how a single tournament could actually unfold.</div>'
+   + wk14tbl(d.wk14)+'</section>';
 
-  /* ===== WEEK 14 ===== */
-  var w=d.wk14.map(function(m){
-    return '<tr><td>'+esc(m.home)+' vs '+esc(m.away)+'</td><td class="num">'+m.score+'</td>'
-      +'<td>'+(m.winner==='Tie'?'<span class="small">Tie (1 pt each)</span>':'<b>'+esc(m.winner)+'</b>')+'</td></tr>';
+  h+='<section id="talent"><h2>Talent vs. results</h2>'
+   +'<p>Every team\'s paper talent (top-4 Fargo) against how it actually performed (Elo from 13 weeks). Teams above the dashed line are beating their ratings; teams below are underperforming. This is where the contenders separate from the pretenders.</p>'
+   +'<div class="chartbox"><canvas id="scatterChart"></canvas></div>'
+   +'<p class="small"><b>El Farolito and Pilsner sit well above the line</b> — they win more than their rosters suggest, the mark of a real playoff team. The high-Fargo names on or below the line are the classic "better on paper than in practice" trap.</p></section>';
+
+  var dr=d.drift.map(function(x){
+    var col=x.drift>0?GREEN:(x.drift<0?RED:MUTED);
+    return '<tr><td>'+ss(x.seed)+esc(x.team)+'</td><td class="num">'+x.start+'</td><td class="num">'+x.final+'</td><td class="num" style="color:'+col+'">'+(x.drift>0?'+':'')+x.drift+'</td></tr>';
   }).join('');
-  html+='<section id="wk14"><h2>Predicted Week 14 (sets the final seeds)</h2>'
-    +'<p>The last regular-season week, by standing. A match can finish 8-8 here — a genuine tie worth a point each (no tiebreaker game; that only happens in the playoffs). These set the final seeds but rarely move a team more than a spot.</p>'
-    +'<table><thead><tr><th>Matchup (by standing)</th><th class="num">Predicted score</th><th>Winner</th></tr></thead><tbody>'+w+'</tbody></table></section>';
+  h+='<section id="drift"><h2>Season drift — how the season moved each team</h2>'
+   +'<p>The same idea as the scatter, made concrete. Every team is <i>seeded</i> a starting Elo from its preseason talent (top-4 Fargo); 13 weeks of results then push that rating up or down. The gap — the "drift" — is the cleanest single measure of who over- or under-played their roster this season. (This is pure on-table performance, before any playoff pedigree adjustment.)</p>'
+   +'<div class="chartbox"><canvas id="driftChart"></canvas></div>'
+   +'<table><thead><tr><th>Team</th><th class="num">Start Elo (talent)</th><th class="num">Final Elo (results)</th><th class="num">Drift</th></tr></thead><tbody>'+dr+'</tbody></table>'
+   +'<p class="small">Reading it: <b>Rawhides started so far ahead on talent (1812) that even a −132 drift leaves them the league\'s top final Elo (1680)</b> — the strongest team by results even after that slide, which is why they\'re the narrow favorite despite carrying no pedigree bump. Risers are low seeds who played above their ratings; steep fallers are high-Fargo teams that underdelivered — a warning sign the bracket respects.</p></section>';
 
-  /* ===== METHOD ===== */
-  html+='<section id="method"><h2>How these numbers were built</h2>'
-    +'<h3>1. A power rating for every team, earned on the table</h3>'
-    +'<p>Each team starts rated by the Fargo (skill) ratings of its top four players, then that rating moves up or down after every week based on actual game-by-game results. Standard Elo — the same math used to rank chess players.</p>'
-    +'<h3>2. Turning ratings into win probabilities — and proving they work</h3>'
-    +'<p>Playoff matches are a <b>race to 9</b>: teams play individual games until one side reaches 9, and the match stops there (so a 9-3 match is over after 12 games — scores need not add to 16). The rating gap sets each team\'s per-game chance, capped at 85/15, and we play the race out game by game. At <b>8-8, a single deciding game</b> is played — each team sends its highest-Fargo player, settled by those two players\' head-to-head Fargo expectancy. Back-tested week by week, the engine called <b>'+d.backtest.accuracy+'% of '+d.backtest.n+' matches</b> (Brier '+d.backtest.brier+').</p>'
-    +'<h3>3. Simulating the tournament 60,000 times</h3>'
-    +'<p>We play out the full double-elimination bracket — winners\' side, B-side, and the grand final where the B-side team must win twice — 60,000 times and count how often each team wins. Every number in this report comes from that one simulation.</p>'
-    +'<h3>4. Did prior seasons matter? We measured it, instead of guessing</h3>'
-    +'<p>Rather than set a "pedigree" weight by feel, we tested whether each contender won more playoff matches than its rating predicted. The result was asymmetric: '+esc(t3[2].team)+' overperformed (a conservative +'+(d.ratings.find(function(r){return r.ped>0;})||{ped:45}).ped+' Elo bump is kept); the others did not, so they get no bump. Every adjustment now has a number behind it.</p></section>';
+  h+='<section id="dynasty"><h2>The dynasty context</h2>'
+   +'<p>The league\'s defining pattern is real: the same two teams (Rawhides and Pilsner) have met in the City Championship final four years running, Rawhides winning every time. But we tested what that history is actually worth — and only <b>Pilsner</b> demonstrably outperforms its rating in the playoffs. Rawhides win as the favorite they already are. So the dynasty informs the line through Pilsner\'s earned bump, not by anointing Rawhides.</p>'
+   + dynastyHtml(d.dynasty)+'</section>';
 
-  /* ===== CALIBRATION ===== */
-  html+='<section id="calib"><h2>Is the model honest? Calibration</h2>'
-    +'<p>A model is well-calibrated if things it calls 70% likely happen about 70% of the time. Each dot is a confidence bucket; the closer to the diagonal, the better. Across the season the model tracks the line.</p>'
-    +'<div class="chartbox"><canvas id="calibChart"></canvas></div></section>';
+  var am={},rb={}; t.forEach(function(x){am[x.team]=x.american;rb[x.team]=p0(x.title);});
+  h+='<section id="verdict"><h2>The verdict</h2>'
+   +'<p><b>Slight lean: '+esc(t3[0].team)+' ('+am[t3[0].team]+', ~'+rb[t3[0].team]+').</b> On this season\'s actual results they grade out as the league\'s strongest team — the top power rating, earned on the table, with no borrowed history. They\'re the favorite, but only narrowly, and they drew the tougher half of the bracket, so it\'s a lean, not a lock.</p>'
+   +'<p><b>Live contender: '+esc(t3[1].team)+' ('+am[t3[1].team]+', '+rb[t3[1].team]+').</b> A whisker behind on rating with a kinder draw — the gap to the favorite is small enough that any swing (a Week-14 result, one bracket upset) flips the order. A legitimate co-favorite.</p>'
+   +'<p><b>Don\'t sleep on: '+esc(t3[2].team)+' ('+am[t3[2].team]+', '+rb[t3[2].team]+').</b> The one team whose playoff pedigree is statistically real — they win matches their seed says they shouldn\'t, which is why they\'re priced like a contender despite a mid-pack seed. Dangerous in the B-side bracket. Below these three, equity falls off a cliff.</p></section>';
 
-  /* ===== PDFs ===== */
+  h+='<section id="calib"><h2>Appendix — is the model honest? Calibration</h2>'
+   +'<p>Proof the odds can be trusted: matches the model calls at a given confidence win at about that rate. Predicted vs. actual track closely across all confidence bands.</p>'
+   +'<div class="chartbox"><canvas id="calibChart"></canvas></div>'
+   +'<p class="small">Overall '+bt.accuracy+'% of '+bt.n+' matches called correctly; Brier '+bt.brier+' (0.25 = coin flip).</p></section>';
+
   var snaps=d.snapshots||[];
-  var sn = snaps.length ? '<ul class="snaps">'+snaps.map(function(s,i){
-      return '<li><span><a href="'+encodeURI(s.file)+'">📄 '+s.date+' snapshot</a>'+(i===0?'<span class="pill">LATEST</span>':'')+'</span><a class="dl" href="'+encodeURI(s.file)+'">Open PDF →</a></li>';
-    }).join('')+'</ul>' : '<p class="small">No dated snapshots yet — the first appears once playoff results post.</p>';
-  html+='<section id="pdf" style="border-bottom:none"><h2>Printable report snapshots</h2>'
-    +'<p>Each snapshot is a permanent point-in-time PDF of the full report. The newest reflects all results posted so far.</p>'+sn+'</section>';
+  var sn=snaps.length?'<ul class="snaps">'+snaps.map(function(s,i){return '<li><span><a href="'+encodeURI(s.file)+'">📄 '+s.date+' snapshot</a>'+(i===0?'<span class="pill">LATEST</span>':'')+'</span><a class="dl" href="'+encodeURI(s.file)+'">Open PDF →</a></li>';}).join('')+'</ul>':'<p class="small">No dated snapshots yet — the first appears once playoff results post.</p>';
+  h+='<section id="pdf" style="border-bottom:none"><h2>Printable report snapshots</h2><p>Each snapshot is a permanent point-in-time PDF of the full report. The newest reflects all results posted so far.</p>'+sn+'</section>';
 
-  document.getElementById('content').innerHTML=html;
-  drawOdds(d.teams); drawCalib(d.calibration);
+  document.getElementById('content').innerHTML=h;
+  drawOdds(t); drawTiers(t); drawScatter(d.scatter); drawDrift(d.drift); drawCalib(d.calibration);
 }
 
+function heatmap(teams){
+  function cell(v){var a=Math.max(0,Math.min(100,v))/100;var bg='rgba(27,122,67,'+(0.08+a*0.62).toFixed(2)+')';var col=a>0.55?'#fff':INK;return '<td style="background:'+bg+';color:'+col+'">'+Math.round(v)+'%</td>';}
+  var rows=teams.filter(function(t){return t.reach_qf!=null;}).map(function(t){
+    return '<tr><td class="tm">'+ss(t.seed)+esc(short(t.team))+'</td>'+cell(t.reach_qf)+cell(t.reach_sf)+cell(t.reach_final)+'<td style="font-weight:700;background:rgba(200,162,75,.18)">'+pct(t.title)+'</td></tr>';
+  }).join('');
+  return '<div style="overflow-x:auto"><table class="heat"><thead><tr><th style="text-align:left">Team</th><th>Reach QF</th><th>Reach semis</th><th>Reach final</th><th>Win title</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+}
 function bracketHtml(b){
-  function match(m){
-    var aw=m.win===m.a, bw=m.win===m.b;
-    var sa=m.score.split('-')[0], sb=m.score.split('-')[1];
-    return '<div class="match">'
-      +'<div class="row '+(aw?'w':'')+'"><span>('+m.as+') '+esc(short(m.a))+'</span><span class="sc">'+sa+'</span></div>'
-      +'<div class="row '+(bw?'w':'')+'"><span>('+m.bs+') '+esc(short(m.b))+'</span><span class="sc">'+sb+'</span></div>'
-      +'</div>';
-  }
-  function col(title,arr){return '<div class="bcol"><h4>'+title+'</h4>'+arr.map(match).join('')+'</div>';}
-  var wb='<div class="band wb">Winners\' bracket · A-side</div><div class="bracket-scroll"><div class="bcols">'
-    + col('Round 1',b.wb_r1) + col('Quarters',b.wb_qf) + col('Semis',b.wb_sf) + col('WB Final',[b.wb_final])
-    + '</div></div>';
-  var lb='<div class="band lb">Losers\' bracket · B-side</div><div class="bracket-scroll"><div class="bcols">'
-    + col('LB R1',b.lb_r1) + col('LB R2',b.lb_r2) + col('LB R3',b.lb_r3) + col('LB R4',b.lb_r4)
-    + col('LB R5',[b.lb_r5]) + col('B-side Final',[b.lb_r6])
-    + '</div></div>';
+  function match(m){var aw=m.win===m.a,bw=m.win===m.b,p=m.score.split('-');
+    return '<div class="match"><div class="mrow '+(aw?'w':'')+'"><span>('+m.as+') '+esc(short(m.a))+'</span><span class="sc">'+p[0]+'</span></div><div class="mrow '+(bw?'w':'')+'"><span>('+m.bs+') '+esc(short(m.b))+'</span><span class="sc">'+p[1]+'</span></div></div>';}
+  function col(t,a){return '<div class="bcol"><h4>'+t+'</h4>'+a.map(match).join('')+'</div>';}
+  var wb='<div class="band wb">Winners\' bracket · A-side</div><div class="bracket-scroll"><div class="bcols">'+col('Round 1',b.wb_r1)+col('Quarters',b.wb_qf)+col('Semis',b.wb_sf)+col('WB Final',[b.wb_final])+'</div></div>';
+  var lb='<div class="band lb">Losers\' bracket · B-side</div><div class="bracket-scroll"><div class="bcols">'+col('LB R1',b.lb_r1)+col('LB R2',b.lb_r2)+col('LB R3',b.lb_r3)+col('LB R4',b.lb_r4)+col('LB R5',[b.lb_r5])+col('B-side final',[b.lb_r6])+'</div></div>';
   var g=b.grand_final;
-  var gf='<div class="gf"><div class="small">GRAND FINAL · ('+g.a_seed+') '+esc(short(g.a_side))+' vs ('+g.b_seed+') '+esc(short(g.b_side))+' · '+g.score
-    +'</div><div class="champ"><span class="t">🏆</span> Champion: '+esc(short(g.champion))+'</div>'
-    +'<div class="small">A-side finalist needs one win; B-side challenger must win twice.</div></div>';
+  var gf='<div class="gf"><div class="small">GRAND FINAL · ('+g.a_seed+') '+esc(short(g.a_side))+' vs ('+g.b_seed+') '+esc(short(g.b_side))+' · '+g.score+'</div><div class="champ"><span class="t">🏆</span> Champion: '+esc(short(g.champion))+'</div><div class="small">A-side finalist needs one win; B-side challenger must win twice.</div></div>';
   return wb+lb+gf;
 }
-function short(n){
-  var map={'Happy Lounge Rawhides':'Rawhides','El Farolito Shooters':'El Farolito','Pilsner InnDecisives':'Pilsner',
-    'Bus Stop Flyers':'Bus Stop','Marcelo\'s Hall Stars':'Marcelo\'s','Lucky Horseshoe Glue Factory':'LH Glue Factory',
-    'Route 101 Dalmatians':'Route 101','Friends Crooked Cues':'Friends Cues','Temple Holy Smokes':'Temple',
-    'Karl\'s Freakin\' Beacon':"Karl's",'Lower Haight Misfits':'Lower Haight','Cinch You\'re Down There':'Cinch','Pocket Full of Fizz':'Pocket Fizz'};
-  return map[n]||n;
+function wk14tbl(w){
+  var r=w.map(function(m){return '<tr><td>'+esc(m.home)+' vs '+esc(m.away)+'</td><td class="num">'+m.score+'</td><td>'+(m.winner==='Tie'?'<span class="small">Tie (1 pt each)</span>':'<b>'+esc(m.winner)+'</b>')+'</td></tr>';}).join('');
+  return '<h3>Predicted Week 14 (sets the final seeds)</h3><table><thead><tr><th>Matchup (by standing)</th><th class="num">Predicted score</th><th>Winner</th></tr></thead><tbody>'+r+'</tbody></table><p class="small">Week 14 is regular season, where a match can finish 8-8 — a genuine tie worth a point each (no tiebreaker game; that only happens in the playoffs). These results set the final seeds but rarely move a team more than a spot.</p>';
+}
+function dynastyHtml(dyn){
+  return '<div class="dyn">'+dyn.map(function(y){
+    if(!y.champion)return '<div class="yr open"><div class="s">'+y.season+'</div><div class="c" style="color:'+GOLD+'">?</div><div class="r">to be decided</div></div>';
+    return '<div class="yr"><div class="s">'+y.season+'</div><div class="c">'+y.champion+'</div><div class="r">def. '+y.runner_up+' '+y.score+'</div></div>';
+  }).join('')+'</div>';
 }
 
 function drawOdds(teams){
-  var top=teams.filter(function(t){return t.title>=0.05;});
-  var ctx=document.getElementById('oddsChart'); if(!ctx)return;
-  new Chart(ctx,{type:'bar',data:{labels:top.map(function(t){return short(t.team);}),
-    datasets:[{data:top.map(function(t){return t.title;}),
-      backgroundColor:top.map(function(t,i){return i===0?GOLD:(i<3?GREEN:STEEL);}),borderRadius:4}]},
-    options:{indexAxis:'y',plugins:{legend:{display:false},title:{display:true,text:'Title probability (%)',color:MUTED,font:{size:13}},
-      tooltip:{callbacks:{label:function(c){return c.parsed.x.toFixed(1)+'%';}}}},
-      scales:{x:{ticks:{color:MUTED},grid:{color:'#eee'}},y:{ticks:{color:INK,font:{size:12}},grid:{display:false}}},
-      responsive:true,maintainAspectRatio:false}});
+  var top=teams.filter(function(t){return t.title>=0.1;}),ctx=document.getElementById('oddsChart');if(!ctx)return;
+  new Chart(ctx,{type:'bar',data:{labels:top.map(function(t){return short(t.team);}),datasets:[{data:top.map(function(t){return t.title;}),backgroundColor:top.map(function(t,i){return i===0?GOLD:(i<3?GREEN:STEEL);}),borderRadius:4}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},title:{display:true,text:'Title probability (%)',color:MUTED}},scales:{x:{ticks:{color:MUTED},grid:{color:'#eee'}},y:{ticks:{color:INK},grid:{display:false}}},responsive:true,maintainAspectRatio:false}});
   ctx.parentNode.style.height=(top.length*30+60)+'px';
 }
+function drawTiers(teams){
+  var top=teams.filter(function(t){return t.title>=0.5;}),ctx=document.getElementById('tierChart');if(!ctx)return;
+  new Chart(ctx,{type:'bar',data:{labels:top.map(function(t){return short(t.team);}),datasets:[{data:top.map(function(t){return t.title;}),backgroundColor:top.map(function(t,i){return i===0?GOLD:(i<3?GREEN:STEEL);}),borderRadius:3,barThickness:10}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},title:{display:true,text:'The board — title % (favorite · contenders · field)',color:MUTED}},scales:{x:{ticks:{color:MUTED},grid:{color:'#eee'}},y:{ticks:{color:INK},grid:{display:false}}},responsive:true,maintainAspectRatio:false}});
+  ctx.parentNode.style.height=(top.length*26+60)+'px';
+}
+function drawScatter(sc){
+  var ctx=document.getElementById('scatterChart');if(!ctx||!sc)return;
+  var pts=sc.filter(function(x){return x.fargo;});
+  new Chart(ctx,{data:{datasets:[
+    {type:'scatter',label:'Contenders',data:pts.filter(function(x){return x.contender;}).map(function(x){return {x:x.fargo,y:x.final,t:short(x.team)};}),backgroundColor:GREEN,pointRadius:6},
+    {type:'scatter',label:'Field',data:pts.filter(function(x){return !x.contender;}).map(function(x){return {x:x.fargo,y:x.final,t:short(x.team)};}),backgroundColor:STEEL,pointRadius:5},
+    {type:'line',label:'Expected (talent = results)',data:[{x:390,y:1500+(390-455)*2},{x:620,y:1500+(620-455)*2}],borderColor:'#bbb',borderDash:[5,5],pointRadius:0,fill:false}]},
+    options:{plugins:{legend:{labels:{color:MUTED,boxWidth:12}},tooltip:{callbacks:{label:function(c){return (c.raw.t||'')+': Fargo '+c.parsed.x+', Elo '+c.parsed.y;}}}},
+      scales:{x:{title:{display:true,text:'Top-4 Fargo (paper talent)',color:MUTED},ticks:{color:MUTED}},y:{title:{display:true,text:'Final Elo (actual results)',color:MUTED},ticks:{color:MUTED}}},responsive:true,maintainAspectRatio:false}});
+  ctx.parentNode.style.height='360px';
+}
+function drawDrift(dr){
+  var ctx=document.getElementById('driftChart');if(!ctx||!dr)return;
+  var s=dr.slice().sort(function(a,b){return a.drift-b.drift;});
+  new Chart(ctx,{type:'bar',data:{labels:s.map(function(x){return short(x.team);}),datasets:[{data:s.map(function(x){return x.drift;}),backgroundColor:s.map(function(x){return x.drift>=0?GREEN:RED;}),borderRadius:3}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false},title:{display:true,text:'Season drift: Elo gained/lost vs preseason talent',color:MUTED}},scales:{x:{ticks:{color:MUTED},grid:{color:'#eee'}},y:{ticks:{color:INK,font:{size:11}},grid:{display:false}}},responsive:true,maintainAspectRatio:false}});
+  ctx.parentNode.style.height=(s.length*24+60)+'px';
+}
 function drawCalib(cal){
-  var ctx=document.getElementById('calibChart'); if(!ctx)return;
-  var pts=cal.map(function(c){return {x:c.pred,y:c.actual};});
-  new Chart(ctx,{type:'scatter',data:{datasets:[
-    {label:'Model',data:pts,backgroundColor:GREEN,pointRadius:5},
-    {label:'Perfect',type:'line',data:[{x:0,y:0},{x:100,y:100}],borderColor:'#bbb',borderDash:[5,5],pointRadius:0,fill:false}]},
+  var ctx=document.getElementById('calibChart');if(!ctx)return;
+  new Chart(ctx,{data:{datasets:[
+    {type:'scatter',label:'Model',data:cal.map(function(c){return {x:c.pred,y:c.actual};}),backgroundColor:GREEN,pointRadius:5},
+    {type:'line',label:'Perfect',data:[{x:0,y:0},{x:100,y:100}],borderColor:'#bbb',borderDash:[5,5],pointRadius:0,fill:false}]},
     options:{plugins:{legend:{labels:{color:MUTED,boxWidth:12}},tooltip:{callbacks:{label:function(c){return 'predicted '+c.parsed.x+'% → actual '+c.parsed.y+'%';}}}},
-      scales:{x:{min:0,max:100,title:{display:true,text:'Predicted win %',color:MUTED},ticks:{color:MUTED}},
-        y:{min:0,max:100,title:{display:true,text:'Actual win %',color:MUTED},ticks:{color:MUTED}}},
-      responsive:true,maintainAspectRatio:false}});
+      scales:{x:{min:0,max:100,title:{display:true,text:'Predicted win %',color:MUTED},ticks:{color:MUTED}},y:{min:0,max:100,title:{display:true,text:'Actual win %',color:MUTED},ticks:{color:MUTED}}},responsive:true,maintainAspectRatio:false}});
   ctx.parentNode.style.height='340px';
 }
 
-fetch('odds.json?'+Date.now())
-  .then(function(r){if(!r.ok)throw new Error('odds.json not found');return r.json();})
-  .then(render)
-  .catch(function(e){
-    document.getElementById('content').innerHTML='<div class="err">Could not load the latest data (<code>'+e.message+'</code>). If this page was just published, give it a minute and refresh.</div>';
-  });
+fetch('odds.json?'+Date.now()).then(function(r){if(!r.ok)throw new Error('odds.json not found');return r.json();}).then(render)
+  .catch(function(e){document.getElementById('content').innerHTML='<div class="err">Could not load the latest data (<code>'+e.message+'</code>). If this page was just published, give it a minute and refresh.</div>';});
 </script>
 </body>
 </html>

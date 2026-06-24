@@ -1,6 +1,6 @@
 {
- "updated": "June 23, 2026 at 11:53 PM",
- "updated_iso": "2026-06-23T23:53:40.666301",
+ "updated": "June 24, 2026 at 12:03 AM",
+ "updated_iso": "2026-06-24T00:03:40.953191",
  "season": "SFPA Spring 2026 City Championship",
  "backtest": {
   "accuracy": 73.6,
@@ -717,6 +717,282 @@
    "away": "Cinch You're Down There",
    "score": "8-8",
    "winner": "Tie"
+  }
+ ],
+ "drift": [
+  {
+   "team": "Happy Lounge Rawhides",
+   "seed": 1,
+   "start": 1812,
+   "final": 1680,
+   "drift": -132
+  },
+  {
+   "team": "El Farolito Shooters",
+   "seed": 2,
+   "start": 1684,
+   "final": 1669,
+   "drift": -15
+  },
+  {
+   "team": "Hall Monitors",
+   "seed": 3,
+   "start": 1724,
+   "final": 1625,
+   "drift": -99
+  },
+  {
+   "team": "Pilsner InnDecisives",
+   "seed": 6,
+   "start": 1668,
+   "final": 1624,
+   "drift": -44
+  },
+  {
+   "team": "Bus Stop Flyers",
+   "seed": 5,
+   "start": 1692,
+   "final": 1623,
+   "drift": -69
+  },
+  {
+   "team": "Marcelo's Hall Stars",
+   "seed": 8,
+   "start": 1698,
+   "final": 1622,
+   "drift": -76
+  },
+  {
+   "team": "Happy HALLers",
+   "seed": 4,
+   "start": 1598,
+   "final": 1608,
+   "drift": 10
+  },
+  {
+   "team": "Gino & Carlo",
+   "seed": 9,
+   "start": 1600,
+   "final": 1576,
+   "drift": -24
+  },
+  {
+   "team": "Pocket Full of Fizz",
+   "seed": 7,
+   "start": 1620,
+   "final": 1547,
+   "drift": -73
+  },
+  {
+   "team": "Lucky Horseshoe Glue Factory",
+   "seed": 10,
+   "start": 1492,
+   "final": 1545,
+   "drift": 53
+  },
+  {
+   "team": "Route 101 Dalmatians",
+   "seed": 11,
+   "start": 1500,
+   "final": 1537,
+   "drift": 37
+  },
+  {
+   "team": "Friends Crooked Cues",
+   "seed": 12,
+   "start": 1546,
+   "final": 1536,
+   "drift": -10
+  },
+  {
+   "team": "Temple Holy Smokes",
+   "seed": 14,
+   "start": 1618,
+   "final": 1532,
+   "drift": -86
+  },
+  {
+   "team": "Karl's Freakin' Beacon",
+   "seed": 13,
+   "start": 1450,
+   "final": 1506,
+   "drift": 56
+  },
+  {
+   "team": "Lower Haight Misfits",
+   "seed": 15,
+   "start": 1410,
+   "final": 1490,
+   "drift": 80
+  },
+  {
+   "team": "Cinch You're Down There",
+   "seed": 16,
+   "start": 1388,
+   "final": 1479,
+   "drift": 91
+  }
+ ],
+ "scatter": [
+  {
+   "team": "Cinch You're Down There",
+   "seed": 16,
+   "fargo": 399,
+   "start": 1388,
+   "final": 1479,
+   "contender": false
+  },
+  {
+   "team": "Lower Haight Misfits",
+   "seed": 15,
+   "fargo": 410,
+   "start": 1410,
+   "final": 1490,
+   "contender": false
+  },
+  {
+   "team": "Karl's Freakin' Beacon",
+   "seed": 13,
+   "fargo": 430,
+   "start": 1450,
+   "final": 1506,
+   "contender": false
+  },
+  {
+   "team": "Lucky Horseshoe Glue Factory",
+   "seed": 10,
+   "fargo": 451,
+   "start": 1492,
+   "final": 1545,
+   "contender": false
+  },
+  {
+   "team": "Route 101 Dalmatians",
+   "seed": 11,
+   "fargo": 455,
+   "start": 1500,
+   "final": 1537,
+   "contender": false
+  },
+  {
+   "team": "Happy HALLers",
+   "seed": 4,
+   "fargo": 504,
+   "start": 1598,
+   "final": 1608,
+   "contender": false
+  },
+  {
+   "team": "Friends Crooked Cues",
+   "seed": 12,
+   "fargo": 478,
+   "start": 1546,
+   "final": 1536,
+   "contender": false
+  },
+  {
+   "team": "El Farolito Shooters",
+   "seed": 2,
+   "fargo": 547,
+   "start": 1684,
+   "final": 1669,
+   "contender": true
+  },
+  {
+   "team": "Gino & Carlo",
+   "seed": 9,
+   "fargo": 505,
+   "start": 1600,
+   "final": 1576,
+   "contender": false
+  },
+  {
+   "team": "Pilsner InnDecisives",
+   "seed": 6,
+   "fargo": 539,
+   "start": 1668,
+   "final": 1624,
+   "contender": true
+  },
+  {
+   "team": "Bus Stop Flyers",
+   "seed": 5,
+   "fargo": 551,
+   "start": 1692,
+   "final": 1623,
+   "contender": false
+  },
+  {
+   "team": "Pocket Full of Fizz",
+   "seed": 7,
+   "fargo": 515,
+   "start": 1620,
+   "final": 1547,
+   "contender": false
+  },
+  {
+   "team": "Marcelo's Hall Stars",
+   "seed": 8,
+   "fargo": 554,
+   "start": 1698,
+   "final": 1622,
+   "contender": false
+  },
+  {
+   "team": "Temple Holy Smokes",
+   "seed": 14,
+   "fargo": 514,
+   "start": 1618,
+   "final": 1532,
+   "contender": false
+  },
+  {
+   "team": "Hall Monitors",
+   "seed": 3,
+   "fargo": 567,
+   "start": 1724,
+   "final": 1625,
+   "contender": false
+  },
+  {
+   "team": "Happy Lounge Rawhides",
+   "seed": 1,
+   "fargo": 611,
+   "start": 1812,
+   "final": 1680,
+   "contender": true
+  }
+ ],
+ "dynasty": [
+  {
+   "season": "Spring 2024",
+   "champion": "Rawhides",
+   "runner_up": "Pilsner",
+   "score": "9-4"
+  },
+  {
+   "season": "Fall 2024",
+   "champion": "Rawhides",
+   "runner_up": "Pilsner",
+   "score": "9-7"
+  },
+  {
+   "season": "Spring 2025",
+   "champion": "Rawhides",
+   "runner_up": "Pilsner",
+   "score": "9-4"
+  },
+  {
+   "season": "Fall 2025",
+   "champion": "Rawhides",
+   "runner_up": "Pilsner",
+   "score": "9-5"
+  },
+  {
+   "season": "Spring 2026",
+   "champion": null,
+   "runner_up": null,
+   "score": null
   }
  ],
  "snapshots": [
