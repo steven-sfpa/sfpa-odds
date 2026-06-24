@@ -1,6 +1,6 @@
 {
- "updated": "June 24, 2026 at 07:47 AM",
- "updated_iso": "2026-06-24T07:47:42.021179",
+ "updated": "June 24, 2026 at 07:54 AM",
+ "updated_iso": "2026-06-24T07:54:16.162634",
  "season": "SFPA Spring 2026 City Championship",
  "backtest": {
   "accuracy": 73.1,
@@ -1026,6 +1026,12 @@
     "delta": 18.6
    },
    {
+    "team": "Pilsner InnDecisives",
+    "prev": 21.6,
+    "now": 21.6,
+    "delta": 0.0
+   },
+   {
     "team": "El Farolito Shooters",
     "prev": 34.3,
     "now": 15.7,
@@ -1038,12 +1044,6 @@
     "delta": 2.5
    },
    {
-    "team": "Happy HALLers",
-    "prev": 2.3,
-    "now": 1.1,
-    "delta": -1.2
-   },
-   {
     "team": "Hall Monitors",
     "prev": 3.9,
     "now": 3.1,
@@ -1054,6 +1054,66 @@
     "prev": 2.2,
     "now": 1.7,
     "delta": -0.5
+   },
+   {
+    "team": "Happy HALLers",
+    "prev": 2.3,
+    "now": 1.1,
+    "delta": -1.2
+   },
+   {
+    "team": "Gino & Carlo",
+    "prev": 0.1,
+    "now": 0.1,
+    "delta": 0.0
+   },
+   {
+    "team": "Pocket Full of Fizz",
+    "prev": 0.1,
+    "now": 0.0,
+    "delta": -0.1
+   },
+   {
+    "team": "Lucky Horseshoe Glue Factory",
+    "prev": 0.1,
+    "now": 0.0,
+    "delta": -0.1
+   },
+   {
+    "team": "Friends Crooked Cues",
+    "prev": 0.0,
+    "now": 0.0,
+    "delta": 0.0
+   },
+   {
+    "team": "Route 101 Dalmatians",
+    "prev": 0.0,
+    "now": 0.0,
+    "delta": 0.0
+   },
+   {
+    "team": "Karl's Freakin' Beacon",
+    "prev": 0.0,
+    "now": 0.0,
+    "delta": 0.0
+   },
+   {
+    "team": "Temple Holy Smokes",
+    "prev": 0.0,
+    "now": 0.0,
+    "delta": 0.0
+   },
+   {
+    "team": "Bus Slop",
+    "prev": 0.0,
+    "now": 0.0,
+    "delta": 0.0
+   },
+   {
+    "team": "Lower Haight Misfits",
+    "prev": 0.0,
+    "now": 0.0,
+    "delta": 0.0
    }
   ]
  },

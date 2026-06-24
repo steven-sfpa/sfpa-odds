@@ -238,13 +238,14 @@ function changelogHtml(c){
       +(c.field_in.length&&c.field_out.length?'; ':'')
       +(c.field_out.length?'out — '+c.field_out.map(short).map(esc).join(', '):'')+'.</p>';
   }
-  var movers=(c.movers||[]).filter(function(m){return Math.abs(m.delta)>=0.5;}).slice(0,10);
+  var movers=(c.movers||[]);
   var rows=movers.map(function(m){
-    var up=m.delta>0,col=up?GREEN:RED,arrow=up?'▲':'▼';
-    return '<tr><td>'+esc(short(m.team))+'</td><td class="num">'+m.prev.toFixed(1)+'%</td><td class="num">'+m.now.toFixed(1)+'%</td>'
-      +'<td class="num" style="color:'+col+';font-weight:700">'+arrow+' '+(up?'+':'')+m.delta.toFixed(1)+' pts</td></tr>';
+    var big=Math.abs(m.delta)>=0.05, up=m.delta>0;
+    var chg= big ? '<td class="num" style="color:'+(up?GREEN:RED)+';font-weight:700">'+(up?'▲ +':'▼ ')+m.delta.toFixed(1)+' pts</td>'
+                 : '<td class="num" style="color:'+MUTED+'">— no change</td>';
+    return '<tr><td>'+esc(short(m.team))+'</td><td class="num">'+m.prev.toFixed(1)+'%</td><td class="num">'+m.now.toFixed(1)+'%</td>'+chg+'</tr>';
   }).join('');
-  var table=movers.length?'<table style="margin-top:14px"><thead><tr><th>Team</th><th class="num">Last update</th><th class="num">Now</th><th class="num">Change</th></tr></thead><tbody>'+rows+'</tbody></table><p class="small">Any team not listed moved less than half a point.</p>':'<p class="small">No title-odds moves of half a point or more since the last update.</p>';
+  var table=movers.length?'<table style="margin-top:14px"><thead><tr><th>Team</th><th class="num">Last update</th><th class="num">Now</th><th class="num">Change</th></tr></thead><tbody>'+rows+'</tbody></table><p class="small">Full 16-team field, ordered by current title odds.</p>':'';
   var when=c.now_date?('<span class="small" style="display:block;margin-bottom:6px">Since last update'+(c.prev_date?' ('+esc(c.prev_date)+' → '+esc(c.now_date)+')':'')+'</span>'):'';
   return '<section id="changed" style="background:#FBF1D6;border:1px solid '+GOLD+';border-radius:12px;padding:20px 22px;margin:18px 0 8px"><h2 style="margin-top:0">What changed this update</h2>'+when+head+field+table+'</section>';
 }
