@@ -1,6 +1,6 @@
 {
- "updated": "June 24, 2026 at 08:13 AM",
- "updated_iso": "2026-06-24T08:13:31.208060",
+ "updated": "June 24, 2026 at 01:14 AM",
+ "updated_iso": "2026-06-24T01:14:27.259302",
  "season": "SFPA Spring 2026 City Championship",
  "backtest": {
   "accuracy": 73.1,
@@ -1001,65 +1001,61 @@
   }
  ],
  "changelog": {
-  "prev_date": "June 23, 2026",
+  "prev_date": "June 24, 2026 at 08:13 AM",
   "now_date": "2026-06-24",
   "fav_prev": {
    "team": "Happy Lounge Rawhides",
-   "pct": 39.1
+   "pct": 50.4
   },
   "fav_now": {
    "team": "Happy Lounge Rawhides",
    "pct": 50.4
   },
   "fav_flip": false,
-  "field_in": [
-   "Bus Slop"
-  ],
-  "field_out": [
-   "Cinch You're Down There"
-  ],
+  "field_in": [],
+  "field_out": [],
   "movers": [
    {
     "team": "Happy Lounge Rawhides",
-    "prev": 39.1,
+    "prev": 50.4,
     "now": 50.4,
-    "delta": 11.3
+    "delta": 0.0
    },
    {
     "team": "Pilsner InnDecisives",
-    "prev": 22.0,
+    "prev": 21.6,
     "now": 21.6,
-    "delta": -0.4
+    "delta": 0.0
    },
    {
     "team": "El Farolito Shooters",
-    "prev": 28.7,
+    "prev": 15.7,
     "now": 15.7,
-    "delta": -13.0
+    "delta": 0.0
    },
    {
     "team": "Bus Stop Flyers",
-    "prev": 3.4,
+    "prev": 6.1,
     "now": 6.1,
-    "delta": 2.7
+    "delta": 0.0
    },
    {
     "team": "Hall Monitors",
-    "prev": 2.8,
+    "prev": 3.1,
     "now": 3.1,
-    "delta": 0.3
+    "delta": 0.0
    },
    {
     "team": "Marcelo's Hall Stars",
-    "prev": 2.2,
+    "prev": 1.7,
     "now": 1.7,
-    "delta": -0.5
+    "delta": 0.0
    },
    {
     "team": "Happy HALLers",
-    "prev": 1.6,
+    "prev": 1.1,
     "now": 1.1,
-    "delta": -0.5
+    "delta": 0.0
    },
    {
     "team": "Gino & Carlo",
@@ -1105,9 +1101,9 @@
    },
    {
     "team": "Bus Slop",
-    "prev": null,
+    "prev": 0.0,
     "now": 0.0,
-    "delta": null
+    "delta": 0.0
    },
    {
     "team": "Lower Haight Misfits",
