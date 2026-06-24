@@ -240,10 +240,13 @@ function changelogHtml(c){
   }
   var movers=(c.movers||[]);
   var rows=movers.map(function(m){
-    var big=Math.abs(m.delta)>=0.05, up=m.delta>0;
-    var chg= big ? '<td class="num" style="color:'+(up?GREEN:RED)+';font-weight:700">'+(up?'▲ +':'▼ ')+m.delta.toFixed(1)+' pts</td>'
-                 : '<td class="num" style="color:'+MUTED+'">— no change</td>';
-    return '<tr><td>'+esc(short(m.team))+'</td><td class="num">'+m.prev.toFixed(1)+'%</td><td class="num">'+m.now.toFixed(1)+'%</td>'+chg+'</tr>';
+    var isNew=(m.prev==null||m.delta==null);
+    var prevCell=isNew?'<td class="num small">—</td>':'<td class="num">'+m.prev.toFixed(1)+'%</td>';
+    var chg;
+    if(isNew){ chg='<td class="num" style="color:'+GREEN+';font-weight:700">NEW to field</td>'; }
+    else if(Math.abs(m.delta)>=0.05){ var up=m.delta>0; chg='<td class="num" style="color:'+(up?GREEN:RED)+';font-weight:700">'+(up?'▲ +':'▼ ')+m.delta.toFixed(1)+' pts</td>'; }
+    else { chg='<td class="num" style="color:'+MUTED+'">— no change</td>'; }
+    return '<tr><td>'+esc(short(m.team))+'</td>'+prevCell+'<td class="num">'+m.now.toFixed(1)+'%</td>'+chg+'</tr>';
   }).join('');
   var table=movers.length?'<table style="margin-top:14px"><thead><tr><th>Team</th><th class="num">Last update</th><th class="num">Now</th><th class="num">Change</th></tr></thead><tbody>'+rows+'</tbody></table><p class="small">Full 16-team field, ordered by current title odds.</p>':'';
   var when=c.now_date?('<span class="small" style="display:block;margin-bottom:6px">Since last update'+(c.prev_date?' ('+esc(c.prev_date)+' → '+esc(c.now_date)+')':'')+'</span>'):'';
