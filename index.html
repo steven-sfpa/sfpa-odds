@@ -72,7 +72,7 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Title odds</a><a href="#storylines">Storylines</a><a href="#movement">Odds over time</a><a href="#power">Team Elo</a>
+  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#storylines">Storylines</a><a href="#movement">Odds over time</a><a href="#power">Team Elo</a>
   <a href="#bracket">Bracket</a><a href="#equity">Survival</a><a href="#method">Method</a>
   <a href="#form">Season form</a><a href="#pdf">PDFs</a>
 </div></nav>
@@ -121,6 +121,22 @@ function render(d){
       +'<td class="num">'+pct(x.title)+'</td><td class="num hide-sm">'+pct(x.final)+'</td><td class="num hide-sm">'+pct(x.sf)+'</td></tr>';
   }).join('');
   h+='<table><thead><tr><th>Team</th><th class="num">Title %</th><th class="num hide-sm">Reach final</th><th class="num hide-sm">Reach semis</th></tr></thead><tbody>'+rows+'</tbody></table></section>';
+
+  /* WEEKLY RECAP */
+  if(d.recap && d.recap.results && d.recap.results.length){
+    var rc=d.recap;
+    var rr=rc.results.map(function(m){
+      var up=m.upset;
+      return '<tr'+(up?' style="background:#FBF1D6"':'')+'><td>('+m.w_seed+') <b>'+esc(short(m.winner))+'</b> def. ('+m.l_seed+') '+esc(short(m.loser))+'</td>'
+        +'<td class="num">'+m.score+'</td><td class="small">'+(up?'⚡ upset':(m.margin===1?'nail-biter':''))+'</td></tr>';
+    }).join('');
+    var article=(rc.article&&rc.article.length)
+      ? rc.article.map(function(p,i){return '<p'+(i===0?' class="lead"':'')+'>'+esc(p)+'</p>';}).join('')
+      : '<p class="lead">Results are in for '+esc(rc.session)+'.</p>';
+    h+='<section id="recap"><h2>Last week: '+esc(rc.session)+'</h2>'+article
+     +'<table style="margin-top:14px"><thead><tr><th>Result</th><th class="num">Score</th><th></th></tr></thead><tbody>'+rr+'</tbody></table>'
+     +'<p class="small">Winner\'s game count shown first. ⚡ marks a lower seed beating a higher seed.</p></section>';
+  }
 
   /* STORYLINES */
   var sl=d.storylines||{};

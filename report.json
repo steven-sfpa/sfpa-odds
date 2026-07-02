@@ -1,6 +1,6 @@
 {
  "updated": "July 02, 2026",
- "updated_full": "Jul 2, 2026, 3:29 PM",
+ "updated_full": "Jul 2, 2026, 5:17 PM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "Pilsner InnDecisives",
@@ -636,7 +636,7 @@
    "n_locked": 0
   },
   {
-   "label": "CC WB R1",
+   "label": "WB R1",
    "odds": {
     "Happy Lounge Rawhides": 48.51,
     "El Farolito Shooters": 14.51,
@@ -703,6 +703,130 @@
    "elfarolito_reach_final": 35.8,
    "pilsner_reach_final": 34.3
   }
+ },
+ "recap": {
+  "session": "Winners' Bracket \u2014 Round 1",
+  "week": 340,
+  "results": [
+   {
+    "winner": "Happy Lounge Rawhides",
+    "w_seed": 1,
+    "loser": "Lower Haight Misfits",
+    "l_seed": 16,
+    "score": "9-3",
+    "upset": false,
+    "margin": 6
+   },
+   {
+    "winner": "Marcelo's Hall Stars",
+    "w_seed": 8,
+    "loser": "Gino & Carlo",
+    "l_seed": 9,
+    "score": "9-6",
+    "upset": false,
+    "margin": 3
+   },
+   {
+    "winner": "Hall Monitors",
+    "w_seed": 4,
+    "loser": "Karl\u2019s Freakin\u2019 Beacon",
+    "l_seed": 13,
+    "score": "9-2",
+    "upset": false,
+    "margin": 7
+   },
+   {
+    "winner": "Route 101 Dalmatians",
+    "w_seed": 12,
+    "loser": "Happy HALLers",
+    "l_seed": 5,
+    "score": "9-8",
+    "upset": true,
+    "margin": 1
+   },
+   {
+    "winner": "El Farolito Shooters",
+    "w_seed": 2,
+    "loser": "Bus Slop",
+    "l_seed": 15,
+    "score": "9-8",
+    "upset": false,
+    "margin": 1
+   },
+   {
+    "winner": "Pocket Full of Fizz",
+    "w_seed": 7,
+    "loser": "Lucky Horseshoe Glue Factory",
+    "l_seed": 10,
+    "score": "9-6",
+    "upset": false,
+    "margin": 3
+   },
+   {
+    "winner": "Bus Stop Flyers",
+    "w_seed": 3,
+    "loser": "Temple Holy Smokes",
+    "l_seed": 14,
+    "score": "9-8",
+    "upset": false,
+    "margin": 1
+   },
+   {
+    "winner": "Pilsner InnDecisives",
+    "w_seed": 6,
+    "loser": "Friends Crooked Cues",
+    "l_seed": 11,
+    "score": "9-6",
+    "upset": false,
+    "margin": 3
+   }
+  ],
+  "upsets": [
+   {
+    "winner": "Route 101 Dalmatians",
+    "w_seed": 12,
+    "loser": "Happy HALLers",
+    "l_seed": 5,
+    "score": "9-8",
+    "upset": true,
+    "margin": 1
+   }
+  ],
+  "nailbiters": [
+   {
+    "winner": "Route 101 Dalmatians",
+    "w_seed": 12,
+    "loser": "Happy HALLers",
+    "l_seed": 5,
+    "score": "9-8",
+    "upset": true,
+    "margin": 1
+   },
+   {
+    "winner": "El Farolito Shooters",
+    "w_seed": 2,
+    "loser": "Bus Slop",
+    "l_seed": 15,
+    "score": "9-8",
+    "upset": false,
+    "margin": 1
+   },
+   {
+    "winner": "Bus Stop Flyers",
+    "w_seed": 3,
+    "loser": "Temple Holy Smokes",
+    "l_seed": 14,
+    "score": "9-8",
+    "upset": false,
+    "margin": 1
+   }
+  ],
+  "article": [
+   "The Winners' Bracket \u2014 Round 1 opened with a jolt. The #12-seed Route 101 \u2014 one of the tournament's lower entrants \u2014 knocked off the #5 seed Happy HALLers 9-8, the round's signature upset and the first real crack in the bracket.",
+   "The drama wasn't limited to the upset \u2014 3 matches came down to a single deciding game: Route 101 over Happy HALLers 9-8, El Farolito over Bus Slop 9-8, and Bus Stop over Temple 9-8. In a race to nine, those are the results that swing a tournament, and any of them could have tipped the other way.",
+   "At the top, the contenders looked the part. Rawhides cruised 9-3, and the rest of the title favorites \u2014 Bus Stop, El Farolito, Hall Monitors, Marcelo's, and Pilsner \u2014 all moved on, most without much trouble. For all the early drama, the seeding is largely holding up where it matters.",
+   "With the field thinning, the title picture tightened. Rawhides remain the favorite at 49%. In the numbers, Hall Monitors saw their odds tick up; Rawhides, El Farolito slipped \u2014 the model re-running after every result. The losers'-bracket survivors get their reprieve; the winners' side rolls on."
+  ]
  },
  "backtest": {
   "accuracy": 76.5,
