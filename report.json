@@ -1,6 +1,6 @@
 {
- "updated": "June 24, 2026",
- "updated_full": "Jun 24, 2026, 10:11 PM",
+ "updated": "July 02, 2026",
+ "updated_full": "Jul 2, 2026, 3:29 PM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "Pilsner InnDecisives",
@@ -10,10 +10,10 @@
    "team": "Happy Lounge Rawhides",
    "seed": 1,
    "team_elo": 1702,
-   "title": 50.66,
-   "qf": 98.4,
-   "sf": 77.4,
-   "final": 68.6,
+   "title": 48.51,
+   "qf": 100.0,
+   "sf": 74.5,
+   "final": 66.7,
    "top4_fargo": 609.5,
    "season_form": -10.4,
    "pedigree": 0
@@ -22,10 +22,10 @@
    "team": "El Farolito Shooters",
    "seed": 2,
    "team_elo": 1605,
-   "title": 15.48,
-   "qf": 95.6,
-   "sf": 74.7,
-   "final": 38.1,
+   "title": 14.51,
+   "qf": 100.0,
+   "sf": 74.9,
+   "final": 35.8,
    "top4_fargo": 548.0,
    "season_form": 28.0,
    "pedigree": 0
@@ -34,10 +34,10 @@
    "team": "Pilsner InnDecisives",
    "seed": 6,
    "team_elo": 1632,
-   "title": 13.98,
-   "qf": 88.3,
-   "sf": 58.0,
-   "final": 34.6,
+   "title": 14.12,
+   "qf": 100.0,
+   "sf": 60.4,
+   "final": 34.3,
    "top4_fargo": 539.0,
    "season_form": 4.9,
    "pedigree": 30
@@ -46,10 +46,10 @@
    "team": "Hall Monitors",
    "seed": 4,
    "team_elo": 1620,
-   "title": 10.64,
-   "qf": 94.8,
-   "sf": 73.2,
-   "final": 26.2,
+   "title": 12.68,
+   "qf": 100.0,
+   "sf": 90.6,
+   "final": 30.4,
    "top4_fargo": 567.0,
    "season_form": -7.3,
    "pedigree": 0
@@ -58,10 +58,10 @@
    "team": "Bus Stop Flyers",
    "seed": 3,
    "team_elo": 1594,
-   "title": 4.1,
-   "qf": 75.6,
-   "sf": 33.8,
-   "final": 14.1,
+   "title": 4.91,
+   "qf": 100.0,
+   "sf": 39.6,
+   "final": 15.6,
    "top4_fargo": 550.5,
    "season_form": 3.5,
    "pedigree": 0
@@ -70,10 +70,10 @@
    "team": "Marcelo's Hall Stars",
    "seed": 8,
    "team_elo": 1598,
-   "title": 3.86,
-   "qf": 74.2,
-   "sf": 19.8,
-   "final": 11.3,
+   "title": 4.63,
+   "qf": 100.0,
+   "sf": 25.5,
+   "final": 13.4,
    "top4_fargo": 553.8,
    "season_form": 0.1,
    "pedigree": 0
@@ -82,10 +82,10 @@
    "team": "Pocket Full of Fizz",
    "seed": 7,
    "team_elo": 1526,
-   "title": 0.63,
-   "qf": 81.1,
-   "sf": 22.8,
-   "final": 3.6,
+   "title": 0.61,
+   "qf": 100.0,
+   "sf": 25.1,
+   "final": 3.5,
    "top4_fargo": 515.0,
    "season_form": 8.1,
    "pedigree": 0
@@ -94,48 +94,36 @@
    "team": "Happy HALLers",
    "seed": 5,
    "team_elo": 1509,
-   "title": 0.47,
-   "qf": 75.5,
-   "sf": 22.7,
-   "final": 2.3,
+   "title": 0.01,
+   "qf": 0.0,
+   "sf": 0.0,
+   "final": 0.2,
    "top4_fargo": 503.8,
    "season_form": 17.2,
+   "pedigree": 0
+  },
+  {
+   "team": "Route 101 Dalmatians",
+   "seed": 12,
+   "team_elo": 1412,
+   "title": 0.01,
+   "qf": 100.0,
+   "sf": 9.4,
+   "final": 0.1,
+   "top4_fargo": 455.8,
+   "season_form": 14.4,
    "pedigree": 0
   },
   {
    "team": "Gino & Carlo",
    "seed": 9,
    "team_elo": 1502,
-   "title": 0.09,
-   "qf": 25.8,
-   "sf": 2.7,
-   "final": 0.5,
+   "title": 0.0,
+   "qf": 0.0,
+   "sf": 0.0,
+   "final": 0.1,
    "top4_fargo": 505.2,
    "season_form": 2.4,
-   "pedigree": 0
-  },
-  {
-   "team": "Temple Holy Smokes",
-   "seed": 14,
-   "team_elo": 1508,
-   "title": 0.07,
-   "qf": 24.4,
-   "sf": 5.4,
-   "final": 0.6,
-   "top4_fargo": 513.2,
-   "season_form": -13.5,
-   "pedigree": 0
-  },
-  {
-   "team": "Friends Crooked Cues",
-   "seed": 11,
-   "team_elo": 1454,
-   "title": 0.01,
-   "qf": 11.7,
-   "sf": 2.8,
-   "final": 0.2,
-   "top4_fargo": 478.0,
-   "season_form": 11.6,
    "pedigree": 0
   },
   {
@@ -143,23 +131,23 @@
    "seed": 10,
    "team_elo": 1401,
    "title": 0.0,
-   "qf": 18.9,
-   "sf": 1.5,
+   "qf": 0.0,
+   "sf": 0.0,
    "final": 0.0,
    "top4_fargo": 453.8,
    "season_form": 4.0,
    "pedigree": 0
   },
   {
-   "team": "Route 101 Dalmatians",
-   "seed": 12,
-   "team_elo": 1412,
+   "team": "Friends Crooked Cues",
+   "seed": 11,
+   "team_elo": 1454,
    "title": 0.0,
-   "qf": 24.5,
-   "sf": 3.0,
+   "qf": 0.0,
+   "sf": 0.0,
    "final": 0.0,
-   "top4_fargo": 455.8,
-   "season_form": 14.4,
+   "top4_fargo": 478.0,
+   "season_form": 11.6,
    "pedigree": 0
   },
   {
@@ -167,11 +155,23 @@
    "seed": 13,
    "team_elo": 1363,
    "title": 0.0,
-   "qf": 5.2,
-   "sf": 1.1,
+   "qf": 0.0,
+   "sf": 0.0,
    "final": 0.0,
    "top4_fargo": 431.8,
    "season_form": 13.9,
+   "pedigree": 0
+  },
+  {
+   "team": "Temple Holy Smokes",
+   "seed": 14,
+   "team_elo": 1508,
+   "title": 0.0,
+   "qf": 0.0,
+   "sf": 0.0,
+   "final": 0.1,
+   "top4_fargo": 513.2,
+   "season_form": -13.5,
    "pedigree": 0
   },
   {
@@ -179,8 +179,8 @@
    "seed": 15,
    "team_elo": 1378,
    "title": 0.0,
-   "qf": 4.4,
-   "sf": 0.9,
+   "qf": 0.0,
+   "sf": 0.0,
    "final": 0.0,
    "top4_fargo": 443.2,
    "season_form": 1.6,
@@ -191,8 +191,8 @@
    "seed": 16,
    "team_elo": 1317,
    "title": 0.0,
-   "qf": 1.6,
-   "sf": 0.1,
+   "qf": 0.0,
+   "sf": 0.0,
    "final": 0.0,
    "top4_fargo": 409.8,
    "season_form": 10.8,
@@ -335,7 +335,8 @@
     "b": "Lower Haight Misfits",
     "bs": 16,
     "win": "Happy Lounge Rawhides",
-    "score": "9-3"
+    "score": "9-3",
+    "played": true
    },
    {
     "a": "Marcelo's Hall Stars",
@@ -343,15 +344,17 @@
     "b": "Gino & Carlo",
     "bs": 9,
     "win": "Marcelo's Hall Stars",
-    "score": "9-7"
+    "score": "9-6",
+    "played": true
    },
    {
     "a": "Happy HALLers",
     "as": 5,
     "b": "Route 101 Dalmatians",
     "bs": 12,
-    "win": "Happy HALLers",
-    "score": "9-6"
+    "win": "Route 101 Dalmatians",
+    "score": "8-9",
+    "played": true
    },
    {
     "a": "Hall Monitors",
@@ -359,7 +362,8 @@
     "b": "Karl\u2019s Freakin\u2019 Beacon",
     "bs": 13,
     "win": "Hall Monitors",
-    "score": "9-4"
+    "score": "9-2",
+    "played": true
    },
    {
     "a": "Pilsner InnDecisives",
@@ -367,7 +371,8 @@
     "b": "Friends Crooked Cues",
     "bs": 11,
     "win": "Pilsner InnDecisives",
-    "score": "9-5"
+    "score": "9-6",
+    "played": true
    },
    {
     "a": "Bus Stop Flyers",
@@ -375,7 +380,8 @@
     "b": "Temple Holy Smokes",
     "bs": 14,
     "win": "Bus Stop Flyers",
-    "score": "9-6"
+    "score": "9-8",
+    "played": true
    },
    {
     "a": "Pocket Full of Fizz",
@@ -383,7 +389,8 @@
     "b": "Lucky Horseshoe Glue Factory",
     "bs": 10,
     "win": "Pocket Full of Fizz",
-    "score": "9-6"
+    "score": "9-6",
+    "played": true
    },
    {
     "a": "El Farolito Shooters",
@@ -391,7 +398,8 @@
     "b": "Bus Slop",
     "bs": 15,
     "win": "El Farolito Shooters",
-    "score": "9-4"
+    "score": "9-8",
+    "played": true
    }
   ],
   "wb_qf": [
@@ -401,15 +409,17 @@
     "b": "Marcelo's Hall Stars",
     "bs": 8,
     "win": "Happy Lounge Rawhides",
-    "score": "9-6"
+    "score": "9-6",
+    "played": false
    },
    {
-    "a": "Happy HALLers",
-    "as": 5,
+    "a": "Route 101 Dalmatians",
+    "as": 12,
     "b": "Hall Monitors",
     "bs": 4,
     "win": "Hall Monitors",
-    "score": "7-9"
+    "score": "5-9",
+    "played": false
    },
    {
     "a": "Pilsner InnDecisives",
@@ -417,7 +427,8 @@
     "b": "Bus Stop Flyers",
     "bs": 3,
     "win": "Pilsner InnDecisives",
-    "score": "9-8"
+    "score": "9-8",
+    "played": false
    },
    {
     "a": "Pocket Full of Fizz",
@@ -425,7 +436,8 @@
     "b": "El Farolito Shooters",
     "bs": 2,
     "win": "El Farolito Shooters",
-    "score": "6-9"
+    "score": "6-9",
+    "played": false
    }
   ],
   "wb_sf": [
@@ -435,7 +447,8 @@
     "b": "Hall Monitors",
     "bs": 4,
     "win": "Happy Lounge Rawhides",
-    "score": "9-7"
+    "score": "9-7",
+    "played": false
    },
    {
     "a": "Pilsner InnDecisives",
@@ -443,7 +456,8 @@
     "b": "El Farolito Shooters",
     "bs": 2,
     "win": "Pilsner InnDecisives",
-    "score": "9-8"
+    "score": "9-8",
+    "played": false
    }
   ],
   "wb_final": {
@@ -452,7 +466,8 @@
    "b": "Pilsner InnDecisives",
    "bs": 6,
    "win": "Happy Lounge Rawhides",
-   "score": "9-7"
+   "score": "9-7",
+   "played": false
   },
   "lb_r1": [
    {
@@ -461,15 +476,17 @@
     "b": "Gino & Carlo",
     "bs": 9,
     "win": "Gino & Carlo",
-    "score": "5-9"
+    "score": "5-9",
+    "played": false
    },
    {
-    "a": "Route 101 Dalmatians",
-    "as": 12,
+    "a": "Happy HALLers",
+    "as": 5,
     "b": "Karl\u2019s Freakin\u2019 Beacon",
     "bs": 13,
-    "win": "Route 101 Dalmatians",
-    "score": "9-8"
+    "win": "Happy HALLers",
+    "score": "9-5",
+    "played": false
    },
    {
     "a": "Friends Crooked Cues",
@@ -477,7 +494,8 @@
     "b": "Temple Holy Smokes",
     "bs": 14,
     "win": "Temple Holy Smokes",
-    "score": "8-9"
+    "score": "8-9",
+    "played": false
    },
    {
     "a": "Lucky Horseshoe Glue Factory",
@@ -485,7 +503,8 @@
     "b": "Bus Slop",
     "bs": 15,
     "win": "Lucky Horseshoe Glue Factory",
-    "score": "9-8"
+    "score": "9-8",
+    "played": false
    }
   ],
   "lb_r2": [
@@ -495,23 +514,26 @@
     "b": "Pocket Full of Fizz",
     "bs": 7,
     "win": "Pocket Full of Fizz",
-    "score": "8-9"
+    "score": "8-9",
+    "played": false
    },
    {
-    "a": "Route 101 Dalmatians",
-    "as": 12,
+    "a": "Happy HALLers",
+    "as": 5,
     "b": "Bus Stop Flyers",
     "bs": 3,
     "win": "Bus Stop Flyers",
-    "score": "5-9"
+    "score": "7-9",
+    "played": false
    },
    {
     "a": "Temple Holy Smokes",
     "as": 14,
-    "b": "Happy HALLers",
-    "bs": 5,
-    "win": "Happy HALLers",
-    "score": "8-9"
+    "b": "Route 101 Dalmatians",
+    "bs": 12,
+    "win": "Temple Holy Smokes",
+    "score": "9-7",
+    "played": false
    },
    {
     "a": "Lucky Horseshoe Glue Factory",
@@ -519,7 +541,8 @@
     "b": "Marcelo's Hall Stars",
     "bs": 8,
     "win": "Marcelo's Hall Stars",
-    "score": "5-9"
+    "score": "5-9",
+    "played": false
    }
   ],
   "lb_r3": [
@@ -529,15 +552,17 @@
     "b": "Bus Stop Flyers",
     "bs": 3,
     "win": "Bus Stop Flyers",
-    "score": "7-9"
+    "score": "7-9",
+    "played": false
    },
    {
-    "a": "Happy HALLers",
-    "as": 5,
+    "a": "Temple Holy Smokes",
+    "as": 14,
     "b": "Marcelo's Hall Stars",
     "bs": 8,
     "win": "Marcelo's Hall Stars",
-    "score": "7-9"
+    "score": "6-9",
+    "played": false
    }
   ],
   "lb_r4": [
@@ -547,7 +572,8 @@
     "b": "El Farolito Shooters",
     "bs": 2,
     "win": "El Farolito Shooters",
-    "score": "8-9"
+    "score": "8-9",
+    "played": false
    },
    {
     "a": "Marcelo's Hall Stars",
@@ -555,7 +581,8 @@
     "b": "Hall Monitors",
     "bs": 4,
     "win": "Hall Monitors",
-    "score": "8-9"
+    "score": "8-9",
+    "played": false
    }
   ],
   "lb_r5": {
@@ -564,7 +591,8 @@
    "b": "Hall Monitors",
    "bs": 4,
    "win": "El Farolito Shooters",
-   "score": "9-8"
+   "score": "9-8",
+   "played": false
   },
   "lb_r6": {
    "a": "El Farolito Shooters",
@@ -572,7 +600,8 @@
    "b": "Pilsner InnDecisives",
    "bs": 6,
    "win": "Pilsner InnDecisives",
-   "score": "8-9"
+   "score": "8-9",
+   "played": false
   },
   "grand_final": {
    "a_side": "Happy Lounge Rawhides",
@@ -605,6 +634,28 @@
     "Lower Haight Misfits": 0.0
    },
    "n_locked": 0
+  },
+  {
+   "label": "CC WB R1",
+   "odds": {
+    "Happy Lounge Rawhides": 48.51,
+    "El Farolito Shooters": 14.51,
+    "Bus Stop Flyers": 4.91,
+    "Hall Monitors": 12.68,
+    "Happy HALLers": 0.01,
+    "Pilsner InnDecisives": 14.12,
+    "Pocket Full of Fizz": 0.61,
+    "Marcelo's Hall Stars": 4.63,
+    "Gino & Carlo": 0.0,
+    "Lucky Horseshoe Glue Factory": 0.0,
+    "Friends Crooked Cues": 0.0,
+    "Route 101 Dalmatians": 0.01,
+    "Karl\u2019s Freakin\u2019 Beacon": 0.0,
+    "Temple Holy Smokes": 0.0,
+    "Bus Slop": 0.0,
+    "Lower Haight Misfits": 0.0
+   },
+   "n_locked": 8
   }
  ],
  "pedigree_note": {
@@ -621,21 +672,21 @@
    ],
    "vs_nonrawhides": "15-0",
    "seed": 6,
-   "title": 13.98,
-   "reach_final": 34.6,
+   "title": 14.12,
+   "reach_final": 34.3,
    "team_elo": 1632
   },
   "rawhides": {
    "team_elo": 1702,
    "fargo": 609.5,
    "form": -10.4,
-   "title": 50.66,
-   "reach_final": 68.6
+   "title": 48.51,
+   "reach_final": 66.7
   },
   "elfarolito": {
    "form": 28.0,
-   "title": 15.48,
-   "reach_final": 38.1
+   "title": 14.51,
+   "reach_final": 35.8
   },
   "bracket_halves": {
    "top_contenders": [
@@ -648,9 +699,9 @@
     "Pilsner InnDecisives",
     "Bus Stop Flyers"
    ],
-   "rawhides_reach_final": 68.6,
-   "elfarolito_reach_final": 38.1,
-   "pilsner_reach_final": 34.6
+   "rawhides_reach_final": 66.7,
+   "elfarolito_reach_final": 35.8,
+   "pilsner_reach_final": 34.3
   }
  },
  "backtest": {
@@ -716,6 +767,10 @@
   ]
  },
  "snapshots": [
+  {
+   "file": "SFPA_CityChampionship_2026-07-02.pdf",
+   "date": "2026-07-02"
+  },
   {
    "file": "SFPA_CityChampionship_2026-06-24.pdf",
    "date": "2026-06-24"
