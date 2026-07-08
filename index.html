@@ -72,8 +72,8 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#storylines">Storylines</a><a href="#movement">Odds over time</a><a href="#power">Team Elo</a>
-  <a href="#bracket">Bracket</a><a href="#equity">Survival</a><a href="#method">Method</a>
+  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#equity">Survival</a>
+  <a href="#storylines">Storylines</a><a href="#power">Team Elo</a><a href="#method">Method</a>
   <a href="#form">Season form</a><a href="#pdf">PDFs</a>
 </div></nav>
 
@@ -154,6 +154,27 @@ function render(d){
      +'<p class="small">Model-predicted score (favorite &amp; expected margin) vs. the actual result. ⚡ marks a match the model\'s pick lost; winner\'s game count shown first.</p></section>';
   }
 
+  /* ===== DYNAMIC SECTIONS (change week to week) come first ===== */
+
+  /* MOVEMENT (time-series) */
+  h+='<section id="movement"><h2>Title odds over time</h2>'
+   +'<p>Each team\'s championship odds, re-computed after every play session (Tuesdays = winners\' bracket, Thursdays = losers\' bracket). A line can stay flat on a day a team didn\'t play — and can still move if the field around it changes (e.g. a contender knocked out early). The chart starts at the seeded draw and fills in as the playoffs unfold.</p>'
+   +'<div class="chartbox"><canvas id="tsChart" role="img" aria-label="Title odds over time line chart"></canvas></div>'
+   + (d.timeseries.length<=1 ? '<p class="small">Only the seeded starting point exists so far — the playoffs haven\'t begun. Lines will appear here as results come in.</p>' : '');
+
+  /* BRACKET */
+  h+='<section id="bracket"><h2>Projected bracket</h2>'
+   +'<p>The single most-likely path through the 16-team double-elimination bracket. Lose on the A-side (winners\') and you drop to the B-side (losers\'); a second loss ends your run. The B-side survivor must beat the A-side finalist twice in the grand final.</p>'
+   + '<div id="bracketSvg" class="bracket-scroll" style="min-width:0"></div>'
+   +'<p class="small">This is one most-likely tournament out of 60,000 simulated. The title odds above come from all of them — so a team\'s odds and its place in this single bracket can differ.</p></section>';
+
+  /* EQUITY heatmap */
+  h+='<section id="equity"><h2>How far each team survives</h2>'
+   +'<p>Share of simulations in which each team is still alive at each stage. Double-elimination means a team stays "alive" on either side until its second loss.</p>'
+   + heatmap(t)+'</section>';
+
+  /* ===== STATIC SECTIONS (background & methodology) come below ===== */
+
   /* STORYLINES */
   var sl=d.storylines||{};
   h+='<section id="storylines"><h2>The storylines</h2>';
@@ -182,12 +203,6 @@ function render(d){
   }
   h+='</section>';
 
-  /* MOVEMENT (time-series) */
-  h+='<section id="movement"><h2>Title odds over time</h2>'
-   +'<p>Each team\'s championship odds, re-computed after every play session (Tuesdays = winners\' bracket, Thursdays = losers\' bracket). A line can stay flat on a day a team didn\'t play — and can still move if the field around it changes (e.g. a contender knocked out early). The chart starts at the seeded draw and fills in as the playoffs unfold.</p>'
-   +'<div class="chartbox"><canvas id="tsChart" role="img" aria-label="Title odds over time line chart"></canvas></div>'
-   + (d.timeseries.length<=1 ? '<p class="small">Only the seeded starting point exists so far — the playoffs haven\'t begun. Lines will appear here as results come in.</p>' : '');
-
   /* POWER (Team Elo) */
   var pr=t.slice().sort(function(a,b){return b.team_elo-a.team_elo;}).map(function(x){
     return '<tr><td>'+ss(x.seed)+esc(x.team)+'</td><td class="num">'+x.team_elo+'</td><td class="num">'+x.top4_fargo+'</td><td class="num hide-sm">'+pct(x.title)+'</td></tr>';
@@ -195,17 +210,6 @@ function render(d){
   h+='<section id="power"><h2>Team Elo — overall strength</h2>'
    +'<p>Each team\'s strength rating: the Fargo of their best playoff lineup, adjusted for how they actually played this season, plus a data-tested pedigree where earned. Higher = stronger. This is what drives the title odds above.</p>'
    +'<table><thead><tr><th>Team</th><th class="num">Team Elo</th><th class="num">Top-4 Fargo</th><th class="num hide-sm">Title %</th></tr></thead><tbody>'+pr+'</tbody></table></section>';
-
-  /* BRACKET */
-  h+='<section id="bracket"><h2>Projected bracket</h2>'
-   +'<p>The single most-likely path through the 16-team double-elimination bracket. Lose on the A-side (winners\') and you drop to the B-side (losers\'); a second loss ends your run. The B-side survivor must beat the A-side finalist twice in the grand final.</p>'
-   + '<div id="bracketSvg" class="bracket-scroll" style="min-width:0"></div>'
-   +'<p class="small">This is one most-likely tournament out of 60,000 simulated. The title odds above come from all of them — so a team\'s odds and its place in this single bracket can differ.</p></section>';
-
-  /* EQUITY heatmap */
-  h+='<section id="equity"><h2>How far each team survives</h2>'
-   +'<p>Share of simulations in which each team is still alive at each stage. Double-elimination means a team stays "alive" on either side until its second loss.</p>'
-   + heatmap(t)+'</section>';
 
   /* METHOD */
   var ped=d.pedigree_note, bt=d.backtest||{};
