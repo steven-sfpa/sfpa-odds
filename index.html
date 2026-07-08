@@ -133,8 +133,14 @@ function render(d){
     var article=(rc.article&&rc.article.length)
       ? rc.article.map(function(p,i){return '<p'+(i===0?' class="lead"':'')+'>'+esc(p)+'</p>';}).join('')
       : '<p class="lead">Results are in for '+esc(rc.session)+'.</p>';
+    var elimLine=(rc.eliminated&&rc.eliminated.length)
+      ? '<p class="small" style="margin-top:10px"><b>Eliminated this round:</b> '
+        +rc.eliminated.map(function(t){return esc(short(t));}).join(', ')
+        +' <span style="color:#8a8f98">(second loss — out of the double-elimination bracket)</span></p>'
+      : '';
     h+='<section id="recap"><h2>Last week: '+esc(rc.session)+'</h2>'+article
      +'<table style="margin-top:14px"><thead><tr><th>Result</th><th class="num">Score</th><th></th></tr></thead><tbody>'+rr+'</tbody></table>'
+     +elimLine
      +'<p class="small">Winner\'s game count shown first. ⚡ marks a lower seed beating a higher seed.</p></section>';
   }
 
