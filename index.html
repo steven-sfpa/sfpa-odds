@@ -72,7 +72,7 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#equity">Survival</a>
+  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a>
   <a href="#storylines">Storylines</a><a href="#power">Team Elo</a><a href="#method">Method</a>
   <a href="#form">Season form</a><a href="#pdf">PDFs</a>
 </div></nav>
@@ -118,9 +118,9 @@ function render(d){
    +'<div class="chartbox"><canvas id="oddsChart" role="img" aria-label="Title odds bar chart"></canvas></div>';
   var rows=t.map(function(x,i){
     return '<tr class="'+(i===0?'fav':'')+'"><td>'+ss(x.seed)+esc(x.team)+'</td>'
-      +'<td class="num">'+pct(x.title)+'</td><td class="num hide-sm">'+pct(x.final)+'</td><td class="num hide-sm">'+pct(x.sf)+'</td></tr>';
+      +'<td class="num">'+pct(x.title)+'</td><td class="num hide-sm">'+pct(x.final)+'</td></tr>';
   }).join('');
-  h+='<table><thead><tr><th>Team</th><th class="num">Title %</th><th class="num hide-sm">Reach final</th><th class="num hide-sm">Reach semis</th></tr></thead><tbody>'+rows+'</tbody></table></section>';
+  h+='<table><thead><tr><th>Team</th><th class="num">Title %</th><th class="num hide-sm">Reach grand final</th></tr></thead><tbody>'+rows+'</tbody></table></section>';
 
   /* WEEKLY RECAP */
   if(d.recap && d.recap.results && d.recap.results.length){
@@ -167,11 +167,6 @@ function render(d){
    +'<p>The single most-likely path through the 16-team double-elimination bracket. Lose on the A-side (winners\') and you drop to the B-side (losers\'); a second loss ends your run. The B-side survivor must beat the A-side finalist twice in the grand final.</p>'
    + '<div id="bracketSvg" class="bracket-scroll" style="min-width:0"></div>'
    +'<p class="small">This is one most-likely tournament out of 60,000 simulated. The title odds above come from all of them — so a team\'s odds and its place in this single bracket can differ.</p></section>';
-
-  /* EQUITY heatmap */
-  h+='<section id="equity"><h2>How far each team survives</h2>'
-   +'<p>Share of simulations in which each team is still alive at each stage. Double-elimination means a team stays "alive" on either side until its second loss.</p>'
-   + heatmap(t)+'</section>';
 
   /* ===== STATIC SECTIONS (background & methodology) come below ===== */
 
@@ -221,7 +216,7 @@ function render(d){
    +'<div class="chartbox"><canvas id="calibChart" role="img" aria-label="Calibration chart: predicted vs actual win rate"></canvas></div>'
    +'<p class="small">Calibration: each dot is a confidence bucket. When the model says "70% to win," teams in that bucket should win about 70% of the time — and they land near the dashed line of perfect calibration. A model can be accurate but overconfident; this one isn\'t.</p>'
    +'<h3>3. Simulating the tournament 60,000 times</h3>'
-   +'<p>Title odds aren\'t a guess. We play out the full 16-team double-elimination bracket — winners\' side, losers\' (B-side), and the grand final where the B-side team must win twice — <b>60,000 times</b>, every match a game-by-game race to 9 with the 8-8 tiebreaker, and count how often each team wins. Every number in this report — title odds, the survival percentages, the projected bracket — comes from this one simulation, so they\'re all mutually consistent.</p>'
+   +'<p>Title odds aren\'t a guess. We play out the full 16-team double-elimination bracket — winners\' side, losers\' (B-side), and the grand final where the B-side team must win twice — <b>60,000 times</b>, every match a game-by-game race to 9 with the 8-8 tiebreaker, and count how often each team wins. Every number in this report — the title odds and the projected bracket — comes from this one simulation, so they\'re all mutually consistent.</p>'
    +'<h3>4. Did history matter? We measured it, instead of guessing</h3>'
    +'<p>Pilsner and Rawhides have met in the City Championship final four straight seasons — a pattern a single-season model can\'t see, which argues for a "pedigree" weight. But rather than set that weight by feel, we tested it against four seasons of real playoff results. The finding was decisive: <b>Pilsner\'s playoff record is '+esc((ped.basis||'').split(',')[0])+'</b>, and every one of their losses came against Rawhides — against everyone else they are a perfect 15-0. That overperformance is statistically real (it beats a coin-flip baseline at p&lt;0.05), so Pilsner carries a measured <b>+'+ped.bump_fargo+' Fargo</b> playoff bump. <b>No other team earned one</b> — Rawhides\' four titles are just the league\'s best team doing what the best team should, already captured by their rating.</p>'
    +'<p class="small">Every adjustment in this report has a number behind it, not a feel. Pool is high-variance, so treat these as probabilities, not predictions — even a clear favorite loses far more often than it wins.</p></section>';
@@ -247,11 +242,6 @@ function render(d){
   });
 }
 
-function heatmap(teams){
-  function cell(v){var a=Math.max(0,Math.min(100,v))/100;return '<td style="background:rgba(27,122,67,'+(0.07+a*0.62).toFixed(2)+');color:'+(a>0.55?'#fff':INK)+'">'+Math.round(v)+'%</td>';}
-  var rows=teams.map(function(t){return '<tr><td class="tm">'+ss(t.seed)+esc(short(t.team))+'</td>'+cell(t.qf)+cell(t.sf)+cell(t.final)+'<td style="font-weight:700;background:rgba(200,162,75,.18)">'+pct(t.title)+'</td></tr>';}).join('');
-  return '<div style="overflow-x:auto"><table class="heat"><thead><tr><th style="text-align:left">Team</th><th>Reach QF</th><th>Reach semis</th><th>Reach final</th><th>Win title</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
-}
 function bracketHtml(b){
   function match(m){var aw=m.win===m.a,bw=m.win===m.b,p=m.score.split('-');
     return '<div class="match"><div class="mrow '+(aw?'w':'')+'"><span>('+m.as+') '+esc(short(m.a))+'</span><span class="sc">'+p[0]+'</span></div><div class="mrow '+(bw?'w':'')+'"><span>('+m.bs+') '+esc(short(m.b))+'</span><span class="sc">'+p[1]+'</span></div></div>';}
