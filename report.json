@@ -1,6 +1,6 @@
 {
  "updated": "July 08, 2026",
- "updated_full": "Jul 8, 2026, 1:32 AM",
+ "updated_full": "Jul 8, 2026, 1:40 AM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "Pilsner InnDecisives",
@@ -739,7 +739,11 @@
     "score": "9-7",
     "upset": false,
     "margin": 2,
-    "loser_eliminated": false
+    "loser_eliminated": false,
+    "pred_winner": "Happy Lounge Rawhides",
+    "pred_w_seed": 1,
+    "pred_score": "9-6",
+    "model_miss": false
    },
    {
     "key": "WBQF.1",
@@ -750,7 +754,11 @@
     "score": "9-4",
     "upset": false,
     "margin": 5,
-    "loser_eliminated": false
+    "loser_eliminated": false,
+    "pred_winner": "Hall Monitors",
+    "pred_w_seed": 4,
+    "pred_score": "9-5",
+    "model_miss": false
    },
    {
     "key": "WBQF.2",
@@ -761,7 +769,11 @@
     "score": "9-7",
     "upset": false,
     "margin": 2,
-    "loser_eliminated": false
+    "loser_eliminated": false,
+    "pred_winner": "Pilsner InnDecisives",
+    "pred_w_seed": 6,
+    "pred_score": "9-8",
+    "model_miss": true
    },
    {
     "key": "WBQF.3",
@@ -772,7 +784,11 @@
     "score": "9-4",
     "upset": true,
     "margin": 5,
-    "loser_eliminated": false
+    "loser_eliminated": false,
+    "pred_winner": "El Farolito Shooters",
+    "pred_w_seed": 2,
+    "pred_score": "9-6",
+    "model_miss": true
    },
    {
     "key": "LB1.0",
@@ -783,7 +799,11 @@
     "score": "9-5",
     "upset": false,
     "margin": 4,
-    "loser_eliminated": true
+    "loser_eliminated": true,
+    "pred_winner": "Gino & Carlo",
+    "pred_w_seed": 9,
+    "pred_score": "9-5",
+    "model_miss": false
    },
    {
     "key": "LB1.1",
@@ -794,7 +814,11 @@
     "score": "9-5",
     "upset": false,
     "margin": 4,
-    "loser_eliminated": true
+    "loser_eliminated": true,
+    "pred_winner": "Happy HALLers",
+    "pred_w_seed": 5,
+    "pred_score": "9-5",
+    "model_miss": false
    },
    {
     "key": "LB1.2",
@@ -805,7 +829,11 @@
     "score": "9-7",
     "upset": false,
     "margin": 2,
-    "loser_eliminated": true
+    "loser_eliminated": true,
+    "pred_winner": "Temple Holy Smokes",
+    "pred_w_seed": 14,
+    "pred_score": "9-8",
+    "model_miss": true
    },
    {
     "key": "LB1.3",
@@ -816,7 +844,11 @@
     "score": "9-6",
     "upset": false,
     "margin": 3,
-    "loser_eliminated": true
+    "loser_eliminated": true,
+    "pred_winner": "Lucky Horseshoe Glue Factory",
+    "pred_w_seed": 10,
+    "pred_score": "9-8",
+    "model_miss": false
    }
   ],
   "upsets": [
@@ -829,7 +861,11 @@
     "score": "9-4",
     "upset": true,
     "margin": 5,
-    "loser_eliminated": false
+    "loser_eliminated": false,
+    "pred_winner": "El Farolito Shooters",
+    "pred_w_seed": 2,
+    "pred_score": "9-6",
+    "model_miss": true
    }
   ],
   "nailbiters": [],
@@ -908,19 +944,5 @@
     "n": 16
    }
   ]
- },
- "snapshots": [
-  {
-   "file": "SFPA_CityChampionship_2026-07-08.pdf",
-   "date": "2026-07-08"
-  },
-  {
-   "file": "SFPA_CityChampionship_2026-07-02.pdf",
-   "date": "2026-07-02"
-  },
-  {
-   "file": "SFPA_CityChampionship_2026-06-24.pdf",
-   "date": "2026-06-24"
-  }
- ]
+ }
 }

@@ -126,9 +126,19 @@ function render(d){
   if(d.recap && d.recap.results && d.recap.results.length){
     var rc=d.recap;
     var rr=rc.results.map(function(m){
-      var up=m.upset;
-      return '<tr'+(up?' style="background:#FBF1D6"':'')+'><td>('+m.w_seed+') <b>'+esc(short(m.winner))+'</b> def. ('+m.l_seed+') '+esc(short(m.loser))+'</td>'
-        +'<td class="num">'+m.score+'</td><td class="small">'+(up?'⚡ upset':(m.margin===1?'nail-biter':''))+'</td></tr>';
+      var miss=m.model_miss;
+      // badge: any time the model's pick lost we flag it; seed-upsets are called out specifically
+      var badge=m.upset?' <span class="small" style="color:#b3541e">⚡ upset</span>'
+               :(miss?' <span class="small" style="color:#b3541e">⚡ beat the pick</span>'
+               :(m.margin===1?' <span class="small" style="color:#8a8f98">nail-biter</span>':''));
+      var predCell=m.pred_winner
+        ? '<span style="color:'+(miss?'#b3541e':'#8a8f98')+'">'+esc(short(m.pred_winner))+' '+m.pred_score+'</span>'
+        : '—';
+      var rowBg=miss?' style="background:#FBEbe6"':(m.margin===1?' style="background:#F4F6F8"':'');
+      return '<tr'+rowBg+'>'
+        +'<td>('+m.w_seed+') <b>'+esc(short(m.winner))+'</b> def. ('+m.l_seed+') '+esc(short(m.loser))+badge+'</td>'
+        +'<td class="num hide-sm">'+predCell+'</td>'
+        +'<td class="num"><b>'+m.score+'</b></td></tr>';
     }).join('');
     var article=(rc.article&&rc.article.length)
       ? rc.article.map(function(p,i){return '<p'+(i===0?' class="lead"':'')+'>'+esc(p)+'</p>';}).join('')
@@ -139,9 +149,9 @@ function render(d){
         +' <span style="color:#8a8f98">(second loss — out of the double-elimination bracket)</span></p>'
       : '';
     h+='<section id="recap"><h2>Last week: '+esc(rc.session)+'</h2>'+article
-     +'<table style="margin-top:14px"><thead><tr><th>Result</th><th class="num">Score</th><th></th></tr></thead><tbody>'+rr+'</tbody></table>'
+     +'<table style="margin-top:14px"><thead><tr><th>Result</th><th class="num hide-sm">Model predicted</th><th class="num">Actual</th></tr></thead><tbody>'+rr+'</tbody></table>'
      +elimLine
-     +'<p class="small">Winner\'s game count shown first. ⚡ marks a lower seed beating a higher seed.</p></section>';
+     +'<p class="small">Model-predicted score (favorite &amp; expected margin) vs. the actual result. ⚡ marks a match the model\'s pick lost; winner\'s game count shown first.</p></section>';
   }
 
   /* STORYLINES */
