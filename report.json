@@ -1,6 +1,6 @@
 {
  "updated": "July 15, 2026",
- "updated_full": "Jul 15, 2026, 1:30 AM",
+ "updated_full": "Jul 15, 2026, 2:10 AM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "El Farolito Shooters",
@@ -920,26 +920,26 @@
    }
   ]
  },
- "snapshots": [
+ "storylines_live": [
   {
-   "file": "SFPA_CityChampionship_2026-07-15.pdf",
-   "date": "2026-07-15"
+   "h": "Rawhides are one win from the grand final \u2014 and they'd get there with a net",
+   "p": "The model gives Rawhides a commanding <b>79%</b> to win the whole thing. They've reached the winners'-bracket final, and a win over Bus Stop books a grand-final berth with the double-elimination cushion that makes them so hard to kill: whoever climbs out of the losers' bracket would have to beat them <i>twice</i>. Their Fargo and Team Elo (1702) tower over what's left of the field. About the only thing that beats Rawhides now is Rawhides \u2014 pool is a game of races, and even a runaway favorite drops a few."
   },
   {
-   "file": "SFPA_CityChampionship_2026-07-10.pdf",
-   "date": "2026-07-10"
+   "h": "The winners'-bracket final: Rawhides vs Bus Stop",
+   "p": "This is the A-side title match, and it's worth more than bragging rights. The winner walks into the grand final needing just one win; the loser is knocked to the one-loss bracket and has to climb back the hard way. Rawhides is the heavy favorite, but Bus Stop (the 3rd seed) has already put away two seeded teams to get here and is a 60% live shot to reach the final."
   },
   {
-   "file": "SFPA_CityChampionship_2026-07-08.pdf",
-   "date": "2026-07-08"
+   "h": "The comeback bracket: 4 teams, one brutal road",
+   "p": "Still alive on the losers' side: El Farolito, Hall Monitors, Marcelo's, and Pocket Fizz. Any of them can still reach the grand final \u2014 but the price is steep: win out on the one-loss side, then beat the winners'-bracket champion <i>twice</i>. El Farolito is the model's pick to emerge at <b>22%</b> to reach the final, the last of the pre-playoff contenders still breathing."
   },
   {
-   "file": "SFPA_CityChampionship_2026-07-02.pdf",
-   "date": "2026-07-02"
+   "h": "What it would take to deny Rawhides",
+   "p": "The math is stark \u2014 Rawhides win about 79% of simulations. For anyone else to lift the trophy, the bracket has to break just right: a live underdog out of the winners'-bracket final, or a losers'-bracket team running the table and then toppling the A-side finalist twice. The best of the long shots: Bus Stop at 15%; El Farolito at 3%. Real chances \u2014 but long ones."
   },
   {
-   "file": "SFPA_CityChampionship_2026-06-24.pdf",
-   "date": "2026-06-24"
+   "h": "Dynasty watch: the InnDecisives are out",
+   "p": "For six-plus seasons Pilsner never finished outside the top two, going 17-7 in playoff pool and a perfect 15-0 against everyone but the Rawhides. This year the run ended \u2014 and, for the first time in memory, it ended against someone other than Rawhides, El Farolito closing the book in the losers' bracket. The throne is empty."
   }
  ]
 }

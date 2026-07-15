@@ -170,33 +170,13 @@ function render(d){
 
   /* ===== STATIC SECTIONS (background & methodology) come below ===== */
 
-  /* STORYLINES */
-  var sl=d.storylines||{};
-  h+='<section id="storylines"><h2>The storylines</h2>';
-  // 1. Pilsner — the dynasty's other half
-  if(sl.pilsner){var pl=sl.pilsner;
-   h+='<h3>Pilsner: '+pl.vs_nonrawhides+' in the playoffs against everyone but Rawhides</h3>'
-    +'<p>The most remarkable number in this whole field belongs to a 6-seed. Over the last four City Championships, <b>Pilsner InnDecisives have gone '+pl.playoff_record+' in playoff matches</b> — and <b>every single one of their losses</b> has come against one team: the Happy Lounge Rawhides. Against the other fifteen teams they\'ve faced in the playoffs, Pilsner is a perfect <b>'+pl.vs_nonrawhides+'</b>. They\'ve reached the final four years running. This is why a team seeded sixth is the model\'s <b>#2 title pick at '+p0(pl.title)+'</b>: the regular season undersells them, and the data knows it.</p>';
+  /* STORYLINES — regenerated from the live tournament state each week (data/build_storylines.py) */
+  var slv=d.storylines_live||[];
+  if(slv.length){
+    h+='<section id="storylines"><h2>The storylines</h2>';
+    slv.forEach(function(s){ h+='<h3>'+esc(s.h)+'</h3><p>'+s.p+'</p>'; });
+    h+='</section>';
   }
-  // 2. The Burgess effect — why Pilsner is "only" a 6-seed
-  h+='<h3>The Burgess effect: why Pilsner slipped to the 6-seed</h3>'
-   +'<p>So why isn\'t Pilsner seeded higher? Because their best player, <b>Evan Burgess (576 Fargo), spent the first half of the season playing down with a junior team as its coach</b> — he was always coming back for the playoffs, but his wins didn\'t count toward Pilsner\'s record while he was away. Pilsner won 57% of their games without him in the lineup and 61% with him; that first-half stretch is exactly enough to have dropped them several seed lines, landing them at sixth. He\'s back and the lineup is whole again — but the seeding was already locked. And that one fact ripples through the entire bracket, as the next storyline shows.</p>';
-  // 3. The lopsided bracket
-  if(sl.bracket_halves){var bh=sl.bracket_halves;
-   h+='<h3>One half of the bracket is a war; the other is a stroll</h3>'
-    +'<p>The 6-seed lands Pilsner in the <b>bottom half — alongside El Farolito (2) and Bus Stop (3)</b>. Three of the four strongest non-Rawhides teams are stacked in the same half, forced to knock each other out just to reach the final. Rawhides\' top half, by contrast, is far softer. The survival numbers tell the story plainly: <b>Rawhides reach the final '+p0(bh.rawhides_reach_final)+'</b> of the time, while <b>El Farolito and Pilsner sit near '+p0(bh.elfarolito_reach_final)+'</b> — not because they\'re weak, but because their path is brutal. Had Burgess played all season and Pilsner seeded into Rawhides\' half instead, this bracket would look completely different.</p>';
-  }
-  // 4. Rawhides — dominant on paper, beatable in practice
-  if(sl.rawhides){var rh=sl.rawhides;
-   h+='<h3>Rawhides: so good on paper it barely matters that they\'ve cooled off</h3>'
-    +'<p>Here\'s the paradox of the favorite. By <b>season form, Rawhides actually graded out slightly negative ('+rh.form.toFixed(0)+')</b> — they won a touch less than even their own loaded lineup predicted. And yet they\'re still the runaway #1 at '+p0(rh.title)+', because their <b>Fargo ('+rh.fargo+') and Team Elo ('+rh.team_elo+') tower over the field</b> by enough that a small slump simply doesn\'t move them. But "favorite" isn\'t "lock": these playoff matches are races to 9, and Pilsner alone has taken them to the brink repeatedly — Rawhides hold a 7-2 edge in their nine playoff meetings, but two of those went Pilsner\'s way. An undefeated run is rare. With more strong teams in the field than ever, the favorite will be tested.</p>';
-  }
-  // 5. El Farolito — the form team
-  if(sl.elfarolito){var ef=sl.elfarolito;
-   h+='<h3>El Farolito: the team playing above its paper</h3>'
-    +'<p>If one team is quietly dangerous, it\'s El Farolito. They posted the <b>best season form in the field (+'+ef.form.toFixed(0)+')</b> — they consistently won more than their roster\'s raw Fargo said they should, the signature of a team that\'s peaking at the right time. The model rewards that, lifting them into a co-#2 tie at '+p0(ef.title)+'. The catch is the draw: they\'re in the loaded bottom half, so even a hot team faces the gauntlet of Pilsner and Bus Stop before any shot at Rawhides.</p>';
-  }
-  h+='</section>';
 
   /* POWER (Team Elo) */
   var pr=t.slice().sort(function(a,b){return b.team_elo-a.team_elo;}).map(function(x){
