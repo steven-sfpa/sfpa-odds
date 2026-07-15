@@ -1,6 +1,6 @@
 {
  "updated": "July 15, 2026",
- "updated_full": "Jul 15, 2026, 2:23 AM",
+ "updated_full": "Jul 15, 2026, 2:39 AM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "El Farolito Shooters",
@@ -1045,6 +1045,138 @@
    "wk": "4-0",
    "is_waldon": true,
    "blurb": "No one has been better with the season on the line. Steven Waldon has gone <b>7-1</b> in the playoffs \u2014 a <b>88%</b> win rate, the best of any regular still standing \u2014 and this week he went <b>4-0 with a table run</b>, closing out the winners'-bracket semifinal himself with the deciding rack over Hall Monitors' Clancy Green to send Rawhides to the final. That's the Waldon pattern: he ran the table a league-leading count of times this season, and his playoff table-run consistency is the stuff of local legend. If the grand final ever comes down to a single deciding game, he's exactly who the Rawhides want stepping to the table."
+  },
+  "through_week": 343
+ },
+ "fargo_performance": {
+  "explainer": "A performance rating answers a different question than a win-loss record: <i>how good did you actually play?</i> We take every individual game a player played this playoff run, look up each opponent's Fargo, and solve for the rating at which their win total is exactly what you'd expect. Beat a 500-rated player at a 4-2 clip and you performed like a 600. It rewards beating strong opponents and doesn't punish anyone for a tough draw \u2014 the ultimate opponent-adjusted scoreboard.",
+  "leaders": [
+   {
+    "name": "Steven Waldon",
+    "team": "Rawhides",
+    "rec": "7-1",
+    "avg_opp": 549,
+    "fargo": 604,
+    "perf": 833,
+    "delta": 229,
+    "you": true
+   },
+   {
+    "name": "Albert Yip",
+    "team": "Pocket Fizz",
+    "rec": "6-1",
+    "avg_opp": 468,
+    "fargo": 487,
+    "perf": 743,
+    "delta": 256,
+    "you": false
+   },
+   {
+    "name": "Khanh Ngo",
+    "team": "Marcelo's",
+    "rec": "8-2",
+    "avg_opp": 521,
+    "fargo": 583,
+    "perf": 730,
+    "delta": 147,
+    "you": false
+   },
+   {
+    "name": "Prithiv Kumar",
+    "team": "Hall Monitors",
+    "rec": "9-2",
+    "avg_opp": 487,
+    "fargo": 544,
+    "perf": 719,
+    "delta": 175,
+    "you": false
+   },
+   {
+    "name": "Antonio Cracchiolo",
+    "team": "Hall Monitors",
+    "rec": "8-2",
+    "avg_opp": 492,
+    "fargo": 578,
+    "perf": 707,
+    "delta": 129,
+    "you": false
+   },
+   {
+    "name": "Wade Hargrove",
+    "team": "Bus Stop",
+    "rec": "6-2",
+    "avg_opp": 508,
+    "fargo": 552,
+    "perf": 677,
+    "delta": 125,
+    "you": false
+   },
+   {
+    "name": "Willie Gregory",
+    "team": "Marcelo's",
+    "rec": "5-2",
+    "avg_opp": 478,
+    "fargo": 561,
+    "perf": 616,
+    "delta": 55,
+    "you": false
+   },
+   {
+    "name": "Tom Purcell",
+    "team": "Bus Stop",
+    "rec": "8-4",
+    "avg_opp": 505,
+    "fargo": 515,
+    "perf": 610,
+    "delta": 95,
+    "you": false
+   },
+   {
+    "name": "Nithin Tharakan",
+    "team": "Marcelo's",
+    "rec": "9-5",
+    "avg_opp": 512,
+    "fargo": 525,
+    "perf": 601,
+    "delta": 76,
+    "you": false
+   },
+   {
+    "name": "Bob Simon",
+    "team": "Rawhides",
+    "rec": "7-4",
+    "avg_opp": 505,
+    "fargo": 543,
+    "perf": 591,
+    "delta": 48,
+    "you": false
+   },
+   {
+    "name": "Otoniel Jimenez",
+    "team": "El Farolito",
+    "rec": "9-6",
+    "avg_opp": 490,
+    "fargo": 627,
+    "perf": 553,
+    "delta": -74,
+    "you": false
+   },
+   {
+    "name": "Perez Vallarta",
+    "team": "El Farolito",
+    "rec": "7-5",
+    "avg_opp": 487,
+    "fargo": 537,
+    "perf": 543,
+    "delta": 6,
+    "you": false
+   }
+  ],
+  "featured": {
+   "name": "Steven Waldon",
+   "team": "Rawhides",
+   "perf": 833,
+   "blurb": "And nobody in the tournament has played at a higher level than <b>Steven Waldon</b>. Against playoff competition averaging <b>549</b> Fargo, his 7-1 run computes to an <b>833 performance rating</b> \u2014 a staggering <b>+229 over his own 604 rating</b>, and the single highest performance mark of anyone in the field (the next-best is 743). Put plainly: a very good 604-rated player spent the playoffs playing like an elite 800+. That's not a hot streak against soft competition \u2014 his opponents averaged 549 \u2014 it's the best pool anyone in this City Championship has played."
   },
   "through_week": 343
  }

@@ -72,7 +72,7 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#standouts">Standouts</a>
+  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#standouts">Standouts</a><a href="#performance">Performance</a>
   <a href="#storylines">Storylines</a><a href="#power">Team Elo</a><a href="#method">Method</a>
   <a href="#form">Season form</a><a href="#pdf">PDFs</a>
 </div></nav>
@@ -188,6 +188,26 @@ function render(d){
       h+='<p><b>Hottest hands this week:</b> '+pw.hot.map(function(x){return '<b>'+esc(x.name)+'</b> ('+esc(x.team)+') '+esc(x.rec)+(x.tr?' 🎱':'');}).join(', ')+'.</p>';
     }
     h+='</section>';
+  }
+
+  /* FARGO PERFORMANCE RATINGS — opponent-adjusted "how well did you play", regenerated weekly */
+  var fp=d.fargo_performance;
+  if(fp && fp.leaders && fp.leaders.length){
+    h+='<section id="performance"><h2>Playoff performance ratings</h2><p>'+fp.explainer+'</p>';
+    if(fp.featured && fp.featured.blurb){
+      h+='<div style="background:#FBF1D6;border:1px solid '+GOLD+';border-radius:10px;padding:13px 15px;margin:12px 0">'
+        +'<div style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:'+GOLD+';font-weight:700;margin-bottom:4px">★ Top performer · '+fp.featured.perf+'</div>'
+        +'<p style="margin:0">'+fp.featured.blurb+'</p></div>';
+    }
+    var fr=fp.leaders.map(function(p){
+      var dc=p.delta>=0?'#1a8a3c':'#b3541e', ds=(p.delta>=0?'+':'')+p.delta;
+      return '<tr'+(p.you?' style="background:#FBF1D6;font-weight:600"':'')+'><td>'+esc(p.name)+'</td>'
+        +'<td class="small">'+esc(p.team)+'</td><td class="num">'+esc(p.rec)+'</td>'
+        +'<td class="num hide-sm">'+p.avg_opp+'</td><td class="num hide-sm">'+p.fargo+'</td>'
+        +'<td class="num"><b>'+p.perf+'</b></td><td class="num" style="color:'+dc+'">'+ds+'</td></tr>';
+    }).join('');
+    h+='<table style="margin-top:6px"><thead><tr><th>Player</th><th>Team</th><th class="num">W-L</th><th class="num hide-sm">Avg opp</th><th class="num hide-sm">Fargo</th><th class="num">Performance</th><th class="num">vs rating</th></tr></thead><tbody>'+fr+'</tbody></table>'
+      +'<p class="small">Performance = the Fargo level a player performed at across the playoffs, from opponent-weighted results (players on teams still alive, min 6 games). "vs rating" is performance minus their own Fargo — green means they played above their number.</p></section>';
   }
 
   /* ===== STATIC SECTIONS (background & methodology) come below ===== */
