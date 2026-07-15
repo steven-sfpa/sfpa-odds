@@ -72,7 +72,7 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a>
+  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#standouts">Standouts</a>
   <a href="#storylines">Storylines</a><a href="#power">Team Elo</a><a href="#method">Method</a>
   <a href="#form">Season form</a><a href="#pdf">PDFs</a>
 </div></nav>
@@ -167,6 +167,28 @@ function render(d){
    +'<p>The single most-likely path through the 16-team double-elimination bracket. Lose on the A-side (winners\') and you drop to the B-side (losers\'); a second loss ends your run. The B-side survivor must beat the A-side finalist twice in the grand final.</p>'
    + '<div id="bracketSvg" class="bracket-scroll" style="min-width:0"></div>'
    +'<p class="small">This is one most-likely tournament out of 60,000 simulated. The title odds above come from all of them — so a team\'s odds and its place in this single bracket can differ.</p></section>';
+
+  /* PLAYOFF STANDOUTS — individual player leaders, regenerated weekly (data/build_player_stats.py) */
+  var pw=d.player_watch;
+  if(pw && pw.leaders && pw.leaders.length){
+    h+='<section id="standouts"><h2>Playoff standouts</h2><p>'+esc(pw.lead)+'</p>';
+    if(pw.featured && pw.featured.blurb){
+      h+='<div style="background:#FBF1D6;border:1px solid '+GOLD+';border-radius:10px;padding:13px 15px;margin:12px 0">'
+        +'<div style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:'+GOLD+';font-weight:700;margin-bottom:4px">★ Standout of the round</div>'
+        +'<p style="margin:0">'+pw.featured.blurb+'</p></div>';
+    }
+    var lr=pw.leaders.map(function(p){
+      return '<tr'+(p.you?' style="background:#FBF1D6;font-weight:600"':'')+'><td>'+esc(p.name)+'</td>'
+        +'<td class="small">'+esc(p.team)+'</td><td class="num">'+esc(p.rec)+'</td>'
+        +'<td class="num">'+p.pct+'%</td><td class="num hide-sm">'+(p.tr?('🎱 '+p.tr):'—')+'</td></tr>';
+    }).join('');
+    h+='<table style="margin-top:6px"><thead><tr><th>Player</th><th>Team</th><th class="num">Playoff W-L</th><th class="num">Win %</th><th class="num hide-sm">Table runs</th></tr></thead><tbody>'+lr+'</tbody></table>'
+      +'<p class="small">Individual game record across the City Championship playoff weeks, for players on teams still alive (minimum 6 games). Table runs = racks won from the break without the opponent getting to the table.</p>';
+    if(pw.hot && pw.hot.length){
+      h+='<p><b>Hottest hands this week:</b> '+pw.hot.map(function(x){return '<b>'+esc(x.name)+'</b> ('+esc(x.team)+') '+esc(x.rec)+(x.tr?' 🎱':'');}).join(', ')+'.</p>';
+    }
+    h+='</section>';
+  }
 
   /* ===== STATIC SECTIONS (background & methodology) come below ===== */
 

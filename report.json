@@ -1,6 +1,6 @@
 {
  "updated": "July 15, 2026",
- "updated_full": "Jul 15, 2026, 2:10 AM",
+ "updated_full": "Jul 15, 2026, 2:23 AM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "El Farolito Shooters",
@@ -941,5 +941,111 @@
    "h": "Dynasty watch: the InnDecisives are out",
    "p": "For six-plus seasons Pilsner never finished outside the top two, going 17-7 in playoff pool and a perfect 15-0 against everyone but the Rawhides. This year the run ended \u2014 and, for the first time in memory, it ended against someone other than Rawhides, El Farolito closing the book in the losers' bracket. The throne is empty."
   }
- ]
+ ],
+ "player_watch": {
+  "lead": "The bracket is a team game, but somebody has to make the balls. A look at who's carrying the load for the teams still standing \u2014 the players quietly (and not so quietly) winning their matches within the match.",
+  "leaders": [
+   {
+    "name": "Steven Waldon",
+    "team": "Rawhides",
+    "rec": "7-1",
+    "pct": 88,
+    "tr": 1,
+    "you": true
+   },
+   {
+    "name": "Albert Yip",
+    "team": "Pocket Fizz",
+    "rec": "6-1",
+    "pct": 86,
+    "tr": 0,
+    "you": false
+   },
+   {
+    "name": "Prithiv Kumar",
+    "team": "Hall Monitors",
+    "rec": "9-2",
+    "pct": 82,
+    "tr": 1,
+    "you": false
+   },
+   {
+    "name": "Antonio Cracchiolo",
+    "team": "Hall Monitors",
+    "rec": "8-2",
+    "pct": 80,
+    "tr": 0,
+    "you": false
+   },
+   {
+    "name": "Khanh Ngo",
+    "team": "Marcelo's",
+    "rec": "8-2",
+    "pct": 80,
+    "tr": 1,
+    "you": false
+   },
+   {
+    "name": "Wade Hargrove",
+    "team": "Bus Stop",
+    "rec": "6-2",
+    "pct": 75,
+    "tr": 0,
+    "you": false
+   },
+   {
+    "name": "Willie Gregory",
+    "team": "Marcelo's",
+    "rec": "5-2",
+    "pct": 71,
+    "tr": 0,
+    "you": false
+   },
+   {
+    "name": "Tom Purcell",
+    "team": "Bus Stop",
+    "rec": "8-4",
+    "pct": 67,
+    "tr": 0,
+    "you": false
+   }
+  ],
+  "hot": [
+   {
+    "name": "Steven Waldon",
+    "team": "Rawhides",
+    "rec": "4-0",
+    "tr": 1
+   },
+   {
+    "name": "Perez Vallarta",
+    "team": "El Farolito",
+    "rec": "4-0",
+    "tr": 1
+   },
+   {
+    "name": "Khanh Ngo",
+    "team": "Marcelo's",
+    "rec": "3-0",
+    "tr": 0
+   },
+   {
+    "name": "Nithin Tharakan",
+    "team": "Marcelo's",
+    "rec": "3-0",
+    "tr": 0
+   }
+  ],
+  "featured": {
+   "name": "Steven Waldon",
+   "team": "Rawhides",
+   "rec": "7-1",
+   "pct": 88,
+   "tr": 1,
+   "wk": "4-0",
+   "is_waldon": true,
+   "blurb": "No one has been better with the season on the line. Steven Waldon has gone <b>7-1</b> in the playoffs \u2014 a <b>88%</b> win rate, the best of any regular still standing \u2014 and this week he went <b>4-0 with a table run</b>, closing out the winners'-bracket semifinal himself with the deciding rack over Hall Monitors' Clancy Green to send Rawhides to the final. That's the Waldon pattern: he ran the table a league-leading count of times this season, and his playoff table-run consistency is the stuff of local legend. If the grand final ever comes down to a single deciding game, he's exactly who the Rawhides want stepping to the table."
+  },
+  "through_week": 343
+ }
 }
