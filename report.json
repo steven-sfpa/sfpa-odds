@@ -1,6 +1,6 @@
 {
  "updated": "July 15, 2026",
- "updated_full": "Jul 15, 2026, 5:17 PM",
+ "updated_full": "Jul 15, 2026, 5:34 PM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "El Farolito Shooters",
@@ -945,28 +945,6 @@
    ]
   }
  ],
- "storylines_live": [
-  {
-   "h": "Rawhides are one win from the grand final \u2014 and they'd get there with a net",
-   "p": "The model gives Rawhides a commanding <b>80%</b> to win the whole thing. They've reached the winners'-bracket final, and a win over Bus Stop books a grand-final berth with the double-elimination cushion that makes them so hard to kill: whoever climbs out of the losers' bracket would have to beat them <i>twice</i>. Their Fargo and Team Elo (1702) tower over what's left of the field. About the only thing that beats Rawhides now is Rawhides \u2014 pool is a game of races, and even a runaway favorite drops a few."
-  },
-  {
-   "h": "The winners'-bracket final: Rawhides vs Bus Stop",
-   "p": "This is the A-side title match, and it's worth more than bragging rights. The winner walks into the grand final needing just one win; the loser is knocked to the one-loss bracket and has to climb back the hard way. Rawhides is the heavy favorite, but Bus Stop (the 3rd seed) has already put away two seeded teams to get here and is a 60% live shot to reach the final."
-  },
-  {
-   "h": "The comeback bracket: 4 teams, one brutal road",
-   "p": "Still alive on the losers' side: El Farolito, Hall Monitors, Marcelo's, and Pocket Fizz. Any of them can still reach the grand final \u2014 but the price is steep: win out on the one-loss side, then beat the winners'-bracket champion <i>twice</i>. El Farolito is the model's pick to emerge at <b>18%</b> to reach the final, the last of the pre-playoff contenders still breathing."
-  },
-  {
-   "h": "What it would take to deny Rawhides",
-   "p": "The math is stark \u2014 Rawhides win about 80% of simulations. For anyone else to lift the trophy, the bracket has to break just right: a live underdog out of the winners'-bracket final, or a losers'-bracket team running the table and then toppling the A-side finalist twice. The best of the long shots: Bus Stop at 15%; El Farolito at 3%. Real chances \u2014 but long ones."
-  },
-  {
-   "h": "Dynasty watch: the InnDecisives are out",
-   "p": "For six-plus seasons Pilsner never finished outside the top two, going 17-7 in playoff pool and a perfect 15-0 against everyone but the Rawhides. This year the run ended \u2014 and, for the first time in memory, it ended against someone other than Rawhides, El Farolito closing the book in the losers' bracket. The throne is empty."
-  }
- ],
  "player_watch": {
   "lead": "The bracket is a team game, but somebody has to make the balls. A look at who's carrying the load for the teams still standing \u2014 the players quietly (and not so quietly) winning their matches within the match.",
   "leaders": [
@@ -1204,27 +1182,5 @@
    "blurb": "And nobody in the tournament has played at a higher level than <b>Steven Waldon</b>. Against playoff competition averaging <b>549</b> Fargo, his 7-1 run computes to an <b>833 performance rating</b> \u2014 a staggering <b>+229 over his own 604 rating</b>, and the single highest performance mark of anyone in the field (the next-best is 743). Put plainly: a very good 604-rated player spent the playoffs playing like an elite 800+. That's not a hot streak against soft competition \u2014 his opponents averaged 549 \u2014 it's the best pool anyone in this City Championship has played."
   },
   "through_week": 343
- },
- "snapshots": [
-  {
-   "file": "SFPA_CityChampionship_2026-07-15.pdf",
-   "date": "2026-07-15"
-  },
-  {
-   "file": "SFPA_CityChampionship_2026-07-10.pdf",
-   "date": "2026-07-10"
-  },
-  {
-   "file": "SFPA_CityChampionship_2026-07-08.pdf",
-   "date": "2026-07-08"
-  },
-  {
-   "file": "SFPA_CityChampionship_2026-07-02.pdf",
-   "date": "2026-07-02"
-  },
-  {
-   "file": "SFPA_CityChampionship_2026-06-24.pdf",
-   "date": "2026-06-24"
-  }
- ]
+ }
 }
