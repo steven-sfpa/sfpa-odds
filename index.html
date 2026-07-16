@@ -72,7 +72,7 @@
 </head>
 <body>
 <nav><div class="inner">
-  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#standouts">Standouts</a><a href="#performance">Performance</a>
+  <a href="#odds">Title odds</a><a href="#recap">Last week</a><a href="#ahead">Looking ahead</a><a href="#movement">Odds over time</a><a href="#bracket">Bracket</a><a href="#standouts">Standouts</a><a href="#performance">Performance</a>
   <a href="#storylines">Storylines</a><a href="#power">Team Elo</a><a href="#method">Method</a>
   <a href="#form">Season form</a><a href="#pdf">PDFs</a>
 </div></nav>
@@ -152,6 +152,21 @@ function render(d){
      +'<table style="margin-top:14px"><thead><tr><th>Result</th><th class="num hide-sm">Model predicted</th><th class="num">Actual</th></tr></thead><tbody>'+rr+'</tbody></table>'
      +elimLine
      +'<p class="small">Model-predicted score (favorite &amp; expected margin) vs. the actual result. ⚡ marks a match the model\'s pick lost; winner\'s game count shown first.</p></section>';
+  }
+
+  /* LOOKING AHEAD — commentary on the upcoming matches (data/build_looking_ahead.py) */
+  var la=d.looking_ahead;
+  if(la && la.length){
+    h+='<section id="ahead"><h2>Looking ahead</h2>';
+    la.forEach(function(m,i){
+      var accent=(i===0);
+      h+='<div style="margin:14px 0 6px;'+(accent?'border-left:3px solid '+GOLD+';padding-left:12px':'')+'">'
+        +'<div style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:'+(accent?GOLD:'var(--muted)')+';font-weight:700">'+esc(m.tag)+'</div>'
+        +'<h3 style="margin:.15em 0 .3em">'+esc(m.heading)+'</h3>'
+        + m.body.map(function(p){return '<p>'+esc(p)+'</p>';}).join('')
+        +'</div>';
+    });
+    h+='</section>';
   }
 
   /* ===== DYNAMIC SECTIONS (change week to week) come first ===== */

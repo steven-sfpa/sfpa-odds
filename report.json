@@ -1,6 +1,6 @@
 {
  "updated": "July 15, 2026",
- "updated_full": "Jul 15, 2026, 4:51 PM",
+ "updated_full": "Jul 15, 2026, 5:17 PM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "El Farolito Shooters",
@@ -920,6 +920,31 @@
    }
   ]
  },
+ "looking_ahead": [
+  {
+   "heading": "Rawhides vs Bus Stop",
+   "tag": "The hot seat",
+   "body": [
+    "The one everybody's tuning in for. The winners'-bracket final decides who takes the hot seat: a ticket straight to the grand final with the double-elimination cushion that makes a team nearly impossible to dislodge. The loser doesn't go home, but drops to the one-loss side and inherits the long gauntlet back. Win here and you're most of the way to a title; lose and the mountain triples.",
+    "And these two have history. Over the last four seasons plus this year's regular season, Rawhides and Bus Stop have met 6 times \u2014 and Rawhides have won 5 of them, taking 63% of all the games played between the two clubs. Bus Stop's lone win came on a regular-season night; when the playoff lights come on it hasn't been close, with Rawhides a perfect 2-0 in the postseason and 75% of those games (18-6).",
+    "On Fargo alone the model makes Rawhides a 75% pick for the match (a 58% edge per game). Layer in the head-to-head \u2014 the fact that Bus Stop has never solved this specific opponent when it mattered \u2014 and the number climbs toward 85%. Ratings and receipts point the same way. Bus Stop's path to the upset is real but narrow: they've hung big game counts on Rawhides before, so the talent to make it a match is there \u2014 they just have to finally close one on the big stage."
+   ]
+  },
+  {
+   "heading": "El Farolito vs Hall Monitors",
+   "tag": "Win or go home",
+   "body": [
+    "The sleeper heavyweight bout of the round. El Farolito (the 2-seed and the field's hottest regular-season form team) and Hall Monitors (the 4-seed with one of the deepest lineups in the draw) are two of the best teams left in the whole draw \u2014 and because each stumbled once on the A-side, they're colliding this early with a season on the line. It's the closest match on the board: the model splits it 54%\u201346%, effective Fargos of 569 and 561 just points apart. Both teams already carry a loss, so this one is simple: the winner plays on, the loser's playoff is over. Two contenders, a near-even matchup, sudden death \u2014 if you watch one losers'-bracket match, make it this one."
+   ]
+  },
+  {
+   "heading": "Marcelo's vs Pocket Fizz",
+   "tag": "Win or go home",
+   "body": [
+    "A quieter but no-less-tense elimination game. Marcelo's (the 8-seed quietly on a roll) meet Pocket Fizz (the 7-seed that stunned El Farolito in the quarterfinals), and the model gives Marcelo's the edge, but Pocket Fizz are live \u2014 68% for the match on a 56% per-game advantage (effective Fargo 553 to 521). Both teams already carry a loss, so this one is simple: the winner plays on, the loser's playoff is over. But seeds have already meant little in this bracket, and one hot night flips it."
+   ]
+  }
+ ],
  "storylines_live": [
   {
    "h": "Rawhides are one win from the grand final \u2014 and they'd get there with a net",
