@@ -128,6 +128,16 @@ function render(d){
    +'<p class="small">The full board — championship probability and how often each team reaches the grand final, across 60,000 simulations. Teams already eliminated sit at 0%.</p>'
    +'<table><thead><tr><th>Team</th><th class="num">Title %</th><th class="num hide-sm">Reach grand final</th></tr></thead><tbody>'+oddsRows+'</tbody></table></section>';
 
+  /* SPECIAL THURSDAY UPDATE — mid-week bulletin, rendered above Last Week (data/build_special_update.py) */
+  var su=d.special_update, S_special='';
+  if(su && su.body && su.body.length){
+    S_special='<section id="thursday" style="border-left:3px solid '+GOLD+';padding-left:14px">'
+      +'<div style="font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:'+GOLD+';font-weight:700;margin-bottom:2px">'+esc(su.tag||'Special update')+'</div>'
+      +'<h2 style="margin-top:.05em">'+esc(su.heading)+'</h2>'
+      + su.body.map(function(p){return '<p>'+p+'</p>';}).join('')
+      +'</section>';
+  }
+
   /* LAST WEEK (recap) */
   var S_recap='';
   if(d.recap && d.recap.results && d.recap.results.length){
@@ -226,7 +236,7 @@ function render(d){
   }
 
   /* ===== assemble in reading order: chart, bracket, last week, looking ahead, standouts, performance, odds-over-time, full table ===== */
-  h += S_odds + S_bracket + S_recap + S_ahead + S_standouts + S_performance + S_movement + S_oddsTable;
+  h += S_odds + S_bracket + S_special + S_recap + S_ahead + S_standouts + S_performance + S_movement + S_oddsTable;
 
 
   /* POWER (Team Elo) */
