@@ -867,8 +867,10 @@
    "Lower Haight Misfits"
   ],
   "article": [
-   "Start with the favorite. A week ago the model gave Rawhides 79.2% to win the City Championship; tonight that number jumped to 91.1% \u2014 a 11.9-point rise and another sharp move up. The daylight behind them is becoming a canyon.",
-   "Also out on a second loss: Pocket Fizz. 3 teams remain."
+   "The winners'-bracket final is done, and it wasn't close: Rawhides dropped Bus Stop 9-4, punching a ticket straight to the grand final with the double-elimination cushion every team in this draw has been chasing since the seeds came out. The model had this coming \u2014 Rawhides was already a 79.2% favorite \u2014 but a win this size still moves the number: title odds jump to 91.1%, up 11.9 points from a week ago.",
+   "Look at the box score and the match tells its own story. For Rawhides, Kevin Scheper went a perfect 3-0, while across the table Bus Stop stayed in the fight early \u2014 Wade Hargrove led the way at 2-2. It caught up with them in the end, though: Justin Anderson never got on the board, going 0-3, and the bottom of the lineup is exactly where Rawhides bracket-favorite depth is supposed to show up.",
+   "The undercard carried its own gut-punch. El Farolito eliminated Pocket Fizz 9-3 to end their season, and Otoniel Jimenez went a perfect 3-0. The cruelest detail belongs to the losing side: Albert Yip and Clayton Lapointe were held scoreless, a combined 0-for-6 \u2014 on the night their season ended.",
+   "3 teams remain. Bus Stop drops to the losers'-bracket final to face El Farolito \u2014 the winner of that one earns a single shot at Rawhides, and it comes with the cruelest condition in the sport: a true reset, meaning they have to beat the top seed twice in a row to take the title."
   ]
  },
  "backtest": {
@@ -936,9 +938,11 @@
  "looking_ahead": [
   {
    "heading": "El Farolito vs Bus Stop",
-   "tag": "Win or go home",
+   "tag": "The losers'-bracket final",
    "body": [
-    "A quieter but no-less-tense elimination game. El Farolito (the 2-seed and the field's hottest regular-season form team) meet Bus Stop (the 3-seed grinders), and the model gives El Farolito a slight lean \u2014 59% for the match on a 53% per-game advantage (effective Fargo 569 to 553). Both teams already carry a loss, so this one is simple: the winner plays on, the loser's playoff is over. But seeds have already meant little in this bracket, and one hot night flips it."
+    "The one-loss bracket crowns its champion. El Farolito and Bus Stop both have exactly one path left, and it runs through each other first: win this and you earn the right to chase the top seed through a true-reset grand final \u2014 beating them twice in a row, with nothing in the bank. Lose, and the season's over tonight.",
+    "They've actually met once already, and it settled nothing. Back in the regular season, Bus Stop and El Farolito played to an 8-8 tie \u2014 dead level, 8 games apiece \u2014 the one result on the schedule that refused to pick a side. Now, with a season on the line and ties off the table (this is race-to-9, sudden death), somebody finally has to blink.",
+    "Both arrive hot off wins that tell very different stories. El Farolito bulldozed a way here off elimination games; Bus Stop just got run off the winners'-bracket floor by the top seed and now has to prove that loss was a blip, not a trend. The model gives El Farolito 59% for the match \u2014 53% per game, effective Fargo 569 to 553 \u2014 but this bracket has made a habit of ignoring the model."
    ]
   }
  ],
@@ -956,24 +960,32 @@
    {
     "name": "Steven Waldon",
     "team": "Rawhides",
-    "rec": "7-1",
-    "pct": 88,
-    "tr": 1,
+    "rec": "9-2",
+    "pct": 82,
+    "tr": 2,
     "you": true
+   },
+   {
+    "name": "Otoniel Jimenez",
+    "team": "El Farolito",
+    "rec": "12-6",
+    "pct": 67,
+    "tr": 2,
+    "you": false
    },
    {
     "name": "Wade Hargrove",
     "team": "Bus Stop",
-    "rec": "6-2",
-    "pct": 75,
+    "rec": "8-4",
+    "pct": 67,
     "tr": 0,
     "you": false
    },
    {
-    "name": "Tom Purcell",
-    "team": "Bus Stop",
-    "rec": "8-4",
-    "pct": 67,
+    "name": "Kevin Scheper",
+    "team": "Rawhides",
+    "rec": "9-5",
+    "pct": 64,
     "tr": 0,
     "you": false
    },
@@ -986,63 +998,55 @@
     "you": false
    },
    {
-    "name": "Otoniel Jimenez",
-    "team": "El Farolito",
+    "name": "Tom Purcell",
+    "team": "Bus Stop",
     "rec": "9-6",
     "pct": 60,
-    "tr": 2,
+    "tr": 1,
     "you": false
    },
    {
     "name": "Perez Vallarta",
     "team": "El Farolito",
-    "rec": "7-5",
-    "pct": 58,
+    "rec": "8-6",
+    "pct": 57,
     "tr": 1,
-    "you": false
-   },
-   {
-    "name": "Kevin Scheper",
-    "team": "Rawhides",
-    "rec": "6-5",
-    "pct": 55,
-    "tr": 0,
     "you": false
    },
    {
     "name": "Rene Loria",
     "team": "Bus Stop",
-    "rec": "7-6",
-    "pct": 54,
+    "rec": "8-8",
+    "pct": 50,
     "tr": 0,
     "you": false
    }
   ],
   "hot": [
    {
-    "name": "Steven Waldon",
-    "team": "Rawhides",
-    "rec": "4-0",
-    "tr": 1
+    "name": "Otoniel Jimenez",
+    "team": "El Farolito",
+    "rec": "3-0",
+    "tr": 0
    },
    {
-    "name": "Perez Vallarta",
-    "team": "El Farolito",
-    "rec": "4-0",
-    "tr": 1
+    "name": "Kevin Scheper",
+    "team": "Rawhides",
+    "rec": "3-0",
+    "tr": 0
    }
   ],
   "featured": {
    "name": "Steven Waldon",
    "team": "Rawhides",
-   "rec": "7-1",
-   "pct": 88,
-   "tr": 1,
-   "wk": "4-0",
+   "rec": "9-2",
+   "pct": 82,
+   "tr": 2,
+   "wk": "2-1",
    "is_waldon": true,
-   "blurb": "No one has been better with the season on the line. Steven Waldon has gone <b>7-1</b> in the playoffs \u2014 a <b>88%</b> win rate, the best of any regular still standing \u2014 and this week he went <b>4-0 with a table run</b>, closing out the winners'-bracket semifinal himself with the deciding rack over Hall Monitors' Clancy Green to send Rawhides to the final. That's the Waldon pattern: he ran the table a league-leading count of times this season, and his playoff table-run consistency is the stuff of local legend. If the grand final ever comes down to a single deciding game, he's exactly who the Rawhides want stepping to the table."
+   "blurb": "No one has been better with the season on the line. Steven Waldon has gone <b>9-2</b> in the playoffs \u2014 a <b>82%</b> win rate, the best of any regular still standing. The winners'-bracket final was the first time all playoffs he's actually lost a rack in a match he still won \u2014 Bus Stop's Wade Hargrove caught him in the opener \u2014 but Waldon answered by running the table to beat Justin Anderson and closing it out again over Tom Purcell, going <b>2-1</b> as Rawhides put Bus Stop away 9-4 and walked into the grand final. That's the Waldon pattern: even his rare off-night still ends in a win. If the grand final ever comes down to a single deciding game, he's exactly who the Rawhides want stepping to the table."
   },
-  "through_week": 343
+  "through_week": 345
  },
  "fargo_performance": {
   "explainer": "A performance rating answers a different question than a win-loss record: <i>how good did you actually play?</i> We take every individual game a player played this playoff run, look up each opponent's Fargo, and solve for the rating at which their win total is exactly what you'd expect. Beat a 500-rated player at a 4-2 clip and you performed like a 600. It rewards beating strong opponents and doesn't punish anyone for a tough draw \u2014 the ultimate opponent-adjusted scoreboard.",
@@ -1050,22 +1054,12 @@
    {
     "name": "Steven Waldon",
     "team": "Rawhides",
-    "rec": "7-1",
-    "avg_opp": 549,
+    "rec": "9-2",
+    "avg_opp": 542,
     "fargo": 604,
-    "perf": 833,
-    "delta": 229,
+    "perf": 759,
+    "delta": 155,
     "you": true
-   },
-   {
-    "name": "Albert Yip",
-    "team": "Pocket Fizz",
-    "rec": "6-1",
-    "avg_opp": 468,
-    "fargo": 487,
-    "perf": 743,
-    "delta": 256,
-    "you": false
    },
    {
     "name": "Khanh Ngo",
@@ -1098,13 +1092,23 @@
     "you": false
    },
    {
+    "name": "Joshua Maldonado",
+    "team": "Rawhides",
+    "rec": "3-1",
+    "avg_opp": 535,
+    "fargo": 591,
+    "perf": 695,
+    "delta": 104,
+    "you": false
+   },
+   {
     "name": "Wade Hargrove",
     "team": "Bus Stop",
-    "rec": "6-2",
-    "avg_opp": 508,
+    "rec": "8-4",
+    "avg_opp": 542,
     "fargo": 552,
-    "perf": 677,
-    "delta": 125,
+    "perf": 644,
+    "delta": 92,
     "you": false
    },
    {
@@ -1115,16 +1119,6 @@
     "fargo": 561,
     "perf": 616,
     "delta": 55,
-    "you": false
-   },
-   {
-    "name": "Tom Purcell",
-    "team": "Bus Stop",
-    "rec": "8-4",
-    "avg_opp": 505,
-    "fargo": 515,
-    "perf": 610,
-    "delta": 95,
     "you": false
    },
    {
@@ -1150,31 +1144,51 @@
    {
     "name": "Otoniel Jimenez",
     "team": "El Farolito",
-    "rec": "9-6",
-    "avg_opp": 490,
+    "rec": "12-6",
+    "avg_opp": 489,
     "fargo": 627,
-    "perf": 553,
-    "delta": -74,
+    "perf": 589,
+    "delta": -38,
+    "you": false
+   },
+   {
+    "name": "Tom Purcell",
+    "team": "Bus Stop",
+    "rec": "9-6",
+    "avg_opp": 524,
+    "fargo": 515,
+    "perf": 583,
+    "delta": 68,
+    "you": false
+   },
+   {
+    "name": "Albert Yip",
+    "team": "Pocket Fizz",
+    "rec": "6-4",
+    "avg_opp": 492,
+    "fargo": 487,
+    "perf": 551,
+    "delta": 64,
     "you": false
    },
    {
     "name": "Perez Vallarta",
     "team": "El Farolito",
-    "rec": "7-5",
-    "avg_opp": 487,
+    "rec": "8-6",
+    "avg_opp": 499,
     "fargo": 537,
-    "perf": 543,
-    "delta": 6,
+    "perf": 540,
+    "delta": 3,
     "you": false
    }
   ],
   "featured": {
    "name": "Steven Waldon",
    "team": "Rawhides",
-   "perf": 833,
-   "blurb": "And nobody in the tournament has played at a higher level than <b>Steven Waldon</b>. Against playoff competition averaging <b>549</b> Fargo, his 7-1 run computes to an <b>833 performance rating</b> \u2014 a staggering <b>+229 over his own 604 rating</b>, and the single highest performance mark of anyone in the field (the next-best is 743). Put plainly: a very good 604-rated player spent the playoffs playing like an elite 800+. That's not a hot streak against soft competition \u2014 his opponents averaged 549 \u2014 it's the best pool anyone in this City Championship has played."
+   "perf": 759,
+   "blurb": "And nobody in the tournament has played at a higher level than <b>Steven Waldon</b>. Against playoff competition averaging <b>542</b> Fargo, his 7-1 run computes to an <b>759 performance rating</b> \u2014 a staggering <b>+155 over his own 604 rating</b>, and the single highest performance mark of anyone in the field (the next-best is 730). Put plainly: a very good 604-rated player spent the playoffs playing like an elite 800+. That's not a hot streak against soft competition \u2014 his opponents averaged 542 \u2014 it's the best pool anyone in this City Championship has played."
   },
-  "through_week": 343
+  "through_week": 345
  },
  "snapshots": [
   {
