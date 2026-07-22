@@ -955,7 +955,7 @@
   ]
  },
  "player_watch": {
-  "lead": "The bracket is a team game, but somebody has to make the balls. A look at who's carrying the load for the teams still standing \u2014 the players quietly (and not so quietly) winning their matches within the match.",
+  "lead": "The bracket is a team game, but somebody has to make the balls. A look at who's carrying the load for the teams still standing \u2014 the players quietly (and not so quietly) winning their matches within the match. Covers only the three teams still alive (Rawhides, Bus Stop, El Farolito); eliminated teams' players are no longer tracked here.",
   "leaders": [
    {
     "name": "Steven Waldon",
@@ -968,9 +968,9 @@
    {
     "name": "Otoniel Jimenez",
     "team": "El Farolito",
-    "rec": "12-6",
-    "pct": 67,
-    "tr": 2,
+    "rec": "15-7",
+    "pct": 68,
+    "tr": 3,
     "you": false
    },
    {
@@ -984,6 +984,14 @@
    {
     "name": "Kevin Scheper",
     "team": "Rawhides",
+    "rec": "9-5",
+    "pct": 64,
+    "tr": 0,
+    "you": false
+   },
+   {
+    "name": "Jose Oliva",
+    "team": "El Farolito",
     "rec": "9-5",
     "pct": 64,
     "tr": 0,
@@ -1006,18 +1014,10 @@
     "you": false
    },
    {
-    "name": "Perez Vallarta",
+    "name": "Sayda Soto",
     "team": "El Farolito",
-    "rec": "8-6",
+    "rec": "4-3",
     "pct": 57,
-    "tr": 1,
-    "you": false
-   },
-   {
-    "name": "Rene Loria",
-    "team": "Bus Stop",
-    "rec": "8-8",
-    "pct": 50,
     "tr": 0,
     "you": false
    }
@@ -1046,60 +1046,21 @@
    "is_waldon": true,
    "blurb": "No one has been better with the season on the line. Steven Waldon has gone <b>9-2</b> in the playoffs \u2014 a <b>82%</b> win rate, the best of any regular still standing. The winners'-bracket final was the first time all playoffs he's actually lost a rack in a match he still won \u2014 Bus Stop's Wade Hargrove caught him in the opener \u2014 but Waldon answered by running the table to beat Justin Anderson and closing it out again over Tom Purcell, going <b>2-1</b> as Rawhides put Bus Stop away 9-4 and walked into the grand final. That's the Waldon pattern: even his rare off-night still ends in a win. If the grand final ever comes down to a single deciding game, he's exactly who the Rawhides want stepping to the table."
   },
-  "through_week": 345
+  "through_week": 345,
+  "scope": "active_teams_only"
  },
  "fargo_performance": {
-  "explainer": "A performance rating answers a different question than a win-loss record: <i>how good did you actually play?</i> We take every individual game a player played this playoff run, look up each opponent's Fargo, and solve for the rating at which their win total is exactly what you'd expect. Beat a 500-rated player at a 4-2 clip and you performed like a 600. It rewards beating strong opponents and doesn't punish anyone for a tough draw \u2014 the ultimate opponent-adjusted scoreboard.",
+  "explainer": "A performance rating answers a different question than a win-loss record: <i>how good did you actually play?</i> We take every individual game a player played this playoff run, look up each opponent's Fargo, and solve for the rating at which their win total is exactly what you'd expect. Beat a 500-rated player at a 4-2 clip and you performed like a 600. It rewards beating strong opponents and doesn't punish anyone for a tough draw \u2014 the ultimate opponent-adjusted scoreboard. Covers only the three teams still alive; eliminated teams' players are no longer tracked here.",
   "leaders": [
    {
     "name": "Steven Waldon",
     "team": "Rawhides",
     "rec": "9-2",
-    "avg_opp": 542,
+    "avg_opp": 541,
     "fargo": 604,
-    "perf": 759,
-    "delta": 155,
+    "perf": 761,
+    "delta": 157,
     "you": true
-   },
-   {
-    "name": "Khanh Ngo",
-    "team": "Marcelo's",
-    "rec": "8-2",
-    "avg_opp": 521,
-    "fargo": 583,
-    "perf": 730,
-    "delta": 147,
-    "you": false
-   },
-   {
-    "name": "Prithiv Kumar",
-    "team": "Hall Monitors",
-    "rec": "9-2",
-    "avg_opp": 487,
-    "fargo": 544,
-    "perf": 719,
-    "delta": 175,
-    "you": false
-   },
-   {
-    "name": "Antonio Cracchiolo",
-    "team": "Hall Monitors",
-    "rec": "8-2",
-    "avg_opp": 492,
-    "fargo": 578,
-    "perf": 707,
-    "delta": 129,
-    "you": false
-   },
-   {
-    "name": "Joshua Maldonado",
-    "team": "Rawhides",
-    "rec": "3-1",
-    "avg_opp": 535,
-    "fargo": 591,
-    "perf": 695,
-    "delta": 104,
-    "you": false
    },
    {
     "name": "Wade Hargrove",
@@ -1107,28 +1068,38 @@
     "rec": "8-4",
     "avg_opp": 542,
     "fargo": 552,
-    "perf": 644,
-    "delta": 92,
+    "perf": 650,
+    "delta": 98,
     "you": false
    },
    {
-    "name": "Willie Gregory",
-    "team": "Marcelo's",
-    "rec": "5-2",
-    "avg_opp": 478,
-    "fargo": 561,
-    "perf": 616,
-    "delta": 55,
+    "name": "Otoniel Jimenez",
+    "team": "El Farolito",
+    "rec": "15-7",
+    "avg_opp": 502,
+    "fargo": 627,
+    "perf": 618,
+    "delta": -9,
     "you": false
    },
    {
-    "name": "Nithin Tharakan",
-    "team": "Marcelo's",
+    "name": "Kevin Scheper",
+    "team": "Rawhides",
     "rec": "9-5",
-    "avg_opp": 512,
-    "fargo": 525,
-    "perf": 601,
-    "delta": 76,
+    "avg_opp": 516,
+    "fargo": 602,
+    "perf": 607,
+    "delta": 5,
+    "you": false
+   },
+   {
+    "name": "Jose Oliva",
+    "team": "El Farolito",
+    "rec": "9-5",
+    "avg_opp": 518,
+    "fargo": 509,
+    "perf": 606,
+    "delta": 97,
     "you": false
    },
    {
@@ -1142,51 +1113,131 @@
     "you": false
    },
    {
-    "name": "Otoniel Jimenez",
-    "team": "El Farolito",
-    "rec": "12-6",
-    "avg_opp": 489,
-    "fargo": 627,
-    "perf": 589,
-    "delta": -38,
-    "you": false
-   },
-   {
     "name": "Tom Purcell",
     "team": "Bus Stop",
     "rec": "9-6",
     "avg_opp": 524,
     "fargo": 515,
-    "perf": 583,
-    "delta": 68,
+    "perf": 586,
+    "delta": 71,
     "you": false
    },
    {
-    "name": "Albert Yip",
-    "team": "Pocket Fizz",
-    "rec": "6-4",
-    "avg_opp": 492,
-    "fargo": 487,
-    "perf": 551,
-    "delta": 64,
+    "name": "Juan Cortes",
+    "team": "El Farolito",
+    "rec": "3-2",
+    "avg_opp": 522,
+    "fargo": 479,
+    "perf": 583,
+    "delta": 104,
+    "you": false
+   },
+   {
+    "name": "Joshua Maldonado",
+    "team": "Rawhides",
+    "rec": "6-5",
+    "avg_opp": 508,
+    "fargo": 591,
+    "perf": 537,
+    "delta": -54,
     "you": false
    },
    {
     "name": "Perez Vallarta",
     "team": "El Farolito",
-    "rec": "8-6",
-    "avg_opp": 499,
+    "rec": "9-8",
+    "avg_opp": 507,
     "fargo": 537,
-    "perf": 540,
-    "delta": 3,
+    "perf": 528,
+    "delta": -9,
+    "you": false
+   },
+   {
+    "name": "Rene Loria",
+    "team": "Bus Stop",
+    "rec": "8-8",
+    "avg_opp": 524,
+    "fargo": 576,
+    "perf": 525,
+    "delta": -51,
+    "you": false
+   },
+   {
+    "name": "Matt Gomez",
+    "team": "El Farolito",
+    "rec": "2-2",
+    "avg_opp": 494,
+    "fargo": 418,
+    "perf": 493,
+    "delta": 75,
+    "you": false
+   },
+   {
+    "name": "Sayda Soto",
+    "team": "El Farolito",
+    "rec": "4-3",
+    "avg_opp": 445,
+    "fargo": 434,
+    "perf": 488,
+    "delta": 54,
+    "you": false
+   },
+   {
+    "name": "Oscar Samayoa",
+    "team": "El Farolito",
+    "rec": "3-2",
+    "avg_opp": 401,
+    "fargo": 519,
+    "perf": 464,
+    "delta": -55,
+    "you": false
+   },
+   {
+    "name": "Justin Anderson",
+    "team": "Bus Stop",
+    "rec": "4-7",
+    "avg_opp": 537,
+    "fargo": 498,
+    "perf": 453,
+    "delta": -45,
+    "you": false
+   },
+   {
+    "name": "Daniel Rosillo",
+    "team": "El Farolito",
+    "rec": "4-7",
+    "avg_opp": 513,
+    "fargo": 504,
+    "perf": 429,
+    "delta": -75,
+    "you": false
+   },
+   {
+    "name": "Mike Maxwell",
+    "team": "Rawhides",
+    "rec": "2-5",
+    "avg_opp": 528,
+    "fargo": 641,
+    "perf": 393,
+    "delta": -248,
+    "you": false
+   },
+   {
+    "name": "Martin Barron",
+    "team": "Bus Stop",
+    "rec": "1-5",
+    "avg_opp": 464,
+    "fargo": 507,
+    "perf": 224,
+    "delta": -283,
     "you": false
    }
   ],
   "featured": {
    "name": "Steven Waldon",
    "team": "Rawhides",
-   "perf": 759,
-   "blurb": "And nobody in the tournament has played at a higher level than <b>Steven Waldon</b>. Against playoff competition averaging <b>542</b> Fargo, his 7-1 run computes to an <b>759 performance rating</b> \u2014 a staggering <b>+155 over his own 604 rating</b>, and the single highest performance mark of anyone in the field (the next-best is 730). Put plainly: a very good 604-rated player spent the playoffs playing like an elite 800+. That's not a hot streak against soft competition \u2014 his opponents averaged 542 \u2014 it's the best pool anyone in this City Championship has played."
+   "perf": 761,
+   "blurb": "And nobody in the tournament has played at a higher level than <b>Steven Waldon</b>. Against playoff competition averaging <b>541</b> Fargo, his <b>9-2</b> run computes to a <b>761 performance rating</b> \u2014 a staggering <b>+157 over his own 604 rating</b>, and the single highest performance mark of anyone in the field (the next-best is 650). Put plainly: a 604-rated player has spent the playoffs playing like a 800. That's not a hot streak against soft competition \u2014 his opponents averaged 541 \u2014 it's the best pool anyone in this City Championship has played."
   },
   "through_week": 345
  },
