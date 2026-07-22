@@ -193,6 +193,14 @@ function render(d){
    + '<div id="bracketSvg" class="bracket-scroll" style="min-width:0"></div>'
    +'<p class="small">This is one most-likely tournament out of 60,000 simulated. The title odds come from all of them — so a team\'s odds and its place in this single bracket can differ.</p></section>';
 
+  /* THE STATE OF PLAY — big-picture synthesis (data/build_state.py) */
+  var sop=d.state_of_play, S_state='';
+  if(sop && sop.body && sop.body.length){
+    S_state='<section id="state"><h2>'+esc(sop.heading)+'</h2>'
+      + sop.body.map(function(p){return '<p'+(sop.body[0]===p?' class="lead"':'')+'>'+p+'</p>';}).join('')
+      +'</section>';
+  }
+
   /* PLAYOFF STANDOUTS */
   var pw=d.player_watch, S_standouts='';
   if(pw && pw.leaders && pw.leaders.length){
@@ -236,7 +244,7 @@ function render(d){
   }
 
   /* ===== assemble in reading order: chart, bracket, last week, looking ahead, standouts, performance, odds-over-time, full table ===== */
-  h += S_odds + S_bracket + S_special + S_recap + S_ahead + S_standouts + S_performance + S_movement + S_oddsTable;
+  h += S_odds + S_bracket + S_state + S_special + S_recap + S_ahead + S_standouts + S_performance + S_movement + S_oddsTable;
 
 
   /* POWER (Team Elo) */

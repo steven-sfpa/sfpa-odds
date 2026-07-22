@@ -1,6 +1,6 @@
 {
- "updated": "July 17, 2026",
- "updated_full": "Jul 17, 2026, 12:02 AM",
+ "updated": "July 22, 2026",
+ "updated_full": "Jul 22, 2026, 12:48 AM",
  "season": "SFPA Spring 2026 City Championship",
  "champion": "Happy Lounge Rawhides",
  "runner_up": "El Farolito Shooters",
@@ -10,48 +10,36 @@
    "team": "Happy Lounge Rawhides",
    "seed": 1,
    "team_elo": 1702,
-   "title": 79.22,
+   "title": 91.08,
    "qf": 100.0,
    "sf": 100.0,
-   "final": 93.0,
+   "final": 100.0,
    "top4_fargo": 609.5,
    "season_form": -10.4,
-   "pedigree": 0
-  },
-  {
-   "team": "Bus Stop Flyers",
-   "seed": 3,
-   "team_elo": 1594,
-   "title": 14.89,
-   "qf": 100.0,
-   "sf": 100.0,
-   "final": 60.8,
-   "top4_fargo": 550.5,
-   "season_form": 3.5,
    "pedigree": 0
   },
   {
    "team": "El Farolito Shooters",
    "seed": 2,
    "team_elo": 1605,
-   "title": 5.69,
+   "title": 6.39,
    "qf": 100.0,
    "sf": 0.0,
-   "final": 39.3,
+   "final": 59.3,
    "top4_fargo": 548.0,
    "season_form": 28.0,
    "pedigree": 0
   },
   {
-   "team": "Pocket Full of Fizz",
-   "seed": 7,
-   "team_elo": 1526,
-   "title": 0.2,
+   "team": "Bus Stop Flyers",
+   "seed": 3,
+   "team_elo": 1594,
+   "title": 2.53,
    "qf": 100.0,
    "sf": 100.0,
-   "final": 6.9,
-   "top4_fargo": 515.0,
-   "season_form": 8.1,
+   "final": 40.7,
+   "top4_fargo": 550.5,
+   "season_form": 3.5,
    "pedigree": 0
   },
   {
@@ -89,6 +77,18 @@
    "top4_fargo": 539.0,
    "season_form": 4.9,
    "pedigree": 30
+  },
+  {
+   "team": "Pocket Full of Fizz",
+   "seed": 7,
+   "team_elo": 1526,
+   "title": 0.0,
+   "qf": 100.0,
+   "sf": 100.0,
+   "final": 0.0,
+   "top4_fargo": 515.0,
+   "season_form": 8.1,
+   "pedigree": 0
   },
   {
    "team": "Marcelo's Hall Stars",
@@ -466,8 +466,8 @@
    "b": "Bus Stop Flyers",
    "bs": 3,
    "win": "Happy Lounge Rawhides",
-   "score": "9-6",
-   "played": false
+   "score": "9-4",
+   "played": true
   },
   "lb_r1": [
    {
@@ -591,8 +591,8 @@
    "b": "Pocket Full of Fizz",
    "bs": 7,
    "win": "El Farolito Shooters",
-   "score": "9-6",
-   "played": false
+   "score": "9-3",
+   "played": true
   },
   "lb_r6": {
    "a": "El Farolito Shooters",
@@ -744,6 +744,28 @@
     "Lower Haight Misfits": 0.0
    },
    "n_locked": 26
+  },
+  {
+   "label": "WB R4 / LB R5",
+   "odds": {
+    "Happy Lounge Rawhides": 91.08,
+    "El Farolito Shooters": 6.39,
+    "Bus Stop Flyers": 2.53,
+    "Hall Monitors": 0.0,
+    "Happy HALLers": 0.0,
+    "Pilsner InnDecisives": 0.0,
+    "Pocket Full of Fizz": 0.0,
+    "Marcelo's Hall Stars": 0.0,
+    "Gino & Carlo": 0.0,
+    "Lucky Horseshoe Glue Factory": 0.0,
+    "Friends Crooked Cues": 0.0,
+    "Route 101 Dalmatians": 0.0,
+    "Karl\u2019s Freakin\u2019 Beacon": 0.0,
+    "Temple Holy Smokes": 0.0,
+    "Bus Slop": 0.0,
+    "Lower Haight Misfits": 0.0
+   },
+   "n_locked": 28
   }
  ],
  "pedigree_note": {
@@ -768,13 +790,13 @@
    "team_elo": 1702,
    "fargo": 609.5,
    "form": -10.4,
-   "title": 79.22,
-   "reach_final": 93.0
+   "title": 91.08,
+   "reach_final": 100.0
   },
   "elfarolito": {
    "form": 28.0,
-   "title": 5.69,
-   "reach_final": 39.3
+   "title": 6.39,
+   "reach_final": 59.3
   },
   "bracket_halves": {
    "top_contenders": [
@@ -787,73 +809,43 @@
     "Pilsner InnDecisives",
     "Bus Stop Flyers"
    ],
-   "rawhides_reach_final": 93.0,
-   "elfarolito_reach_final": 39.3,
+   "rawhides_reach_final": 100.0,
+   "elfarolito_reach_final": 59.3,
    "pilsner_reach_final": 0.0
   }
  },
  "recap": {
-  "session": "Winners' Bracket Semifinals + Losers' Bracket R3",
-  "week": 343,
+  "session": "Winners' Bracket Final + Losers' Bracket R5",
+  "week": 345,
   "results": [
    {
-    "key": "WBSF.0",
+    "key": "WBF",
     "winner": "Happy Lounge Rawhides",
     "w_seed": 1,
-    "loser": "Hall Monitors",
-    "l_seed": 4,
-    "score": "9-7",
+    "loser": "Bus Stop Flyers",
+    "l_seed": 3,
+    "score": "9-4",
     "upset": false,
-    "margin": 2,
-    "loser_eliminated": true,
+    "margin": 5,
+    "loser_eliminated": false,
     "pred_winner": "Happy Lounge Rawhides",
     "pred_w_seed": 1,
-    "pred_score": "9-7",
+    "pred_score": "9-6",
     "model_miss": false
    },
    {
-    "key": "WBSF.1",
-    "winner": "Bus Stop Flyers",
-    "w_seed": 3,
-    "loser": "Pocket Full of Fizz",
-    "l_seed": 7,
-    "score": "9-7",
-    "upset": false,
-    "margin": 2,
-    "loser_eliminated": false,
-    "pred_winner": "Bus Stop Flyers",
-    "pred_w_seed": 3,
-    "pred_score": "9-7",
-    "model_miss": false
-   },
-   {
-    "key": "LB3.0",
+    "key": "LB5",
     "winner": "El Farolito Shooters",
     "w_seed": 2,
-    "loser": "Pilsner InnDecisives",
-    "l_seed": 6,
-    "score": "9-6",
+    "loser": "Pocket Full of Fizz",
+    "l_seed": 7,
+    "score": "9-3",
     "upset": false,
-    "margin": 3,
+    "margin": 6,
     "loser_eliminated": true,
-    "pred_winner": "Pilsner InnDecisives",
-    "pred_w_seed": 6,
-    "pred_score": "9-8",
-    "model_miss": true
-   },
-   {
-    "key": "LB3.1",
-    "winner": "Marcelo's Hall Stars",
-    "w_seed": 8,
-    "loser": "Route 101 Dalmatians",
-    "l_seed": 12,
-    "score": "9-2",
-    "upset": false,
-    "margin": 7,
-    "loser_eliminated": true,
-    "pred_winner": "Marcelo's Hall Stars",
-    "pred_w_seed": 8,
-    "pred_score": "9-5",
+    "pred_winner": "El Farolito Shooters",
+    "pred_w_seed": 2,
+    "pred_score": "9-6",
     "model_miss": false
    }
   ],
@@ -863,6 +855,7 @@
    "Hall Monitors",
    "Happy HALLers",
    "Pilsner InnDecisives",
+   "Pocket Full of Fizz",
    "Marcelo's Hall Stars",
    "Gino & Carlo",
    "Lucky Horseshoe Glue Factory",
@@ -874,12 +867,8 @@
    "Lower Haight Misfits"
   ],
   "article": [
-   "Rawhides stay the favorite, holding at 79.2% (from 79.5% a week ago) \u2014 but underneath them, plenty moved.",
-   "They got there by booking the winners'-bracket final: Rawhides beat Hall Monitors 9-7 and Bus Stop beat Pocket Fizz 9-7. The A-side title match is set \u2014 Rawhides vs Bus Stop \u2014 and it carries a double-elimination twist: the winner walks into the grand final with a safety net (the losers'-bracket survivor has to beat them twice), while the loser is knocked to the one-loss side. Bus Stop climbed to 14.9% as the second-most-likely champion \u2014 distant, but real.",
-   "The night's gut-punch landed on the losers' side \u2014 and it was the end of an era. El Farolito ended Pilsner's season 9-6, and with it one of the great runs in City Championship history. For six-plus seasons the InnDecisives never fell out of the top two; their all-time playoff record is 17-7, and the number that defined the dynasty is 15-0 \u2014 their mark against everyone who wasn't the Rawhides. For years you did not beat Pilsner. Rawhides beat Pilsner, and nobody else got a turn.",
-   "This was supposed to be the redemption year. Evan Burgess, their 576-rated ace, had spent the first half of the season playing down with a junior team as its coach \u2014 he was always coming back for the playoffs, and it was his absence from the standings, not from the roster, that stuck a team this good with the 6-seed. He returned, the lineup was whole, and for a while the old magic held. But here is the cruelest detail: for the first time anyone can remember, Pilsner's season didn't end against Rawhides. They fell one rung short of even reaching the rival the whole bracket was bending toward. Six seasons of inevitability, gone quietly in the one-loss bracket. Pour one out for the InnDecisives.",
-   "There was a Cinderella in the wreckage, too, and midnight finally came: Marcelo's ended Route 101's run 9-2. But what a run it was. The 12th-seed Dalmatians knocked off a top seed in the opening round and then flat refused to lose a close one \u2014 both of their wins were 9-8 heart-stoppers that made the smart money sweat for weeks. The glass slipper doesn't fit anymore, but the Dalmatians danced a lot longer than a 12th seed has any right to.",
-   "Also out on a second loss: Hall Monitors. Pocket Fizz survive but drop to the losers' bracket, where one more slip ends it. 4 teams remain. For Rawhides, only the winners'-bracket final stands between them and the grand final."
+   "Start with the favorite. A week ago the model gave Rawhides 79.2% to win the City Championship; tonight that number jumped to 91.1% \u2014 a 11.9-point rise and another sharp move up. The daylight behind them is becoming a canyon.",
+   "Also out on a second loss: Pocket Fizz. 3 teams remain."
   ]
  },
  "backtest": {
@@ -944,35 +933,23 @@
    }
   ]
  },
- "special_update": {
-  "heading": "Special Thursday Update",
-  "tag": "LB R4 \u00b7 Thursday",
-  "body": [
-   "A quiet Thursday it was not. Two losers'-bracket matches, two nine-game escapes, and by the end of the night the B-side had been cut in half \u2014 with the tournament's two most improbable survivors set on a collision course nobody would have drawn up in week one.",
-   "Start with the shocker. Pocket Fizz \u2014 the 7-seed that already bounced #2 El Farolito out of the winners' bracket \u2014 did it again, knocking off Marcelo's 9-6 to keep the Cinderella run alive. The engine room was <b>Roy Santiago</b>: the 616-rated ace went a perfect <b>4-0</b> and slammed the door himself, taking the deciding rack over Willie Gregory. Marcelo's, meanwhile, got nothing from the top of their order \u2014 <b>Ben Green went 0-4</b>, four games and four losses, a rare blank line from a contender's board \u2014 and it cost them their season.",
-   "The other match was pure heart. El Farolito outlasted Hall Monitors 9-6 in a grind, and the storybook finish belonged to their unlikeliest hero: with the match on the line, <b>434-rated Sayda Soto \u2014 the lowest-rated player on the table</b> \u2014 stepped up and won the clinching game over Hall Monitors' Clancy Green (540), a hundred-plus-point underdog delivering the biggest rack of the night. The 2-seed didn't win it with their stars on Thursday; they won it because their bottom rung held.",
-   "Two heavyweights went home \u2014 <b>Marcelo's and Hall Monitors are eliminated</b>, and the field is down to four. The board noticed. Rewarded for surviving <i>and</i> handed the softer of the two remaining B-side paths, <b>El Farolito's title odds more than doubled, from 2.6% to 5.7%</b>, and their chance of reaching the grand final now sits near <b>39%</b>. Pocket Fizz tick up too, though the model still sees the mountain in front of them at 0.2%.",
-   "And now the bracket serves up its spiciest leftover: <b>El Farolito vs Pocket Fizz</b>, win or go home, for the right to reach the B-side final. It's the rematch of the quarterfinal stunner \u2014 the 2-seed that Pocket Fizz already sent packing once, now with a season riding on the do-over. If Roy Santiago and the 7-seed can drop another established heavyweight, this stops being a fluke and starts being a run."
-  ]
- },
  "looking_ahead": [
   {
-   "heading": "Rawhides vs Bus Stop",
-   "tag": "The hot seat",
-   "body": [
-    "The one everybody's tuning in for. The winners'-bracket final decides who takes the hot seat: a ticket straight to the grand final with the double-elimination cushion that makes a team nearly impossible to dislodge. The loser doesn't go home, but drops to the one-loss side and inherits the long gauntlet back. Win here and you're most of the way to a title; lose and the mountain triples.",
-    "And these two have history. Over the last four seasons plus this year's regular season, Rawhides and Bus Stop have met 6 times \u2014 and Rawhides have won 5 of them, taking 63% of all the games played between the two clubs. Bus Stop's lone win came on a regular-season night; when the playoff lights come on it hasn't been close, with Rawhides a perfect 2-0 in the postseason and 75% of those games (18-6).",
-    "On Fargo alone the model makes Rawhides a 75% pick for the match (a 58% edge per game). Layer in the head-to-head \u2014 the fact that Bus Stop has never solved this specific opponent when it mattered \u2014 and the number climbs toward 85%. Ratings and receipts point the same way. Bus Stop's path to the upset is real but narrow: they've hung big game counts on Rawhides before, so the talent to make it a match is there \u2014 they just have to finally close one on the big stage."
-   ]
-  },
-  {
-   "heading": "El Farolito vs Pocket Fizz",
+   "heading": "El Farolito vs Bus Stop",
    "tag": "Win or go home",
    "body": [
-    "A quieter but no-less-tense elimination game. El Farolito (the 2-seed and the field's hottest regular-season form team) meet Pocket Fizz (the 7-seed that stunned El Farolito in the quarterfinals), and the model gives El Farolito a clear edge \u2014 75% for the match on a 58% per-game advantage (effective Fargo 569 to 521). Both teams already carry a loss, so this one is simple: the winner plays on, the loser's playoff is over. But seeds have already meant little in this bracket, and one hot night flips it."
+    "A quieter but no-less-tense elimination game. El Farolito (the 2-seed and the field's hottest regular-season form team) meet Bus Stop (the 3-seed grinders), and the model gives El Farolito a slight lean \u2014 59% for the match on a 53% per-game advantage (effective Fargo 569 to 553). Both teams already carry a loss, so this one is simple: the winner plays on, the loser's playoff is over. But seeds have already meant little in this bracket, and one hot night flips it."
    ]
   }
  ],
+ "state_of_play": {
+  "heading": "The state of play",
+  "body": [
+   "For all the model's confidence in the favorite, this has been the opposite of a chalk tournament. Rawhides have held up their end \u2014 still a commanding <b>91.1%</b> to win it \u2014 but everything behind them has been chaos: a #2 seed knocked out early, the six-season Pilsner dynasty gone, a 12-seed Cinderella in Route 101, and a 7-seed in Pocket Fizz that flatly refuses to read the seed lines. With the field down to <b>3</b>, the bracket has split into two very different movies.",
+   "On the A-side it's coronation-or-spoiler: <b>Rawhides sit one win from the hot seat</b>, with only Bus Stop in the way \u2014 and four seasons of history saying Rawhides own that matchup when it counts (<b>5-1</b> all-time, and a perfect <b>2-0</b> in the playoffs). On the B-side it's a survival gauntlet: <b>El Farolito</b>, the fallen 2-seed, is trying to claw all the way back \u2014 and runs straight into <b>Pocket Fizz</b>, the very team that knocked them down in the first place. A revenge rematch with a season on the line.",
+   "What keeps it tense even with a heavy favorite is the double-elimination math. Rawhides need just two wins and carry a safety net at every step; whoever emerges from the losers' bracket has to run the table and then beat the A-side finalist <i>twice</i>. Two wins with insurance versus five must-wins through a gauntlet \u2014 that asymmetry is the whole tournament in a sentence. For the trophy to change hands, somebody's long shot has to hit."
+  ]
+ },
  "player_watch": {
   "lead": "The bracket is a team game, but somebody has to make the balls. A look at who's carrying the load for the teams still standing \u2014 the players quietly (and not so quietly) winning their matches within the match.",
   "leaders": [
@@ -983,14 +960,6 @@
     "pct": 88,
     "tr": 1,
     "you": true
-   },
-   {
-    "name": "Albert Yip",
-    "team": "Pocket Fizz",
-    "rec": "6-1",
-    "pct": 86,
-    "tr": 0,
-    "you": false
    },
    {
     "name": "Wade Hargrove",
@@ -1037,6 +1006,14 @@
     "team": "Rawhides",
     "rec": "6-5",
     "pct": 55,
+    "tr": 0,
+    "you": false
+   },
+   {
+    "name": "Rene Loria",
+    "team": "Bus Stop",
+    "rec": "7-6",
+    "pct": 54,
     "tr": 0,
     "you": false
    }
@@ -1200,6 +1177,10 @@
   "through_week": 343
  },
  "snapshots": [
+  {
+   "file": "SFPA_CityChampionship_2026-07-22.pdf",
+   "date": "2026-07-22"
+  },
   {
    "file": "SFPA_CityChampionship_2026-07-17.pdf",
    "date": "2026-07-17"
